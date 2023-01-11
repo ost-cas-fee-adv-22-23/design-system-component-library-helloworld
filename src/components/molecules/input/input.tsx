@@ -1,5 +1,4 @@
-import React, {FC, ReactNode} from 'react';
-import MumbleIconSvGComponent from '../../atoms/icon/mumble-icon';
+import React, { FC, ReactNode } from 'react';
 
 export type InputProps = {
   label: string;
@@ -13,7 +12,11 @@ const Input: FC<InputProps> = ({ label, placeholder, type = 'text', children }) 
     <div className={'block text-slate-700'}>
       <label>{label}</label>
       <div className={'w-264 h-48 relative'}>
-        <div className={'first:w-8 first:h-8 first:flex first:absolute first:right-s first:top-s first:bottom-s first:fill-slate-600'}>
+        <div
+          className={
+            'first:w-8 first:h-8 first:flex first:absolute first:right-s first:top-s first:bottom-s first:fill-slate-600'
+          }
+        >
           {children}
         </div>
         <input
