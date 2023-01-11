@@ -20,6 +20,7 @@ module.exports = {
           implementation: require('postcss')
         }
       }
-    }
+    },
+    '@storybook/addon-docs'
   ]
 };
