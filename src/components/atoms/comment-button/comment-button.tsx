@@ -8,9 +8,10 @@ export type LikeWithReactionProps = {
     someComments: string;
   };
   numberOfComments: number;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const CommentButton: FC<LikeWithReactionProps> = ({ label, numberOfComments }) => {
+const CommentButton: FC<LikeWithReactionProps> = ({ label, numberOfComments, onClick }) => {
   const active = numberOfComments > 0;
 
   return (
@@ -18,6 +19,7 @@ const CommentButton: FC<LikeWithReactionProps> = ({ label, numberOfComments }) =
       label={active ? numberOfComments + ' ' + label.someComments : label.noComments}
       colorVariant={'violet'}
       active={active}
+      onClick={onClick}
     >
       <MessageIconSvGComponent
         variant={active ? 'filled' : 'normal'}

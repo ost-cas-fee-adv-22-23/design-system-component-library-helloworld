@@ -12,11 +12,13 @@ const Template: ComponentStory<typeof CopyButton> = (args) => <CopyButton {...ar
 export const Inactive = Template.bind({});
 Inactive.args = {
   label: { inactive: 'Copy Link', active: 'Link copied' },
-  active: false
+  active: false,
+  onClick: () => console.log('Copy button pressed.')
 };
 
 export const Active = Template.bind({});
 Active.args = {
   label: { inactive: 'Copy Link', active: 'Link copied' },
-  active: true
+  active: true,
+  onClick: () => console.log('Copy button pressed.')
 };

@@ -12,11 +12,13 @@ const Template: ComponentStory<typeof PurpleButton> = (args) => <PurpleButton {.
 
 export const PurpleButtonComponent = Template.bind({});
 PurpleButtonComponent.args = {
-  label: 'Click me'
+  label: 'Click me',
+  onClick: () => console.log('Purple button pressed.')
 };
 
 export const PurpleButtonComponentMedium = Template.bind({});
 PurpleButtonComponentMedium.args = {
   label: 'Click me',
-  size: ButtonSize.m
+  size: ButtonSize.m,
+  onClick: () => console.log('Purple button pressed.')
 };

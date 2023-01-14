@@ -45,6 +45,9 @@ module.exports = {
       white: '#FFFFFF'
     },
     spacing: {
+      none: '0px',
+      xxxxs: '2px',
+      xxxs: '3px',
       xxs: '4px',
       xs: '8px',
       s: '16px',
@@ -66,20 +69,34 @@ module.exports = {
     },
     borderWidth: {
       0: '0',
+      1: '1px',
+      2: '2px',
       3: '3px'
     },
     extend: {
       width: {
         16: '16px',
+        40: '40px',
+        44: '44px',
         48: '48px',
+        64: '64px',
+        70: '70px',
+        96: '96px',
         150: '150px',
+        160: '160px',
         178: '178px',
+        264: '264px',
         615: '615px'
       },
       height: {
         16: '16px',
+        40: '40px',
+        44: '44px',
         48: '48px',
-        64: '64px'
+        64: '64px',
+        70: '70px',
+        96: '96px',
+        160: '160px'
       }
     }
   }

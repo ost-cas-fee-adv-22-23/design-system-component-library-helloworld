@@ -18,9 +18,9 @@ const Label: FC<LabelProps> = ({ label, variant, mainTyp = false }) => {
   const mainTypeClasses = 'text-violet-600 group-hover:text-violet-900';
 
   return (
-    <div className={`${defaultClasses} - ${mainTyp ? mainTypeClasses : defaultTypeClasses}`}>
+    <div className={defaultClasses}>
       {iconSwitch(variant, mainTyp)}
-      <span>{label}</span>
+      <span className={mainTyp ? mainTypeClasses : defaultTypeClasses}>{label}</span>
     </div>
   );
 };

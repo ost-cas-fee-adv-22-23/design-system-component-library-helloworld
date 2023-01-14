@@ -12,11 +12,13 @@ const Template: ComponentStory<typeof ColorfulButton> = (args) => <ColorfulButto
 
 export const ColorfulButtonDefaultComponent = Template.bind({});
 ColorfulButtonDefaultComponent.args = {
-  label: 'Click me'
+  label: 'Click me',
+  onClick: () => console.log('Colorful button pressed.')
 };
 
 export const ColorfulButtonComponentMedium = Template.bind({});
 ColorfulButtonComponentMedium.args = {
   label: 'Click me',
-  size: ButtonSize.m
+  size: ButtonSize.m,
+  onClick: () => console.log('Colorful button pressed.')
 };

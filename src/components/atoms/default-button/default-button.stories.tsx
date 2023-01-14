@@ -12,11 +12,13 @@ const Template: ComponentStory<typeof DefaultButton> = (args) => <DefaultButton 
 
 export const DefaultButtonComponent = Template.bind({});
 DefaultButtonComponent.args = {
-  label: 'Click me'
+  label: 'Click me',
+  onClick: () => console.log('Default button pressed.')
 };
 
 export const DefaultButtonComponentMedium = Template.bind({});
 DefaultButtonComponentMedium.args = {
   label: 'Click me',
-  size: ButtonSize.m
+  size: ButtonSize.m,
+  onClick: () => console.log('Default button pressed.')
 };
