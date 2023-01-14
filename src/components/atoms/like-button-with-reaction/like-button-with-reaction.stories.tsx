@@ -19,7 +19,8 @@ NoLike.args = {
     reactionByCurrentUser: 'Liked',
     severalReaction: 'Likes'
   },
-  likes: 0
+  likes: 0,
+  onClick: () => console.log('Like button pressed.')
 };
 
 export const OneLike = Template.bind({});
@@ -30,7 +31,8 @@ OneLike.args = {
     reactionByCurrentUser: 'Liked',
     severalReaction: 'Likes'
   },
-  likes: 1
+  likes: 1,
+  onClick: () => console.log('Like button pressed.')
 };
 
 export const MultipleLikes = Template.bind({});
@@ -41,7 +43,8 @@ MultipleLikes.args = {
     reactionByCurrentUser: 'Liked',
     severalReaction: 'Likes'
   },
-  likes: 15
+  likes: 15,
+  onClick: () => console.log('Like button pressed.')
 };
 
 export const LikedByCurrentUser = Template.bind({});
@@ -53,5 +56,6 @@ LikedByCurrentUser.args = {
     severalReaction: 'Likes'
   },
   likes: 15,
-  reactionByCurrentUser: true
+  reactionByCurrentUser: true,
+  onClick: () => console.log('Like button pressed.')
 };

@@ -12,11 +12,13 @@ const Template: ComponentStory<typeof CommentButton> = (args) => <CommentButton 
 export const NoComment = Template.bind({});
 NoComment.args = {
   label: { noComments: 'Comment', someComments: 'Comments' },
-  numberOfComments: 0
+  numberOfComments: 0,
+  onClick: () => console.log('Comment button pressed.')
 };
 
 export const HasComment = Template.bind({});
 HasComment.args = {
   label: { noComments: 'Comment', someComments: 'Comments' },
-  numberOfComments: 32
+  numberOfComments: 32,
+  onClick: () => console.log('Comment button pressed.')
 };
