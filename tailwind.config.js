@@ -59,11 +59,6 @@ module.exports = {
       xl: '48px',
       xxl: '64px'
     },
-    borderRadius: {
-      none: '0',
-      s: '8px',
-      m: '16px',
-      full: '9999px'
     fontFamily: {
       sans: ["Poppins", ...defaultTheme.fontFamily.sans] // override default tailwind with poppins
     },
@@ -81,6 +76,13 @@ module.exports = {
       medium: '500',
       semibold: '600',
       bold: '700',
+    },
+    borderRadius: {
+      none: '0',
+      xs: '6px',
+      s: '8px',
+      m: '16px',
+      full: '9999px'
     },
     outlineWidth: {
       none: '0px',
@@ -118,11 +120,10 @@ module.exports = {
         160: '160px'
       }
     }
-  }
-};
-    extend: {}
   },
+  extend: {},
   plugins: [
-    require('@headlessui/tailwindcss')
+      require('@headlessui/tailwindcss')
   ]
-}
+};
+
