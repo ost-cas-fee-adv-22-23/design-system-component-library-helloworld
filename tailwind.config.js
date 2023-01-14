@@ -7,6 +7,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: "currentColor",
+      white: '#FFFFFF',
       pink : {
         50: '#FDF2F8',
         100: '#FCE7F3',
@@ -62,6 +63,44 @@ module.exports = {
       semibold: '600',
       bold: '700',
     },
-    extend: {}
+    spacing: {
+      xxs: '4px',
+      xs: '8px',
+      s: '16px',
+      m: '24px',
+      l: '32px',
+      xl: '48px',
+      xxl: '64px'
+    },
+    borderRadius: {
+      none: '0',
+      xs: '6px',
+      s: '8px',
+      m: '16px',
+      full: '9999px'
+    },
+    outlineWidth: {
+      none: '0px',
+      3: '3px',
+      4: '4px'
+    },
+    borderWidth: {
+      0: '0',
+      3: '3px'
+    },
+    extend: {
+      width: {
+        16: '16px',
+        48: '48px',
+        150: '150px',
+        178: '178px',
+        336: '336px'
+
+      },
+      height: {
+        16: '16px',
+        48: '48px'
+      }
+    }
   }
 }
