@@ -1,17 +1,47 @@
-import UserIconSvGComponent from "./user-icon";
+import {IconGallery, IconItem, Meta, Title} from '@storybook/addon-docs/';
+
+import {
+    CalendarIconComponent,
+    EditIconComponent,
+    HeartIconComponent,
+    LocationIconComponent,
+    MessageIconComponent,
+    MumbleIconComponent,
+    ShareIconComponent,
+    TimeIconComponent,
+    UserIconComponent
+} from "./index";
 
 
-import { Meta, Title, IconGallery, IconItem } from '@storybook/addon-docs/'; import {CalendarIconComponent} from "./index";
-
-
-<Meta title="Atoms/Iconography" />
+<Meta title="Design Tokens/Iconography" />
 
 # Iconography
 <IconGallery>
   <IconItem name="User Icon">
-      <UserIconSvGComponent />
+      <UserIconComponent />
   </IconItem>
   <IconItem name="Calendar Icon">
     <CalendarIconComponent />
+  </IconItem>
+    <IconItem name="Edit Icon">
+    <EditIconComponent />
+  </IconItem>
+    <IconItem name="Heart Icon">
+    <HeartIconComponent />
+  </IconItem>
+    <IconItem name="Location Icon">
+    <LocationIconComponent />
+  </IconItem>
+    <IconItem name="Message Icon">
+    <MessageIconComponent />
+  </IconItem>
+    <IconItem name="Mumble Icon">
+    <MumbleIconComponent />
+  </IconItem>
+    <IconItem name="Share Icon">
+    <ShareIconComponent />
+  </IconItem>
+    <IconItem name="Time Icon">
+    <TimeIconComponent />
   </IconItem>
 </IconGallery>
