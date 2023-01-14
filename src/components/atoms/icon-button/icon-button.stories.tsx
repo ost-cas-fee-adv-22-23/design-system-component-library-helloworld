@@ -12,6 +12,5 @@ const Template: ComponentStory<typeof IconButton> = (args) => <IconButton {...ar
 export const IconButtonComponent = Template.bind({});
 IconButtonComponent.args = {
   label: 'Click me',
-  onClick: () => console.log('Icon button pressed.'),
-  variant: 'logo'
+  onClick: () => console.log('Icon button pressed.')
 };
