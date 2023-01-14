@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import IconButton from '../icon-button/icon-button';
 import MumbleIconSvGComponent from '../icons/mumble-icon';
+import {EditIconComponent} from "../icons";
 
 export type ProfilePicProps = {
   size?: 'S' | 'M' | 'L' | 'XL';
@@ -46,7 +47,7 @@ const ProfilePic: FC<ProfilePicProps> = ({ size, imageUrl, editLabel, altText, o
         </div>
         <div className={size !== 'XL' ? 'invisible' : 'absolute right-none bottom-none'}>
           <IconButton label={editLabel} onClick={onClick}>
-            <MumbleIconSvGComponent />
+            <EditIconComponent />
           </IconButton>
         </div>
       </div>
