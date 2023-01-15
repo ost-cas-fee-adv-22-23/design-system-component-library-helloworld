@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     colors: {
       transparent: 'transparent',
-      current: "currentColor",
-      pink : {
+      current: 'currentColor',
+      pink: {
         50: '#FDF2F8',
         100: '#FCE7F3',
         200: '#FBCFE8',
@@ -42,7 +42,8 @@ module.exports = {
         700: '#6D28D9',
         800: '#5B21B6',
         900: '#4C1D95'
-      }
+      },
+      white: '#FFFFFF'
     },
     fontFamily: {
       sans: ["Poppins", ...defaultTheme.fontFamily.sans] // override default tailwind with poppins
@@ -61,7 +62,60 @@ module.exports = {
       medium: '500',
       semibold: '600',
       bold: '700',
+    spacing: {
+      none: '0px',
+      xxxxs: '2px',
+      xxxs: '3px',
+      xxs: '4px',
+      xs: '8px',
+      s: '16px',
+      m: '24px',
+      l: '32px',
+      xl: '48px',
+      xxl: '64px'
     },
-    extend: {}
+    borderRadius: {
+      none: '0',
+      s: '8px',
+      m: '16px',
+      full: '9999px'
+    },
+    outlineWidth: {
+      none: '0px',
+      3: '3px',
+      4: '4px'
+    },
+    borderWidth: {
+      0: '0',
+      1: '1px',
+      2: '2px',
+      3: '3px'
+    },
+    extend: {
+      width: {
+        16: '16px',
+        40: '40px',
+        44: '44px',
+        48: '48px',
+        64: '64px',
+        70: '70px',
+        96: '96px',
+        150: '150px',
+        160: '160px',
+        178: '178px',
+        264: '264px',
+        615: '615px'
+      },
+      height: {
+        16: '16px',
+        40: '40px',
+        44: '44px',
+        48: '48px',
+        64: '64px',
+        70: '70px',
+        96: '96px',
+        160: '160px'
+      }
+    }
   }
-}
+};

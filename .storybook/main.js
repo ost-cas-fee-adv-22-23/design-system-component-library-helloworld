@@ -8,10 +8,7 @@ module.exports = {
       propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true)
     }
   },
-  stories: [
-    "../src/**/*.stories.mdx",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)"
-  ],
+  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     {
       name: '@storybook/addon-postcss',
@@ -20,7 +17,7 @@ module.exports = {
           importLoaders: 1
         },
         postcssLoaderOptions: {
-          implementation: require('postcss'),
+          implementation: require('postcss')
         }
       }
     },
