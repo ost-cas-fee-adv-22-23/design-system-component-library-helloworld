@@ -22,10 +22,10 @@ export const TabGroup: FC<TabProps> = ({ tabs }) => {
         <Tab.Group defaultIndex={0} onChange={(index) => {
             console.log('Changed selected tab to: ', index)
         }}>
-            <Tab.List className={classNames(true,'List', defaultTabListClass)}>
+            <Tab.List className={classNames(defaultTabListClass)}>
                 {tabs.map((tab, tabIndex ) => (
                     <Tab key={tabIndex}
-                        className={ ({selected}) => classNames(selected, tab, defaultTabItemClass, selected ? tabItemSelectedClass : tabItemUnselectedClass)}>
+                        className={ ({selected}) => classNames(defaultTabItemClass, selected ? tabItemSelectedClass : tabItemUnselectedClass)}>
                         {tab}
                     </Tab>
                 ))}
