@@ -24,12 +24,11 @@ const BrandingLogoSvGComponent: FC<BrandingLogoProps> = ({orientation, color}) =
           }
         default:
           if(orientation === 'horizontal') {
-            return purpleVerticalLogo
-          } else {
             return purpleHorizontalLogo
+          } else {
+            return purpleVerticalLogo
           }
       }
-      return gradientHorizontalLogo;
     };
 
 export default BrandingLogoSvGComponent;
