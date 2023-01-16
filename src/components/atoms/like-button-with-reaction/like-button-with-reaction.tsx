@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import InteractionButton from '../interaction-button/interaction-button';
 import HeartIconSvGComponent from '../icons/heart-icon';
+import BrandingHoverLogoSvGComponent from "../branding/branding-hover-logo";
 
 export type LikeWithReactionProps = {
   active: boolean;
