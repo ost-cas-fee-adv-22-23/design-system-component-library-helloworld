@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import IconButton from '../icon-button/icon-button';
-import MumbleIconSvGComponent from '../icons/mumble-icon';
-import {EditIconComponent} from "../icons";
+import { EditIconComponent } from '../icons';
 
 export type ProfilePicProps = {
   size?: 'S' | 'M' | 'L' | 'XL';
