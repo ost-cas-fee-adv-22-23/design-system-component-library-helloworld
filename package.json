@@ -16,9 +16,11 @@
     }
   },
   "scripts": {
-    "build": "npm run build:types",
+    "build": "npm run build:types build:css",
     "build:types": "tsc -p ./tsconfig.json --declaration",
+    "build:css": "tailwindcss build ./src/global.css -o ./dist/global.css",
     "build-storybook": "build-storybook",
+    "dev:css": "tailwindcss -w -i ./src/global.css -o ./public/global.css",
     "storybook": "start-storybook -p 6006",
     "storybook-windows": "set NODE_OPTIONS=\"--openssl-legacy-provider\" && start-storybook -p 6006",
     "lint": "eslint .",
