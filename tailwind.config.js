@@ -62,6 +62,7 @@ module.exports = {
       medium: '500',
       semibold: '600',
       bold: '700',
+    },
     spacing: {
       none: '0px',
       xxxxs: '2px',

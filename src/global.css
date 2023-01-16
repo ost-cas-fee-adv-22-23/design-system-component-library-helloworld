@@ -5,40 +5,37 @@
 
 
 @layer base {
-    html {
-        font-family: 'Poppins', sans-serif;
-    }
     .head-1 {
-        @apply font-sans font-bold text-l3 text-slate-600
+        @apply font-sans font-bold text-l3
     }
     .head-2 {
-        @apply font-sans font-bold text-l2 text-slate-600
+        @apply font-sans font-bold text-l2
     }
     .head-3 {
-        @apply font-sans font-semibold text-l1 text-slate-600
+        @apply font-sans font-semibold text-l1
     }
     .head-4 {
-        @apply font-sans font-semibold text-m2 text-slate-600
+        @apply font-sans font-semibold text-m2
     }
     .paragraph-L {
-        @apply font-sans font-medium text-m2 text-slate-600
+        @apply font-sans font-medium text-m2
     }
     .paragraph-M {
-        @apply font-sans font-medium text-s3 text-slate-600
+        @apply font-sans font-medium text-s3
     }
     .labl-XL {
-        @apply font-sans font-semibold text-m2 text-slate-600
+        @apply font-sans font-semibold text-m2
     }
     .label-L {
-        @apply font-sans font-semibold text-m1 text-slate-600
+        @apply font-sans font-semibold text-m1
     }
     .label-M {
-        @apply font-sans font-semibold text-s2 text-slate-600
+        @apply font-sans font-semibold text-s2
     }
     .placeholder {
-        @apply font-sans font-medium text-s1 text-slate-300
+        @apply font-sans font-medium text-s1
     }
     .label-S {
-        @apply font-sans font-semibold text-s1 text-slate-600
+        @apply font-sans font-semibold text-s1
     }
 }
