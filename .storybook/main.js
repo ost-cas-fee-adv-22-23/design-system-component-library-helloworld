@@ -21,6 +21,7 @@ module.exports = {
         }
       }
     },
-    '@storybook/addon-docs'
+    '@storybook/addon-docs',
+    '@storybook/addon-a11y'
   ]
 };
