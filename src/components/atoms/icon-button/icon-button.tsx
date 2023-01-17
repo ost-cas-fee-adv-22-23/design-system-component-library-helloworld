@@ -1,20 +1,12 @@
-import React, { FC } from 'react';
-import MumbleIconSvGComponent from '../icon/mumble-icon';
-import { EditIconSvGComponent } from '../icons/index';
+import React, { FC, ReactNode } from 'react';
 
 export type IconButtonProps = {
   label: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  variant: 'logo' | 'edit';
+  children: ReactNode;
 };
 
-const IconButton: FC<IconButtonProps> = ({ label, variant, onClick }) => {
-  const icon =
-    variant === 'logo' ? (
-      <MumbleIconSvGComponent className={'fill-white'} />
-    ) : (
-      <EditIconSvGComponent className={'fill-white'} />
-    );
+const IconButton: FC<IconButtonProps> = ({ label, onClick, children }) => {
   return (
     <button
       className={
@@ -22,9 +14,9 @@ const IconButton: FC<IconButtonProps> = ({ label, variant, onClick }) => {
       }
       onClick={onClick}
     >
-      <div>
+      <div className={'first:fill-white'}>
+        {children}
         <span className={'sr-only'}>{label}</span>
-        {icon}
       </div>
     </button>
   );

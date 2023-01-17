@@ -12,25 +12,37 @@ const Template: ComponentStory<typeof ProfilePic> = (args) => <ProfilePic {...ar
 export const Small = Template.bind({});
 Small.args = {
   size: 'S',
-  imageUrl: './Profile.svg',
-  editLabel: 'Bearbeiten'
+  imageUrl: 'https://www.ost.ch/typo3conf/ext/template/Resources/Public/Images/logo-de.svg',
+  editLabel: 'Bearbeiten',
+  altText: 'Profilbild'
 };
 export const Medium = Template.bind({});
 Medium.args = {
   size: 'M',
-  imageUrl: './Profile.svg',
-  editLabel: 'Bearbeiten'
+  imageUrl: 'https://www.ost.ch/typo3conf/ext/template/Resources/Public/Images/logo-de.svg',
+  editLabel: 'Bearbeiten',
+  altText: 'Profilbild'
 };
 export const Large = Template.bind({});
 Large.args = {
   size: 'L',
-  imageUrl: './Profile.svg',
-  editLabel: 'Bearbeiten'
+  imageUrl: 'https://www.ost.ch/typo3conf/ext/template/Resources/Public/Images/logo-de.svg',
+  editLabel: 'Bearbeiten',
+  altText: 'Profilbild'
 };
 export const XLarge = Template.bind({});
 XLarge.args = {
   size: 'XL',
-  imageUrl: './Profile.svg',
+  imageUrl: 'https://www.ost.ch/typo3conf/ext/template/Resources/Public/Images/logo-de.svg',
   editLabel: 'Bearbeiten',
-  onClick: () => console.log('Edit button pressed.')
+  onClick: () => console.log('Edit button pressed.'),
+  altText: 'Profilbild'
+};
+
+export const XLargeNoImage = Template.bind({});
+XLargeNoImage.args = {
+  size: 'XL',
+  editLabel: 'Bearbeiten',
+  onClick: () => console.log('Edit button pressed.'),
+  altText: 'Profilbild'
 };

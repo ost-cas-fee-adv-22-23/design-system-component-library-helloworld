@@ -1,14 +1,16 @@
 import React, { FC } from 'react';
 import IconButton from '../icon-button/icon-button';
+import { EditIconComponent } from '../icons';
 
 export type ProfilePicProps = {
   size?: 'S' | 'M' | 'L' | 'XL';
+  altText?: string;
   imageUrl?: string;
   editLabel: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const ProfilePic: FC<ProfilePicProps> = ({ size, imageUrl, editLabel, onClick }) => {
+const ProfilePic: FC<ProfilePicProps> = ({ size, imageUrl, editLabel, altText, onClick }) => {
   const defaultClasses = 'object-fill bg-violet-200 rounded-full absolute';
   const outlineClasses = 'outline outline-4 outline-slate-100';
   const imgClasses = 'absolute w-full h-full';
@@ -28,17 +30,24 @@ const ProfilePic: FC<ProfilePicProps> = ({ size, imageUrl, editLabel, onClick })
       break;
   }
 
-  const image: string = require(`${imageUrl}`);
   return (
     <div className={'relative'}>
       <div className={sizeClasses}>
-        <img
-          src={image}
-          alt="Profile Picture"
+        <div
           className={`${defaultClasses} - ${imgClasses} - ${size !== 'S' ? outlineClasses : ''}`}
-        />
+        >
+          {!!imageUrl && (
+            <img
+              src={imageUrl}
+              alt={altText}
+              className="object-fill absolute w-full h-full rounded-full"
+            />
+          )}
+        </div>
         <div className={size !== 'XL' ? 'invisible' : 'absolute right-none bottom-none'}>
-          <IconButton label={editLabel} variant={'edit'} onClick={onClick} />
+          <IconButton label={editLabel} onClick={onClick}>
+            <EditIconComponent />
+          </IconButton>
         </div>
       </div>
     </div>
