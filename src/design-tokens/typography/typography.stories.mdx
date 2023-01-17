@@ -23,10 +23,12 @@ export const SampleText = 'Quia aut et aut. Sunt et eligendi similique enim qui 
 export const LabelText = 'Label'
 
 # Typography
-As primary font the google font "Poppins" is used. For Mumble the default font is overwritten with "Poppins" and it does not need to used it explicitly. It is one of the fonts that contains a wide range of readability, so it is very common to see it in continuous text and in large headings.
+As primary font the google font "Poppins" is used. For Mumble the default font is overwritten with "Poppins". It is one of the fonts that contains a wide range of readability, so it is very common to see it in continuous text and in large headings.
+
 
 # Type scale
-Type scales are hierarchical type systems consisting of style definitions for common elements.
+Type scales are hierarchical type systems consisting of style definitions for common elements. The existing components headers 'h1', 'h2' etc., 'p' and 'label' are set with styles which used by Mumble.
+The  scales can be overridden if it is necessary.
 
 | Scale                             | Weight                 | Font-Family             | Size                  |
 | --------------------------------- | ---------------------- | ----------------------- | --------------------- |
@@ -34,16 +36,16 @@ Type scales are hierarchical type systems consisting of style definitions for co
 | h2                                | bold       (700)       | Poppins                 | l2    (2.5rem/40px)   |
 | h3                                | semibold   (600)       | Poppins                 | l1    (2rem/32px)     |
 | h4                                | semibold   (600)       | Poppins                 | m2    (2rem/24px)     |
-| p (L)                             | medium   (500)         | Poppins                 | m2    (2rem/24px)     |
-| p (M)                             | medium   (500)         | Poppins                 | s3    (1.125rem/18px) |
-| label (XL)                        | semibold   (600)       | Poppins                 | m2    (2rem/24px)     |
-| label (L)                         | semibold   (600)       | Poppins                 | m1    (1.25rem/20px)  |
-| label (M)                         | semibold   (600)       | Poppins                 | s2    (1rem/16px)     |
-| label (S)                         | semibold   (600)       | Poppins                 | s1    (0.875rem/14px) |
+| p (l)                             | medium   (500)         | Poppins                 | m2    (2rem/24px)     |
+| p (m)                             | medium   (500)         | Poppins                 | s3    (1.125rem/18px) |
+| label (xl)                        | semibold   (600)       | Poppins                 | m2    (2rem/24px)     |
+| label (l)                         | semibold   (600)       | Poppins                 | m1    (1.25rem/20px)  |
+| label (m)                         | semibold   (600)       | Poppins                 | s2    (1rem/16px)     |
+| label (s)                         | semibold   (600)       | Poppins                 | s1    (0.875rem/14px) |
 
 
 # Headings
-**Scale:** head-1, head-2
+**Scale:** h1, h2
 
 <Typeset
     fontSizes={[
@@ -54,7 +56,7 @@ Type scales are hierarchical type systems consisting of style definitions for co
     sampleText={HeaderText}
     fontFamily={fullConfig.theme.fontFamily.sans}/>
 
-**Scale:** head-3, head-4
+**Scale:** h3, h4
 
 <Typeset
     fontSizes={[
@@ -65,8 +67,20 @@ Type scales are hierarchical type systems consisting of style definitions for co
     sampleText={HeaderText}
     fontFamily={fullConfig.theme.fontFamily.sans}/>
 
+## Usage
+You can use the known components. The scale of the component is set by default for mumble.
+```jsx
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+```
+If you want to use the component with another height or weight, just define it on the component.
+```jsx
+<h1 className="text-l1 font-semibold">Heading</h1>
+```
+
 # Paragraph
-**Scale:** paragraph-L, paragraph-M
+**Scale:** p (l), p (m)
+**Default:** p(m) is the default p
 
 <Typeset
     fontSizes={[
@@ -77,8 +91,17 @@ Type scales are hierarchical type systems consisting of style definitions for co
     sampleText={SampleText}
     fontFamily={fullConfig.theme.fontFamily.sans}/>
 
+## Usage
+Here the HTML element p has the expected css styling. The default styling ist the size 'm'. If you need another size just added to the element.
+```jsx
+<p>Paragraph M</p>
+// With larger size
+<p className="text-m2">Paragraph L</p>
+```
+
 # Label
-**Scale:** label-XL, label-L, label-M, label-S
+**Scale:** label (xl), label (l), label (m), label (s)
+**Default:** label(m) is the default label
 
 <Typeset
     fontSizes={[
@@ -91,3 +114,21 @@ Type scales are hierarchical type systems consisting of style definitions for co
     sampleText={LabelText}
     fontFamily={fullConfig.theme.fontFamily.sans}/>
 
+## Usage
+Here the component label has the expected css styling. The default styling ist the size 'm'. If you need another size just added to the component.
+```jsx
+<m>Label M</m>
+// With larger size
+<m className="text-m2">Label XL</m>
+```
+
+# Color
+The desired color can be set on the component.
+## Header
+```jsx
+<h1 className="text-slate-600">Heading</h1>
+```
+## Label
+```jsx
+<label className="text-slate-600">Label</label>
+```
