@@ -7,20 +7,25 @@
     "tag": "latest"
   },
   "files": [
-    "dist"
+    "dist",
+    "tailwind.config.js"
   ],
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js"
-    }
+    },
+    "./dist/global.css": {
+        "import": "./dist/global.css"
+    },
+    "./tailwind": "./tailwind.config.js"
   },
   "scripts": {
-    "build": "npm run build:types build:css",
-    "build:types": "tsc -p ./tsconfig.json --declaration",
-    "build:css": "tailwindcss build ./src/global.css -o ./dist/global.css",
+    "build": "npm run build:types && npm run build:css",
+    "build:types": "tsc -p ./tsconfig.json",
+    "build:css": "npx tailwindcss -i ./src/global.css -o ./dist/global.css",
     "build-storybook": "build-storybook",
-    "dev:css": "tailwindcss -w -i ./src/global.css -o ./public/global.css",
+    "dev:css": "npx tailwindcss -w -i ./src/global.css -o ./dist/global.css",
     "storybook": "start-storybook -p 6006",
     "storybook-windows": "set NODE_OPTIONS=\"--openssl-legacy-provider\" && start-storybook -p 6006",
     "lint": "eslint .",
