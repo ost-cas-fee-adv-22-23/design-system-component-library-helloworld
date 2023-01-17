@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Label, Size } from './label';
 
 export default {
-    title: 'Components/Atoms/Typography',
+    title: 'Design Tokens/Typography-Examples',
     component: Label,
 } as ComponentMeta<typeof Label>;
 

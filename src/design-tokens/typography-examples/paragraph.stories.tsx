@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Paragraph, Size } from './paragraph';
 
 export default {
-    title: 'Components/Atoms/Typography',
+    title: 'Design Tokens/Typography-Examples',
     component: Paragraph,
 } as ComponentMeta<typeof Paragraph>;
 

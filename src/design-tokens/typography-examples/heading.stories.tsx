@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Heading, Size } from './heading';
 
 export default {
-    title: 'Components/Atoms/Typography',
+    title: 'Design Tokens/Typography-Examples',
     component: Heading,
 } as ComponentMeta<typeof Heading>;
 
