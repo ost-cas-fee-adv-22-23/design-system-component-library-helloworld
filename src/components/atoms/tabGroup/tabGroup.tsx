@@ -19,9 +19,7 @@ function classNames(...classes: any[]) {
 
 export const TabGroup: FC<TabProps> = ({ tabs }) => {
     return (
-        <Tab.Group defaultIndex={0} onChange={(index) => {
-            console.log('Changed selected tab to: ', index)
-        }}>
+        <Tab.Group defaultIndex={0}>
             <Tab.List className={classNames(defaultTabListClass)}>
                 {tabs.map((tab, tabIndex ) => (
                     <Tab key={tabIndex}
