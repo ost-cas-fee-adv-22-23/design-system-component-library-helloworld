@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, {FC} from 'react';
 import InteractionButton from '../interaction-button/interaction-button';
 import MessageIconSvGComponent from '../icons/message-icon';
 
@@ -21,10 +21,7 @@ const CommentButton: FC<LikeWithReactionProps> = ({ label, numberOfComments, onC
       active={active}
       onClick={onClick}
     >
-      <MessageIconSvGComponent
-        variant={active ? 'filled' : 'normal'}
-        classes={active ? 'fill-violet-600' : 'fill-slate-600 group-hover:fill-violet-600'}
-      />
+      <MessageIconSvGComponent variant={active ? 'filled' : 'normal'} size={16} />
     </InteractionButton>
   );
 };

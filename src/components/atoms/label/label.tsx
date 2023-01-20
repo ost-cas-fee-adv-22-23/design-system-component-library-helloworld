@@ -13,31 +13,29 @@ export type LabelProps = {
 };
 
 const Label: FC<LabelProps> = ({ label, variant, mainTyp = false }) => {
-  const defaultClasses = 'group flex space-x-xs items-center px-xs py-xxs rounded-m';
-  const defaultTypeClasses = 'text-slate-400 group-hover:text-slate-600';
-  const mainTypeClasses = 'text-violet-600 group-hover:text-violet-900';
+  const defaultClasses =  'flex space-x-xs items-center px-xs py-xxs rounded-m';
+  const classes = `${defaultClasses} - ${mainTyp ? 'text-violet-600 group-hover:text-violet-900' : 'text-slate-400 group-hover:text-slate-600'}`
 
   return (
-    <div className={defaultClasses}>
-      {iconSwitch(variant, mainTyp)}
-      <span className={mainTyp ? mainTypeClasses : defaultTypeClasses}>{label}</span>
+      <div className='group'>
+        <div className={classes}>
+          {iconSwitch(variant)}
+          <span className='text-current'>{label}</span>
+        </div>
     </div>
   );
 };
 
-function iconSwitch(variant?: 'username' | 'timestamp' | 'location' | 'joined', mainTyp?: boolean) {
-  const iconClasses = mainTyp
-    ? 'fill-violet-600 group-hover:fill-violet-900'
-    : 'fill-slate-400 group-hover:fill-slate-600';
+function iconSwitch(variant?: 'username' | 'timestamp' | 'location' | 'joined') {
   switch (variant) {
     case 'username':
-      return <UserIconComponent className={iconClasses} />;
+      return <UserIconComponent size={16} />;
     case 'timestamp':
-      return <TimeIconComponent className={iconClasses} />;
+      return <TimeIconComponent size={16} />;
     case 'location':
-      return <LocationIconComponent className={iconClasses} />;
+      return <LocationIconComponent size={16} />;
     case 'joined':
-      return <CalendarIconComponent size={16} color={'slate-400'} hoverColor={'slate-600'} />;
+      return <CalendarIconComponent size={16} />;
   }
 }
 
