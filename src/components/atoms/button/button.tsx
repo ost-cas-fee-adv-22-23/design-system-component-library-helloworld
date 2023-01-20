@@ -9,7 +9,7 @@ export type ButtonProps = {
   size?: 'M' | 'L';
   label?: string;
   classes?: string;
-  variant?: 'default' | 'purple' | 'colorful';
+  variant?: 'default' | 'purple' | 'gradient';
   test?: ButtonType;
   children?: ReactNode;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
@@ -20,7 +20,7 @@ const Button: FC<ButtonProps> = ({ size, label, classes, onClick, variant, child
     'bg-violet-600 hover:bg-violet-700 hover:outline-violet-100 active:outline-violet-200';
   const defaultVariant =
     'bg-slate-600 hover:bg-slate-700 hover:outline-slate-100 active:outline-slate-200';
-  const colorfulVariant =
+  const gradientVariant =
     'bg-gradient-to-r from-pink-500 to-violet-500 hover:outline-violet-100 active:outline-violet-200';
 
   const defaultClasses =
@@ -31,8 +31,8 @@ const Button: FC<ButtonProps> = ({ size, label, classes, onClick, variant, child
       className={`${defaultClasses} - ${classes} - ${currentSize} - ${
         variant === 'purple'
           ? purpleVariant
-          : variant === 'colorful'
-          ? colorfulVariant
+          : variant === 'gradient'
+          ? gradientVariant
           : defaultVariant
       }`}
       onClick={onClick}

@@ -8,7 +8,7 @@ export default {
   component: Button,
   argTypes: {
     variant: {
-      options: ['default', 'purple', 'colorful'],
+      options: ['default', 'purple', 'gradient'],
       control: { type: 'select' }
     },
     size: {
