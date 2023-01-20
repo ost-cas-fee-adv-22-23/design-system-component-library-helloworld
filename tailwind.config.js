@@ -2,7 +2,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx,mdx}'],
+  content: ['./src/**/*.{js,jsx,mdx,ts,tsx}'],
   theme: {
     colors: {
       transparent: 'transparent',
