@@ -15,7 +15,7 @@ const InteractionButton: FC<InteractionButtonProps> = ({
   onClick,
   children
 }) => {
-  const defaultClasses = 'group flex space-x-xs items-center px-xs py-xxs rounded-m text-current text-slate-600';
+  const defaultClasses = 'group flex space-x-xs items-center px-xs py-xxs rounded-m text-slate-600';
   let hoverColor;
   let textColor;
   let iconColor;
@@ -36,17 +36,19 @@ const InteractionButton: FC<InteractionButtonProps> = ({
     case 'violet':
       hoverColor = 'hover:bg-violet-50';
       textColor = 'group-hover:text-violet-600';
-      iconColor = active? 'text-violet-600' : 'group-hover:text-violet-600'
+      iconColor = active? 'text-violet-600' : 'text-slate-600 group-hover:text-violet-600'
       break;
   }
 
   return (
+      <div className="group">
     <button className={`${defaultClasses} - ${hoverColor} - ${textColor}`} onClick={onClick}>
       <div className={iconColor}>
         {children}
       </div>
-      <span className={textColor}>{label}</span>
+      <span className="text-current">{label}</span>
     </button>
+      </div>
   );
 };
 
