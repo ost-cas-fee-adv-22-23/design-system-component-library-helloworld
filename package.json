@@ -7,18 +7,25 @@
     "tag": "latest"
   },
   "files": [
-    "dist"
+    "dist",
+    "tailwind.config.js"
   ],
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js"
-    }
+    },
+    "./dist/global.css": {
+      "import": "./dist/global.css"
+    },
+    "./tailwind": "./tailwind.config.js"
   },
   "scripts": {
-    "build": "npm run build:types",
-    "build:types": "tsc -p ./tsconfig.json --declaration",
+    "build": "npm run build:types && npm run build:css",
+    "build:types": "tsc -p ./tsconfig.json",
+    "build:css": "npx tailwindcss -i ./src/global.css -o ./dist/global.css",
     "build-storybook": "build-storybook",
+    "build-storybook-win": "set NODE_OPTIONS=\"--openssl-legacy-provider\" && build-storybook",
     "storybook": "start-storybook -p 6006",
     "storybook-windows": "set NODE_OPTIONS=\"--openssl-legacy-provider\" && start-storybook -p 6006",
     "lint": "eslint .",
@@ -28,9 +35,9 @@
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@storybook/addon-a11y": "^6.5.15",
-    "@storybook/addon-docs": "^6.5.15",
     "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-controls": "^6.5.15",
+    "@storybook/addon-docs": "^6.5.15",
     "@storybook/addon-essentials": "^6.5.13",
     "@storybook/addon-interactions": "^6.5.13",
     "@storybook/addon-links": "^6.5.13",
