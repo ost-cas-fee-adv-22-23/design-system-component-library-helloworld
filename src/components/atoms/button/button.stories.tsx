@@ -5,7 +5,17 @@ import Button from './button';
 
 export default {
   title: 'Components/Atoms/Buttons/Button',
-  component: Button
+  component: Button,
+  argTypes: {
+    variant: {
+      options: ['default', 'purple', 'colorful'],
+      control: { type: 'select' }
+    },
+    size: {
+      options: ['M', 'L'],
+      control: { type: 'select' }
+    },
+  },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => (
@@ -14,29 +24,10 @@ const Template: ComponentStory<typeof Button> = (args) => (
   </Button>
 );
 
-export const DefaultButtonComponent = Template.bind({});
-DefaultButtonComponent.args = {
+export const ButtonComponent = Template.bind({});
+ButtonComponent.args = {
   label: 'Click me',
-  onClick: () => console.log('Default button pressed.')
-};
-
-export const DefaultButtonComponentMedium = Template.bind({});
-DefaultButtonComponentMedium.args = {
-  label: 'Click me',
+  variant: 'default',
   size: 'M',
-  onClick: () => console.log('Default button pressed.')
-};
-
-export const PurpleButtonComponent = Template.bind({});
-PurpleButtonComponent.args = {
-  label: 'Click me',
-  variant: 'purple',
-  onClick: () => console.log('Default button pressed.')
-};
-
-export const ColorfulButtonComponent = Template.bind({});
-ColorfulButtonComponent.args = {
-  label: 'Click me',
-  variant: 'colorful',
   onClick: () => console.log('Default button pressed.')
 };
