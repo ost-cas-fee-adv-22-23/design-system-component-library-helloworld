@@ -22,7 +22,7 @@ const Label: FC<LabelProps> = ({ label, variant, mainTyp = false }) => {
           {iconSwitch(variant)}
           <span className='text-current'>{label}</span>
         </div>
-    </div>
+      </div>
   );
 };
 
