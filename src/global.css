@@ -5,22 +5,37 @@
 
 
 @layer base {
-    h1 {
+    .head-1 {
         @apply font-sans font-bold text-l3
     }
-    h2 {
+    .head-2 {
         @apply font-sans font-bold text-l2
     }
-    h3 {
+    .head-3 {
         @apply font-sans font-semibold text-l1
     }
-    h4 {
+    .head-4 {
         @apply font-sans font-semibold text-m2
     }
-    p {
+    .paragraph-L {
+        @apply font-sans font-medium text-m2
+    }
+    .paragraph-M {
         @apply font-sans font-medium text-s3
     }
-    label {
+    .label-XL {
+        @apply font-sans font-semibold text-m2
+    }
+    .label-L {
+        @apply font-sans font-semibold text-m1
+    }
+    .label-M {
         @apply font-sans font-semibold text-s2
+    }
+    .placeholder {
+        @apply font-sans font-medium text-s1
+    }
+    .label-S {
+        @apply font-sans font-semibold text-s1
     }
 }

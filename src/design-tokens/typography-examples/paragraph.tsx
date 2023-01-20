@@ -12,8 +12,8 @@ export type ParagraphProps = {
 
 
 const classMap: Record<Size, string> = {
-    l: 'text-m2 text-slate-600',
-    m: 'text-slate-600',
+    l: 'paragraph-L text-slate-600',
+    m: 'paragraph-M text-slate-600',
 };
 
 export const Paragraph: FC<ParagraphProps> = ({ children, size = Size.m }) => (

@@ -14,11 +14,11 @@ export type LabelProps = {
 };
 
 const classMap: Record<Size, string> = {
-    xl: 'text-m2 leading-none cursor-inherit text-slate-600',
-    l: 'text-m1 leading-none cursor-inherit text-slate-600',
-    m: 'leading-none cursor-inherit text-slate-600',
-    placeholder: 'text-s1 leading-none text-slate-300',
-    s: 'text-s1 leading-none cursor-inherit text-slate-600',
+    xl: 'label-XL leading-none cursor-inherit text-slate-600',
+    l: 'label-L leading-none cursor-inherit text-slate-600',
+    m: 'label-M cursor-inherit text-slate-600',
+    placeholder: 'label-S leading-none text-slate-300',
+    s: 'label-S leading-none cursor-inherit text-slate-600',
 };
 
 export const Label: FC<LabelProps> = ({ children, size = Size.m }) => (
