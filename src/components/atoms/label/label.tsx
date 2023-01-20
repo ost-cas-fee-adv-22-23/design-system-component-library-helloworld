@@ -37,7 +37,7 @@ function iconSwitch(variant?: 'username' | 'timestamp' | 'location' | 'joined', 
     case 'location':
       return <LocationIconComponent className={iconClasses} />;
     case 'joined':
-      return <CalendarIconComponent className={iconClasses} />;
+      return <CalendarIconComponent size={16} color={'slate-400'} hoverColor={'slate-600'} />;
   }
 }
 

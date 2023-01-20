@@ -46,7 +46,7 @@ const ProfilePic: FC<ProfilePicProps> = ({ size, imageUrl, editLabel, altText, o
         </div>
         <div className={size !== 'XL' ? 'invisible' : 'absolute right-none bottom-none'}>
           <IconButton label={editLabel} onClick={onClick}>
-            <EditIconComponent />
+            <EditIconComponent size={16} color={'white'}/>
           </IconButton>
         </div>
       </div>
