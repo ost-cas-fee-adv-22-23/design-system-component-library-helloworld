@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  content: ['./src/**/*.{js, jsx,ts,tsx}'],
+  content: ['./src/**/*.{js,jsx,mdx,ts,tsx}'],
   theme: {
     colors: {
       transparent: 'transparent',
@@ -43,6 +44,24 @@ module.exports = {
         900: '#4C1D95'
       },
       white: '#FFFFFF'
+    },
+    fontFamily: {
+      sans: ["Poppins", ...defaultTheme.fontFamily.sans] // override default tailwind with poppins
+    },
+    fontSize: {
+      l3: ['48px'],
+      l2: ['40px'],
+      l1: ['32px'],
+      m2: ['24px'],
+      m1:['20px'],
+      s3: ['18px'],
+      s2: ['16px'],
+      s1: ['14px']
+    },
+    fontWeight: {
+      medium: '500',
+      semibold: '600',
+      bold: '700',
     },
     spacing: {
       none: '0px',

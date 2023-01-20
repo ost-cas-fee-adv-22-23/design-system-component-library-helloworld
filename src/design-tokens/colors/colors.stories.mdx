@@ -1,0 +1,24 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../../../tailwind.config.js";
+const fullConfig = resolveConfig(tailwindConfig);
+
+<Meta title="Design Tokens/Colors" />
+
+<ColorPalette>
+    <ColorItem
+        title="Slate from Tailwind"
+        subtitle="--slate-{n}"
+        colors={fullConfig.theme.colors.slate}
+        />
+    <ColorItem
+        title="Pink from Tailwind"
+        subtitle="--pink-{n}"
+        colors={fullConfig.theme.colors.pink}
+        />
+    <ColorItem
+        title="Violet from Tailwind"
+        subtitle="--violet-{n}"
+        colors={fullConfig.theme.colors.violet}
+        />
+</ColorPalette>
