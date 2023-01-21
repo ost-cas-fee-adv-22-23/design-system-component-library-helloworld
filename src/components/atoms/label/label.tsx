@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import {
-  CalendarIconComponent,
+  CalendarIcon,
   LocationIconComponent,
   TimeIconComponent,
-  UserIconComponent
+  UserIcon
 } from '../icons/index';
 
 export type LabelProps = {
@@ -33,13 +33,13 @@ const Label: FC<LabelProps> = ({ label, variant, mainTyp = false }) => {
 function iconSwitch(variant?: 'username' | 'timestamp' | 'location' | 'joined') {
   switch (variant) {
     case 'username':
-      return <UserIconComponent size={16} />;
+      return <UserIcon size={16} />;
     case 'timestamp':
       return <TimeIconComponent size={16} />;
     case 'location':
       return <LocationIconComponent size={16} />;
     case 'joined':
-      return <CalendarIconComponent size={16} />;
+      return <CalendarIcon size={16} />;
   }
 }
 

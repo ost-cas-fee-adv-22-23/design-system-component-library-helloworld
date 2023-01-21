@@ -1,9 +1,9 @@
-export { default as HeartIconComponent } from './heart-icon';
+export { default as HeartIcon } from './heart-icon';
 export { default as MessageIconComponent } from './message-icon';
 export { default as ShareIconComponent } from './share-icon';
-export { default as CalendarIconComponent } from './calendar-icon';
+export { default as CalendarIcon } from './calendar-icon';
 export { default as LocationIconComponent } from './location-icon';
 export { default as TimeIconComponent } from './time-icon';
-export { default as UserIconComponent } from './user-icon';
-export { default as EditIconComponent } from './edit-icon';
+export { default as UserIcon } from './user-icon';
+export { default as EditIcon } from './edit-icon';
 export { default as MumbleIconComponent } from './mumble-icon';
