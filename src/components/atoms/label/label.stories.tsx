@@ -8,7 +8,7 @@ export default {
   argTypes: {
     variant: {
       options: ['username', 'timestamp', 'location', 'joined'],
-      control: { type: 'select' }
+      control: { type: 'radio' }
     }
   }
 } as ComponentMeta<typeof Label>;

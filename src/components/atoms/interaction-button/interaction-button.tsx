@@ -24,31 +24,29 @@ const InteractionButton: FC<InteractionButtonProps> = ({
     case 'pink':
       hoverColor = 'hover:bg-pink-50';
       textColor = active ? 'group-hover:text-pink-600 text-pink-900' : 'group-hover:text-pink-600';
-      iconColor = active? 'text-pink-500' : 'group-hover:text-pink-500'
+      iconColor = active ? 'text-pink-500' : 'group-hover:text-pink-500';
       break;
     case 'slate':
       hoverColor = 'hover:bg-slate-100';
       textColor = active
         ? 'text-slate-700 group-hover:text-slate-700'
         : 'group-hover:text-slate-700';
-      iconColor = active ? 'fill-pink-500' : 'fill-slate-600 group-hover:fill-slate-700'
+      iconColor = active ? 'fill-pink-500' : 'fill-slate-600 group-hover:fill-slate-700';
       break;
     case 'violet':
       hoverColor = 'hover:bg-violet-50';
       textColor = 'group-hover:text-violet-600';
-      iconColor = active? 'text-violet-600' : 'text-slate-600 group-hover:text-violet-600'
+      iconColor = active ? 'text-violet-600' : 'text-slate-600 group-hover:text-violet-600';
       break;
   }
 
   return (
-      <div className="group">
-    <button className={`${defaultClasses} - ${hoverColor} - ${textColor}`} onClick={onClick}>
-      <div className={iconColor}>
-        {children}
-      </div>
-      <span className="text-current">{label}</span>
-    </button>
-      </div>
+    <div className="group">
+      <button className={`${defaultClasses} - ${hoverColor} - ${textColor}`} onClick={onClick}>
+        <div className={iconColor}>{children}</div>
+        <span className="text-current">{label}</span>
+      </button>
+    </div>
   );
 };
 

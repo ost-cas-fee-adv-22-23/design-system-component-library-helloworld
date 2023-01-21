@@ -1,4 +1,4 @@
 export type SvgIcon = {
-    variant?: 'normal' | 'filled';
-    size: 16 | 24
+  variant?: 'normal' | 'filled';
+  size: 16 | 24;
 };

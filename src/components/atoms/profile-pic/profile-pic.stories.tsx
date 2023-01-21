@@ -1,7 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 import { ProfilePic } from '../index';
-import Label from "../label";
 
 export default {
   title: 'Components/Atoms/Profile Pic',
@@ -9,7 +8,7 @@ export default {
   argTypes: {
     size: {
       options: ['S', 'M', 'L', 'XL'],
-      control: { type: 'select' }
+      control: { type: 'radio' }
     }
   }
 } as ComponentMeta<typeof ProfilePic>;

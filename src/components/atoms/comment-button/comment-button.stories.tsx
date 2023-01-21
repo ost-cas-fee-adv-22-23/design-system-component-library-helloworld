@@ -5,7 +5,7 @@ import CommentButton from './comment-button';
 export default {
   title: 'Components/Atoms/Interaction Buttons/Comment Button',
   component: CommentButton,
-  argTypes: { label: { control: 'object' }}
+  argTypes: { label: { control: 'object' } }
 } as ComponentMeta<typeof CommentButton>;
 
 const Template: ComponentStory<typeof CommentButton> = (args) => <CommentButton {...args} />;

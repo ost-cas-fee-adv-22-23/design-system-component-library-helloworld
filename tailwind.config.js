@@ -46,14 +46,14 @@ module.exports = {
       white: '#FFFFFF'
     },
     fontFamily: {
-      sans: ["Poppins", ...defaultTheme.fontFamily.sans] // override default tailwind with poppins
+      sans: ['Poppins', ...defaultTheme.fontFamily.sans] // override default tailwind with poppins
     },
     fontSize: {
       l3: ['48px'],
       l2: ['40px'],
       l1: ['32px'],
       m2: ['24px'],
-      m1:['20px'],
+      m1: ['20px'],
       s3: ['18px'],
       s2: ['16px'],
       s1: ['14px']
@@ -61,7 +61,7 @@ module.exports = {
     fontWeight: {
       medium: '500',
       semibold: '600',
-      bold: '700',
+      bold: '700'
     },
     spacing: {
       none: '0px',

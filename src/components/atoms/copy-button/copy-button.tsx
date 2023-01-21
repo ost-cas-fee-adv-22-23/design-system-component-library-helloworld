@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import InteractionButton from '../interaction-button/interaction-button';
 import ShareIconSvGComponent from '../icons/share-icon/share-icon';
-import MessageIconSvGComponent from "../icons/message-icon";
 
 export type CopyButtonProps = {
   active: boolean;
@@ -19,9 +18,7 @@ const CopyButton: FC<CopyButtonProps> = ({ label, active, onClick }) => {
       colorVariant={'slate'}
       onClick={onClick}
     >
-      <ShareIconSvGComponent
-          variant={active ? 'filled' : 'normal'} size={16}
-      />
+      <ShareIconSvGComponent variant={active ? 'filled' : 'normal'} size={16} />
     </InteractionButton>
   );
 };

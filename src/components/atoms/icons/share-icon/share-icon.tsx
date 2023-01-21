@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { FC } from 'react';
-import {SvgIcon} from "../icons.types";
+import { SvgIcon } from '../icons.types';
 
 const ShareIconSvGComponent: FC<SvgIcon> = ({ size }) => (
   <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" className="fill-current">

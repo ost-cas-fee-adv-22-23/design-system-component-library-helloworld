@@ -9,13 +9,13 @@ export default {
   argTypes: {
     variant: {
       options: ['default', 'purple', 'gradient'],
-      control: { type: 'select' }
+      control: { type: 'radio' }
     },
     size: {
       options: ['M', 'L'],
-      control: { type: 'select' }
-    },
-  },
+      control: { type: 'radio' }
+    }
+  }
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => (
