@@ -121,8 +121,8 @@ module.exports = {
       }
     },
     plugins: [
-        plugin(function ({addBase, theme }) {
-          addBase({
+        plugin(function ({ addComponents, theme }) {
+          addComponents({
             '.head-1': {
               fontSize: theme('fontSize.l3'),
               fontWeight: theme('fontWeight.bold'),
@@ -182,4 +182,4 @@ module.exports = {
         })
     ]
   }
-};
+}

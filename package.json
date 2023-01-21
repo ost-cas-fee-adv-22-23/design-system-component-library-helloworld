@@ -15,7 +15,7 @@
     ".": {
       "import": "./dist/index.js"
     },
-    "./preset": "./tailwind.config.js"
+    "./tailwind": "./tailwind.config.js"
   },
   "scripts": {
     "build": "npm run build:types",

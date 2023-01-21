@@ -68,14 +68,14 @@ The  scales can be overridden if it is necessary.
     fontFamily={fullConfig.theme.fontFamily.sans}/>
 
 ## Usage
--- Under construction
+The heading can be used as class property. It creates depending on the above mentioned properties the style.
 ```jsx
 <h1 className="head-1">Heading 1</h1>
 <h2 className="head-2">Heading 2</h2>
 ```
-If you want to use the component with another height or weight, just define it on the component.
+The header tag can be used with a different property
 ```jsx
-<h1 className="head-2">Heading</h1>
+<h1 className="head-4">Heading 4</h1>
 ```
 
 # Paragraph
@@ -91,7 +91,7 @@ If you want to use the component with another height or weight, just define it o
     fontFamily={fullConfig.theme.fontFamily.sans}/>
 
 ## Usage
--- Under construction
+The paragraph property can be used as class property. It creates depending on the above mentioned properties the style.
 ```jsx
 <p className="paragraph-M">Paragraph M</p>
 // larger size
@@ -113,7 +113,7 @@ If you want to use the component with another height or weight, just define it o
     fontFamily={fullConfig.theme.fontFamily.sans}/>
 
 ## Usage
--- Under construction
+The label property can be used as class property. It creates depending on the above mentioned properties the style.
 ```jsx
 <label className="label-M">Label M</label>
 // With larger size
@@ -121,12 +121,16 @@ If you want to use the component with another height or weight, just define it o
 ```
 
 # Color
--- Under construction
+The colors of the typography properties refers to the current text color of the parent element. SO you could set the color for the header, paragraph and label outside of it.
 ## Header
 ```jsx
-<h1 className="head-1 text-slate-600">Heading</h1>
+<div className="text-slate-600">
+    <h1 className="head-1">Heading</h1>
+</div>
 ```
 ## Label
 ```jsx
-<label className="label-M text-slate-600">Label</label>
+<div className="text-slate-600">
+    <label className="label-M">Label</label>
+</div>
 ```
