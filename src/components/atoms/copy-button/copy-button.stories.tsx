@@ -4,7 +4,8 @@ import CopyButton from './copy-button';
 
 export default {
   title: 'Components/Atoms/Interaction Buttons/Copy Button',
-  component: CopyButton
+  component: CopyButton,
+  argTypes: { label: { control: 'object' } }
 } as ComponentMeta<typeof CopyButton>;
 
 const Template: ComponentStory<typeof CopyButton> = (args) => <CopyButton {...args} />;

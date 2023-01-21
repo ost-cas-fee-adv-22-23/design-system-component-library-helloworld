@@ -36,10 +36,7 @@ const LikeButtonWithReaction: FC<LikeWithReactionProps> = ({
 
   return (
     <InteractionButton label={theLabel} colorVariant={'pink'} active={active} onClick={onClick}>
-      <HeartIconSvGComponent
-        variant={active ? 'filled' : 'normal'}
-        classes={active ? 'fill-pink-500' : 'fill-slate-600 group-hover:fill-pink-500'}
-      />
+      <HeartIconSvGComponent variant={active ? 'filled' : 'normal'} size={16} />
     </InteractionButton>
   );
 };

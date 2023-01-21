@@ -4,7 +4,8 @@ import LikeButtonWithReaction from './like-button-with-reaction';
 
 export default {
   title: 'Components/Atoms/Interaction Buttons/Like Button',
-  component: LikeButtonWithReaction
+  component: LikeButtonWithReaction,
+  argTypes: { label: { control: 'object' } }
 } as ComponentMeta<typeof LikeButtonWithReaction>;
 
 const Template: ComponentStory<typeof LikeButtonWithReaction> = (args) => (

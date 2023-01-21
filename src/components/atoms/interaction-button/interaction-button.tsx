@@ -15,32 +15,38 @@ const InteractionButton: FC<InteractionButtonProps> = ({
   onClick,
   children
 }) => {
-  const defaultClasses = 'group flex space-x-xs items-center text-slate-600 px-xs py-xxs rounded-m';
+  const defaultClasses = 'group flex space-x-xs items-center px-xs py-xxs rounded-m text-slate-600';
   let hoverColor;
   let textColor;
+  let iconColor;
 
   switch (colorVariant) {
     case 'pink':
       hoverColor = 'hover:bg-pink-50';
       textColor = active ? 'group-hover:text-pink-600 text-pink-900' : 'group-hover:text-pink-600';
+      iconColor = active ? 'text-pink-500' : 'group-hover:text-pink-500';
       break;
     case 'slate':
       hoverColor = 'hover:bg-slate-100';
       textColor = active
         ? 'text-slate-700 group-hover:text-slate-700'
         : 'group-hover:text-slate-700';
+      iconColor = active ? 'fill-pink-500' : 'fill-slate-600 group-hover:fill-slate-700';
       break;
     case 'violet':
       hoverColor = 'hover:bg-violet-50';
       textColor = 'group-hover:text-violet-600';
+      iconColor = active ? 'text-violet-600' : 'text-slate-600 group-hover:text-violet-600';
       break;
   }
 
   return (
-    <button className={`${defaultClasses} - ${hoverColor}`} onClick={onClick}>
-      {children}
-      <span className={textColor}>{label}</span>
-    </button>
+    <div className="group">
+      <button className={`${defaultClasses} - ${hoverColor} - ${textColor}`} onClick={onClick}>
+        <div className={iconColor}>{children}</div>
+        <span className="text-current">{label}</span>
+      </button>
+    </div>
   );
 };
 
