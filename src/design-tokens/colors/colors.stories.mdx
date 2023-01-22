@@ -5,20 +5,56 @@ const fullConfig = resolveConfig(tailwindConfig);
 
 <Meta title="Design Tokens/Colors" />
 
+# Colors
+The Color Palette is based on the Tailwind colors "Slate", "Pink" and "Violet".
+
 <ColorPalette>
     <ColorItem
-        title="Slate from Tailwind"
-        subtitle="--slate-{n}"
+        title="Slate"
+        subtitle="{x}-slate-{n}"
         colors={fullConfig.theme.colors.slate}
         />
     <ColorItem
-        title="Pink from Tailwind"
-        subtitle="--pink-{n}"
+        title="Pink"
+        subtitle="{x}-pink-{n}"
         colors={fullConfig.theme.colors.pink}
         />
     <ColorItem
-        title="Violet from Tailwind"
-        subtitle="--violet-{n}"
+        title="Violet"
+        subtitle="{x}-violet-{n}"
         colors={fullConfig.theme.colors.violet}
         />
+    <ColorItem
+        title="Black"
+        subtitle="{x}-black"
+        colors={{Black: fullConfig.theme.colors.black}}
+    />
+    <ColorItem
+        title="White"
+        subtitle="{x}-white"
+        colors={{White: fullConfig.theme.colors.white}}
+    />
+    <ColorItem
+        title="Red"
+        subtitle="{x}-red"
+        colors={{Red: fullConfig.theme.colors.red}}
+    />
 </ColorPalette>
+
+## Color Slate
+The color Slate us used as primary text color.
+
+## Color Violet
+The color Violet is used mostly for hover, interaction, navigation and clickable or clicked states of an element.
+
+## Color Pink
+The color Pink is used as secondary interaction for elements.
+
+## Color Black
+The color Black is selectable but is not defined for Mumble interactions.
+
+## Color White
+The color White is used as background color and for text if dark mode is used.
+
+## Color Red
+The color Red is used for warnings and error messages.

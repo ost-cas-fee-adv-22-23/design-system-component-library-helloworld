@@ -7,6 +7,9 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
+      black: '#000000',
+      white: '#FFFFFF',
+      red: '#FF0000',
       pink: {
         50: '#FDF2F8',
         100: '#FCE7F3',
@@ -42,8 +45,7 @@ module.exports = {
         700: '#6D28D9',
         800: '#5B21B6',
         900: '#4C1D95'
-      },
-      white: '#FFFFFF'
+      }
     },
     fontFamily: {
       sans: ['Poppins', ...defaultTheme.fontFamily.sans] // override default tailwind with poppins
