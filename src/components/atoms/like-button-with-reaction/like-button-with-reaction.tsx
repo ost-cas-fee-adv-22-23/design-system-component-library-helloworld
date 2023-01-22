@@ -1,6 +1,6 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 import InteractionButton from '../interaction-button/interaction-button';
-import {HeartIcon} from "../icons";
+import { HeartIcon } from '../icons';
 
 export type LikeWithReactionProps = {
   active: boolean;

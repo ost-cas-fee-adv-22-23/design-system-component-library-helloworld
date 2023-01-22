@@ -1,10 +1,5 @@
 import React, { FC } from 'react';
-import {
-  CalendarIcon,
-  LocationIconComponent,
-  TimeIconComponent,
-  UserIcon
-} from '../icons/index';
+import { CalendarIcon, LocationIconComponent, TimeIconComponent, UserIcon } from '../icons/index';
 
 export type LabelProps = {
   label: string;
