@@ -94,8 +94,10 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'gradient70': 'linear-gradient(90deg, var(--tw-gradient-from) -12.5%, var(--tw-gradient-to) 62.9%);',
-        'gradient80': 'linear-gradient(90deg, var(--tw-gradient-from) -15.3%, var(--tw-gradient-to) 38.8%);'
+        gradient70:
+          'linear-gradient(90deg, var(--tw-gradient-from) -12.5%, var(--tw-gradient-to) 62.9%);',
+        gradient80:
+          'linear-gradient(90deg, var(--tw-gradient-from) -15.3%, var(--tw-gradient-to) 38.8%);'
       },
       width: {
         16: '16px',
@@ -127,7 +129,7 @@ module.exports = {
       },
       transitionDuration: {
         0: '0ms',
-        2000: '2000ms',
+        2000: '2000ms'
       }
     }
   }
