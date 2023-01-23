@@ -123,6 +123,7 @@ module.exports = {
       }
     },
     plugins: [
+        require('@headlessui/tailwindcss')({ prefix: 'ui' }),
         plugin(function ({ addComponents, theme }) {
           addComponents({
             '.head-1': {
