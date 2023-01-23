@@ -18,14 +18,6 @@ H1Heading.args = {
   children: 'Überschrift',
   size: Size.h1
 };
-H1Heading.parameters = {
-  a11y: {
-    disable: true,
-    config: {
-      rules: [{ id: 'color-contrast', enabled: false }]
-    }
-  }
-};
 H1Heading.storyName = 'Heading H1';
 export const H2Heading = Template.bind({});
 H2Heading.args = {
