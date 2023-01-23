@@ -117,6 +117,13 @@ module.exports = {
         70: '70px',
         96: '96px',
         160: '160px'
+      },
+      rotate: {
+        360: '360deg'
+      },
+      transitionDuration: {
+        0: '0ms',
+        2000: '2000ms',
       }
     }
   }

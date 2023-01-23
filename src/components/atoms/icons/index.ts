@@ -7,3 +7,5 @@ export { default as TimeIconComponent } from './time-icon';
 export { default as UserIcon } from './user-icon';
 export { default as EditIcon } from './edit-icon';
 export { default as MumbleIconComponent } from './mumble-icon';
+export { default as EyeIconComponent } from './eye-icon';
+export { default as SettingsIconComponent } from './settings-icon';

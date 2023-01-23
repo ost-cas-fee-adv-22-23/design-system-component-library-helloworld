@@ -2,11 +2,11 @@ import {IconGallery, IconItem, Meta, Title} from '@storybook/addon-docs/';
 
 import {
     CalendarIcon,
-    EditIcon,
+    EditIcon, EyeIconComponent,
     HeartIcon,
     LocationIconComponent,
     MessageIconComponent,
-    MumbleIconComponent,
+    MumbleIconComponent, SettingsIconComponent,
     ShareIconComponent,
     TimeIconComponent,
     UserIcon
@@ -48,6 +48,12 @@ Some of the icons do additionaly to the default variant have a filled variant, t
     </IconItem>
     <IconItem name="TimeIcon">
         <TimeIconComponent />
+    </IconItem>
+    <IconItem name="EyeIcon">
+        <EyeIconComponent size={16} />
+    </IconItem>
+    <IconItem name="EyeIcon">
+        <SettingsIconComponent size={16} />
     </IconItem>
 </IconGallery>
 
