@@ -5,7 +5,13 @@ import MumbleIconSvGComponent from '../../atoms/icons/mumble-icon';
 
 export default {
   title: 'Components/Molecules/Input',
-  component: Input
+  component: Input,
+  argTypes: {
+    type: {
+      options: ['text', 'email', 'number', 'password'],
+      control: { type: 'radio' }
+    }
+  }
 } as ComponentMeta<typeof Input>;
 
 const Template: ComponentStory<typeof Input> = (args) => (
@@ -18,5 +24,7 @@ export const InputComponent = Template.bind({});
 InputComponent.args = {
   label: 'Label',
   placeholder: 'Placeholder',
-  type: 'text'
+  type: 'text',
+  actionLabel: 'Delete',
+  onClick: () => console.log('Delete button pressed.')
 };
