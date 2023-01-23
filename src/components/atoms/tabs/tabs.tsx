@@ -17,7 +17,7 @@ function classNames(...classes: any[]) {
     return classes.filter(Boolean).join(' ');
 }
 
-export const Tabs: FC<TabProps> = ({ tabs }) => {
+const Tabs: FC<TabProps> = ({ tabs }) => {
     return (
         <Tab.Group defaultIndex={0}>
             <Tab.List className={classNames(defaultTabListClass)}>
@@ -31,3 +31,5 @@ export const Tabs: FC<TabProps> = ({ tabs }) => {
         </Tab.Group>
     );
 };
+
+export default Tabs;

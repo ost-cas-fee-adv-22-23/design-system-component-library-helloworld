@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import { Tabs } from './tabs';
+import Tabs from './tabs';
 
 export default {
     title: 'Components/Atoms/TabGroup',
