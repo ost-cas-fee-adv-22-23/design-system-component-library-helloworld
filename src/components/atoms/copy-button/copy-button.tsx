@@ -18,9 +18,7 @@ const CopyButton: FC<CopyButtonProps> = ({ label, active, onClick }) => {
       colorVariant={'slate'}
       onClick={onClick}
     >
-      <ShareIconSvGComponent
-        className={active ? 'fill-slate-700' : 'fill-slate-600 group-hover:fill-slate-700'}
-      />
+      <ShareIconSvGComponent variant={active ? 'filled' : 'normal'} size={16} />
     </InteractionButton>
   );
 };
