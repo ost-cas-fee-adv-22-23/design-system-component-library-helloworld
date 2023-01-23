@@ -1,14 +1,14 @@
 import {IconGallery, IconItem, Meta, Title} from '@storybook/addon-docs/';
 
 import {
-    CalendarIcon,
-    EditIcon, EyeIconComponent,
+    CalendarIcon, CancelIcon, CheckmarkIcon,
+    EditIcon, EyeIconComponent, FullscreenIcon,
     HeartIcon,
-    LocationIconComponent,
+    LocationIconComponent, LogoutIcon,
     MessageIconComponent,
-    MumbleIconComponent, SettingsIconComponent,
+    MumbleIconComponent, RepostIcon, SendIcon, SettingsIconComponent,
     ShareIconComponent,
-    TimeIconComponent,
+    TimeIconComponent, UploadIcon,
     UserIcon
 } from "./index";
 
@@ -23,37 +23,58 @@ Some of the icons do additionaly to the default variant have a filled variant, t
 ### Available Icons with no "fill" variant
 <IconGallery>
     <IconItem name="UserIcon">
-        <UserIcon />
+        <UserIcon size={16}/>
     </IconItem>
     <IconItem name="CalendarIcon">
-        <CalendarIcon/>
+        <CalendarIcon size={16}/>
     </IconItem>
     <IconItem name="EditIcon">
-        <EditIcon />
+        <EditIcon size={16} />
     </IconItem>
     <IconItem name="HeartIcon">
-        <HeartIcon />
+        <HeartIcon size={16} />
     </IconItem>
     <IconItem name="LocationIcon">
-        <LocationIconComponent />
+        <LocationIconComponent size={16} />
     </IconItem>
     <IconItem name="MessageIcon">
-        <MessageIconComponent />
+        <MessageIconComponent size={16} />
     </IconItem>
     <IconItem name="MumbleIcon">
-        <MumbleIconComponent />
+        <MumbleIconComponent size={16} />
     </IconItem>
     <IconItem name="ShareIcon">
-        <ShareIconComponent />
+        <ShareIconComponent size={16}/>
     </IconItem>
-    <IconItem name="TimeIcon">
+    <IconItem name="TimeIcon" size={16}>
         <TimeIconComponent />
     </IconItem>
     <IconItem name="EyeIcon">
         <EyeIconComponent size={16} />
     </IconItem>
-    <IconItem name="EyeIcon">
+    <IconItem name="SettingsIcon">
         <SettingsIconComponent size={16} />
+    </IconItem>
+    <IconItem name="CancelIcon">
+        <CancelIcon size={16} />
+    </IconItem>
+    <IconItem name="CheckmarkIcon">
+        <CheckmarkIcon size={16} />
+    </IconItem>
+    <IconItem name="FullscreenIcon">
+        <FullscreenIcon size={16} />
+    </IconItem>
+    <IconItem name="LogoutIcon">
+        <LogoutIcon size={16} />
+    </IconItem>
+    <IconItem name="RepostIcon">
+        <RepostIcon size={16} />
+    </IconItem>
+    <IconItem name="SendIcon">
+        <SendIcon size={16} />
+    </IconItem>
+    <IconItem name="UploadIcon">
+        <UploadIcon size={16} />
     </IconItem>
 </IconGallery>
 
