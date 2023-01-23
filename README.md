@@ -13,7 +13,7 @@ an application from the beginning to the end.
 * [Technology Stack](#technology-stack)
 * [Installation Guide](#installation-guide)
 * [Usage of the Components](#usage-of-the-components)
-* [Development](#development)
+* [Component Development](#component-development)
 * [Deployment](#deployment)
 * [Project History and Status](#project-history-and-status)
 * [Authors](#authors)
@@ -109,7 +109,6 @@ import { Button, MumbleIconComponent } from "@smartive-education/design-system-c
 
 const MyComponent = () => {
   return (
-    <>
       <Button
         label="Click me"
         onClick={function noRefCheck(){}}
@@ -118,14 +117,13 @@ const MyComponent = () => {
       >
         <MumbleIconComponent />
       </Button>
-    </>
   );
 };
 ```
 
 export default MyComponent;
 
-## Development 
+## Component Development 
 
 This is a guide for developing components 
 * Clone or download the UI component library [Hello World](https://github.com/smartive-education/design-system-component-library-helloworld)
