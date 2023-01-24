@@ -1,15 +1,15 @@
 import {IconGallery, IconItem, Meta, Title} from '@storybook/addon-docs/';
 
 import {
-    CalendarIconComponent,
-    EditIconComponent,
-    HeartIconComponent,
-    LocationIconComponent,
+    CalendarIcon, CancelIcon, CheckmarkIcon,
+    EditIcon, EyeIconComponent, FullscreenIcon,
+    HeartIcon,
+    LocationIconComponent, LogoutIcon,
     MessageIconComponent,
-    MumbleIconComponent,
+    MumbleIconComponent, RepostIcon, SendIcon, SettingsIconComponent,
     ShareIconComponent,
-    TimeIconComponent,
-    UserIconComponent
+    TimeIconComponent, UploadIcon,
+    UserIcon
 } from "./index";
 
 
@@ -18,46 +18,98 @@ import {
 # Iconography
 ## How to use icon components
 Icons inherit the text-color of the parent as shown in the following example.
+Some of the icons do additionaly to the default variant have a filled variant, too.
 
-Example code:
+### Available Icons with no "fill" variant
+<IconGallery>
+    <IconItem name="UserIcon">
+        <UserIcon size={16}/>
+    </IconItem>
+    <IconItem name="CalendarIcon">
+        <CalendarIcon size={16}/>
+    </IconItem>
+    <IconItem name="EditIcon">
+        <EditIcon size={16} />
+    </IconItem>
+    <IconItem name="HeartIcon">
+        <HeartIcon size={16} />
+    </IconItem>
+    <IconItem name="LocationIcon">
+        <LocationIconComponent size={16} />
+    </IconItem>
+    <IconItem name="MessageIcon">
+        <MessageIconComponent size={16} />
+    </IconItem>
+    <IconItem name="MumbleIcon">
+        <MumbleIconComponent size={16} />
+    </IconItem>
+    <IconItem name="ShareIcon">
+        <ShareIconComponent size={16}/>
+    </IconItem>
+    <IconItem name="TimeIcon" size={16}>
+        <TimeIconComponent />
+    </IconItem>
+    <IconItem name="EyeIcon">
+        <EyeIconComponent size={16} />
+    </IconItem>
+    <IconItem name="SettingsIcon">
+        <SettingsIconComponent size={16} />
+    </IconItem>
+    <IconItem name="CancelIcon">
+        <CancelIcon size={16} />
+    </IconItem>
+    <IconItem name="CheckmarkIcon">
+        <CheckmarkIcon size={16} />
+    </IconItem>
+    <IconItem name="FullscreenIcon">
+        <FullscreenIcon size={16} />
+    </IconItem>
+    <IconItem name="LogoutIcon">
+        <LogoutIcon size={16} />
+    </IconItem>
+    <IconItem name="RepostIcon">
+        <RepostIcon size={16} />
+    </IconItem>
+    <IconItem name="SendIcon">
+        <SendIcon size={16} />
+    </IconItem>
+    <IconItem name="UploadIcon">
+        <UploadIcon size={16} />
+    </IconItem>
+</IconGallery>
+
+#### Example code:
 
      <div className={'text-pink-500 hover:text-violet-900'}>
-        <CalendarIconComponent size={16}/>
+        <CalendarIcon size={16}/>
     </div>
 
-Result:
+#### Result:
 <div className='text-pink-500 hover:text-violet-900'>
-    <CalendarIconComponent size={16}/>
+    <CalendarIcon size={16}/>
 </div>
 
 
-## Available Icons
+### Available Icons with a filled variant
 <IconGallery>
-  <IconItem name="UserIcon">
-      <UserIconComponent />
-  </IconItem>
-  <IconItem name="CalendarIcon">
-    <CalendarIconComponent/>
-  </IconItem>
-    <IconItem name="EditIcon">
-    <EditIconComponent />
-  </IconItem>
-    <IconItem name="HeartIcon">
-    <HeartIconComponent />
-  </IconItem>
-    <IconItem name="LocationIcon">
-    <LocationIconComponent />
-  </IconItem>
+    <IconItem name="HeartIcon" variant={'filled'}>
+        <HeartIcon size={16} />
+        <HeartIcon size={16} variant={'filled'}/>
+    </IconItem>
     <IconItem name="MessageIcon">
-    <MessageIconComponent />
-  </IconItem>
-    <IconItem name="MumbleIcon">
-    <MumbleIconComponent />
-  </IconItem>
-    <IconItem name="ShareIcon">
-    <ShareIconComponent />
-  </IconItem>
-    <IconItem name="TimeIcon">
-    <TimeIconComponent />
-  </IconItem>
+        <MessageIconComponent size={16}/>
+        <MessageIconComponent size={16} variant={'filled'}/>
+    </IconItem>
 </IconGallery>
+
+#### Example code:
+
+    <div className='text-pink-500 hover:text-violet-900'>
+        <HeartIcon size={16} variant={'filled'}/>
+    </div>
+
+#### Result:
+
+<div className='text-pink-500 hover:text-violet-900'>
+    <HeartIcon size={16} variant={'filled'}/>
+</div>

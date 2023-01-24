@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import InteractionButton from '../interaction-button/interaction-button';
-import HeartIconSvGComponent from '../icons/heart-icon';
+import { HeartIcon } from '../icons';
 
 export type LikeWithReactionProps = {
   active: boolean;
@@ -36,7 +36,7 @@ const LikeButtonWithReaction: FC<LikeWithReactionProps> = ({
 
   return (
     <InteractionButton label={theLabel} colorVariant={'pink'} active={active} onClick={onClick}>
-      <HeartIconSvGComponent variant={active ? 'filled' : 'normal'} size={16} />
+      <HeartIcon variant={active ? 'filled' : 'normal'} size={16} />
     </InteractionButton>
   );
 };
