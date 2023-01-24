@@ -16,6 +16,8 @@ an application from the beginning to the end.
 * [Component Development](#component-development)
 * [Deployment](#deployment)
 * [Project History and Status](#project-history-and-status)
+* [Technical improvements](#technical-improvements)
+* [Personal improvements for next project](#personal-improvements-for-next-project)
 * [Authors](#authors)
 
 ## General Info
@@ -99,6 +101,14 @@ module.exports = {
   ...
 }
 ```
+Further to make use of the tailwind utility class add to your into your applications main entry CSS file
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
 
 ## Usage of the Components
 
@@ -160,6 +170,15 @@ Our design systems package follows the [Atomic Design Principles](https://xd.ado
 The reason to build this component library in this methodology was the clean division of the components and
 the mostly positive experience using it this methodology.
 
+## Technical improvements
+- Add missing animation
+- Add unit tests
+
+## Personal improvements for next project
+- Create more tickets and prioritize them to be able to work more structured.
+- Have a look at the evaluation criteria already at the start of the project.
+- Strictly use defined coding conventions.
+- Not getting influenza and covid again. (Carole ;-))
 
 ## Authors
 [Carole Hug](https://github.com/CaroleHug)
