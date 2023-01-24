@@ -15,15 +15,11 @@
     ".": {
       "import": "./dist/index.js"
     },
-    "./dist/global.css": {
-      "import": "./dist/global.css"
-    },
     "./tailwind": "./tailwind.config.js"
   },
   "scripts": {
-    "build": "del-cli -f dist && npm run build:types && npm run build:css",
+    "build": "del-cli -f dist && npm run build:types",
     "build:types": "tsc -p ./tsconfig.json",
-    "build:css": "npx tailwindcss -i ./src/global.css -o ./dist/global.css",
     "build-storybook": "build-storybook",
     "build-storybook-win": "set NODE_OPTIONS=\"--openssl-legacy-provider\" && build-storybook",
     "storybook": "start-storybook -p 6006",
