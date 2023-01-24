@@ -2,3 +2,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+    .head-1 {
+        @apply font-sans text-current font-bold text-l3
+    }
+    .head-2 {
+        @apply font-sans text-current font-bold text-l2
+    }
+    .head-3 {
+        @apply font-sans text-current font-semibold text-l1
+    }
+    .head-4 {
+        @apply font-sans text-current font-semibold text-m2
+    }
+    .paragraph-L {
+        @apply font-sans text-current font-medium text-m2
+    }
+    .paragraph-M {
+        @apply font-sans text-current font-medium text-s3
+    }
+    .label-XL {
+        @apply font-sans text-current font-semibold text-m2
+    }
+    .label-L {
+        @apply font-sans text-current font-semibold text-m1
+    }
+    .label-M {
+        @apply font-sans text-current font-semibold text-s2
+    }
+    .placeholder {
+        @apply font-sans text-current font-medium text-s1
+    }
+    .label-S {
+        @apply font-sans text-current font-semibold text-s1
+    }
+}
