@@ -16,3 +16,4 @@ export { default as EditIcon } from './edit-icon';
 export { default as MumbleIcon } from './mumble-icon';
 export { default as EyeIcon } from './eye-icon';
 export { default as SettingsIcon } from './settings-icon';
+export * from './icons.types';
