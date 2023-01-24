@@ -1,4 +1,5 @@
-import React, { FC } from 'react';
+import * as React from 'react';
+import { FC } from 'react';
 import InteractionButton from '../interaction-button/interaction-button';
 import { HeartIcon } from '../icons';
 
@@ -22,7 +23,7 @@ const LikeButtonWithReaction: FC<LikeWithReactionProps> = ({
   onClick
 }) => {
   const active = reactionByCurrentUser || likes > 0;
-  let theLabel = '';
+  let theLabel;
 
   if (reactionByCurrentUser) {
     theLabel = label.reactionByCurrentUser;

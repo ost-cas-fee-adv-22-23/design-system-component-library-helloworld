@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
+import * as React from 'react';
 import CommentButton from './comment-button';
 
 export default {
