@@ -1,4 +1,4 @@
-import { IconGallery, IconItem, Meta } from '@storybook/addon-docs/';
+import {IconGallery, IconItem, Meta, Title} from '@storybook/addon-docs/';
 
 import {
     CalendarIcon, CancelIcon, CheckmarkIcon,
@@ -44,11 +44,12 @@ Some of the icons do additionaly to the default variant have a filled variant, t
         <MumbleIconComponent size={16} />
     </IconItem>
     <IconItem name="ShareIcon">
-        <ShareIconComponent size={16} />
-  </IconItem>
-    <IconItem name="TimeIcon"size={16}>
-        <TimeIconComponent size={16} />
-  </IconItem><IconItem name="EyeIcon">
+        <ShareIconComponent size={16}/>
+    </IconItem>
+    <IconItem name="TimeIcon" size={16}>
+        <TimeIconComponent />
+    </IconItem>
+    <IconItem name="EyeIcon">
         <EyeIconComponent size={16} />
     </IconItem>
     <IconItem name="SettingsIcon">

@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import * as React from 'react';
+import React from 'react';
 import LikeButtonWithReaction from './like-button-with-reaction';
 
 export default {

@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { FC } from 'react';
+import React, { FC } from 'react';
 import InteractionButton from '../interaction-button/interaction-button';
 import MessageIconSvGComponent from '../icons/message-icon';
 

@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { CalendarIcon, LocationIconComponent, TimeIconComponent, UserIcon } from '../icons/index';
 
 export type LabelProps = {
