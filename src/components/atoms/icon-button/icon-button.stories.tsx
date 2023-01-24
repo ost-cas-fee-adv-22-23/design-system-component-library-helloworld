@@ -9,9 +9,11 @@ export default {
 } as ComponentMeta<typeof IconButton>;
 
 const Template: ComponentStory<typeof IconButton> = (args) => (
-  <IconButton {...args}>
-    <MumbleIcon size={16} />
-  </IconButton>
+  <div className="text-white">
+    <IconButton {...args}>
+      <MumbleIcon size={16} />
+    </IconButton>
+  </div>
 );
 
 export const IconButtonComponent = Template.bind({});
