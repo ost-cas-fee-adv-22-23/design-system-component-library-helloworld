@@ -165,3 +165,12 @@ the mostly positive experience using it this methodology.
 [Carole Hug](https://github.com/CaroleHug)
 
 [Mehmet Ali Bekooglu](https://github.com/malib)
+
+## Technical improvements
+- Add missing animation
+
+## Personal improvements for next project
+- Create more tickets and prioritize them to be able to work more structured.
+- Have a look at the evaluation criteria already at the start of the project.
+- Strictly use defined coding conventions.  
+- Not getting influenza and covid again. (Carole)
