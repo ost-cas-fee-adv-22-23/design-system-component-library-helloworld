@@ -1,4 +1,5 @@
-import React, { ReactNode, HTMLAttributes, FC } from 'react';
+import * as React from 'react';
+import { ReactNode, HTMLAttributes, FC } from 'react';
 
 export enum Size {
   h1 = 'h1',

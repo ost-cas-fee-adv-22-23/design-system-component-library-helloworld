@@ -9,8 +9,8 @@ export type TabProps = {
 const defaultTabListClass = ['flex flex-row group justify-between rounded-s w-fit p-xxs bg-slate-200'];
 // Tab
 const defaultTabItemClass = ['rounded-s w-fit p-xs focus:outline focus:outline-none cursor-pointer label-L transform transition-all duration-500 ease-in-out'];
-const tabItemSelectedClass = ['ui-selected:bg-white ui-selected:text-violet-600 ui-selected:hover:scale-105 first:hover:pr-m first:hover:pl-xs last:hover:pl-m last:hover:pr-xs'];
-const tabItemUnselectedClass = ['ui-not-selected:group-hover:text-slate-800'];
+const tabItemSelectedClass = ['bg-white text-violet-600 group-hover:scale-105 first:hover:pr-m first:hover:pl-xs last:hover:pl-m last:hover:pr-xs'];
+const tabItemUnselectedClass = ['group-hover:text-slate-800'];
 
 
 function classNames(...classes: any[]) {

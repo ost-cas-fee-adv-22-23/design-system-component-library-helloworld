@@ -10,16 +10,24 @@
     "dist",
     "tailwind.config.js"
   ],
-  "types": "dist/index.d.ts",
+  "types": "dist/cjs/types/index.d.ts",
+  "main": "./dist/cjs/index.js",
   "exports": {
     ".": {
-      "import": "./dist/index.js"
+      "import": {
+        "types": "./dist/cjs/types/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/types/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
     },
     "./tailwind": "./tailwind.config.js"
   },
   "scripts": {
-    "build": "del-cli -f dist && npm run build:types",
-    "build:types": "tsc -p ./tsconfig.json",
+    "build": "del-cli dist -f  && npm run build:types",
+    "build:types": "tsc -p ./tsconfig.cjs.json",
     "build-storybook": "build-storybook",
     "build-storybook-win": "set NODE_OPTIONS=\"--openssl-legacy-provider\" && build-storybook",
     "storybook": "start-storybook -p 6006",
