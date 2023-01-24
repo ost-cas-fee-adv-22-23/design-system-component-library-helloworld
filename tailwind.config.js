@@ -96,6 +96,12 @@ module.exports = {
       3: '3px'
     },
     extend: {
+      backgroundImage: {
+        gradient70:
+          'linear-gradient(90deg, var(--tw-gradient-from) -12.5%, var(--tw-gradient-to) 62.9%);',
+        gradient80:
+          'linear-gradient(90deg, var(--tw-gradient-from) -15.3%, var(--tw-gradient-to) 38.8%);'
+      },
       width: {
         16: '16px',
         40: '40px',
@@ -120,68 +126,75 @@ module.exports = {
         70: '70px',
         96: '96px',
         160: '160px'
+      },
+      rotate: {
+        360: '360deg'
+      },
+      transitionDuration: {
+        0: '0ms',
+        2000: '2000ms'
       }
     },
     plugins: [
-        plugin(function ({ addComponents, theme }) {
-          addComponents({
-            '.head-1': {
-              fontSize: theme('fontSize.l3'),
-              fontWeight: theme('fontWeight.bold'),
-              color: theme('colors.current')
-            },
-            '.head-2': {
-              fontSize: theme('fontSize.l2'),
-              fontWeight: theme('fontWeight.bold'),
-              color: theme('colors.current')
-            },
-            '.head-3': {
-              fontSize: theme('fontSize.l1'),
-              fontWeight: theme('fontWeight.semibold'),
-              color: theme('colors.current')
-            },
-            '.head-4': {
-              fontSize: theme('fontSize.m2'),
-              fontWeight: theme('fontWeight.semibold'),
-              color: theme('colors.current')
-            },
-            '.paragraph-L': {
-              fontSize: theme('fontSize.m2'),
-              fontWeight: theme('fontWeight.medium'),
-              color: theme('colors.current')
-            },
-            '.paragraph-M': {
-              fontSize: theme('fontSize.s3'),
-              fontWeight: theme('fontWeight.medium'),
-              color: theme('colors.current')
-            },
-            '.label-XL': {
-              fontSize: theme('fontSize.m2'),
-              fontWeight: theme('fontWeight.semibold'),
-              color: theme('colors.current')
-            },
-            '.label-L': {
-              fontSize: theme('fontSize.m1'),
-              fontWeight: theme('fontWeight.semibold'),
-              color: theme('colors.current')
-            },
-            '.label-M': {
-              fontSize: theme('fontSize.s2'),
-              fontWeight: theme('fontWeight.semibold'),
-              color: theme('colors.current')
-            },
-            '.label-S': {
-              fontSize: theme('fontSize.s1'),
-              fontWeight: theme('fontWeight.semibold'),
-              color: theme('colors.current')
-            },
-            '.placeholder': {
-              fontSize: theme('fontSize.s1'),
-              fontWeight: theme('fontWeight.semibold'),
-              color: theme('colors.current')
-            },
-          })
-        })
+      plugin(function ({ addComponents, theme }) {
+        addComponents({
+          '.head-1': {
+            fontSize: theme('fontSize.l3'),
+            fontWeight: theme('fontWeight.bold'),
+            color: theme('colors.current')
+          },
+          '.head-2': {
+            fontSize: theme('fontSize.l2'),
+            fontWeight: theme('fontWeight.bold'),
+            color: theme('colors.current')
+          },
+          '.head-3': {
+            fontSize: theme('fontSize.l1'),
+            fontWeight: theme('fontWeight.semibold'),
+            color: theme('colors.current')
+          },
+          '.head-4': {
+            fontSize: theme('fontSize.m2'),
+            fontWeight: theme('fontWeight.semibold'),
+            color: theme('colors.current')
+          },
+          '.paragraph-L': {
+            fontSize: theme('fontSize.m2'),
+            fontWeight: theme('fontWeight.medium'),
+            color: theme('colors.current')
+          },
+          '.paragraph-M': {
+            fontSize: theme('fontSize.s3'),
+            fontWeight: theme('fontWeight.medium'),
+            color: theme('colors.current')
+          },
+          '.label-XL': {
+            fontSize: theme('fontSize.m2'),
+            fontWeight: theme('fontWeight.semibold'),
+            color: theme('colors.current')
+          },
+          '.label-L': {
+            fontSize: theme('fontSize.m1'),
+            fontWeight: theme('fontWeight.semibold'),
+            color: theme('colors.current')
+          },
+          '.label-M': {
+            fontSize: theme('fontSize.s2'),
+            fontWeight: theme('fontWeight.semibold'),
+            color: theme('colors.current')
+          },
+          '.label-S': {
+            fontSize: theme('fontSize.s1'),
+            fontWeight: theme('fontWeight.semibold'),
+            color: theme('colors.current')
+          },
+          '.placeholder': {
+            fontSize: theme('fontSize.s1'),
+            fontWeight: theme('fontWeight.semibold'),
+            color: theme('colors.current')
+          }
+        });
+      })
     ]
   }
-}
+};

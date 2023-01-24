@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import IconButton from '../icon-button/icon-button';
-import { EditIconComponent } from '../icons';
+import { EditIcon } from '../icons';
 
 export type ProfilePicProps = {
   size?: 'S' | 'M' | 'L' | 'XL';
@@ -46,7 +46,7 @@ const ProfilePic: FC<ProfilePicProps> = ({ size, imageUrl, editLabel, altText, o
         </div>
         <div className={size !== 'XL' ? 'invisible' : 'absolute right-none bottom-none text-white'}>
           <IconButton label={editLabel} onClick={onClick}>
-            <EditIconComponent size={16} />
+            <EditIcon size={16} />
           </IconButton>
         </div>
       </div>

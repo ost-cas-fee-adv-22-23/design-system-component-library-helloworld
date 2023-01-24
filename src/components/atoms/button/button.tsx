@@ -15,7 +15,7 @@ const Button: FC<ButtonProps> = ({ size, label, onClick, variant, children }) =>
   const defaultVariant =
     'bg-slate-600 hover:bg-slate-700 hover:outline-slate-100 active:outline-slate-200';
   const gradientVariant =
-    'bg-gradient-to-r from-pink-500 to-violet-500 hover:outline-violet-100 active:outline-violet-200';
+    'bg-gradient-to-r from-pink-500 to-violet-500 hover:bg-gradient70 hover:outline-violet-100 active:outline-violet-200 active:bg-gradient80';
 
   const defaultClasses =
     'text-white py-xxs px-xs rounded-s outline hover:outline-3 active:outline-4 relative';
