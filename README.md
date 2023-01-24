@@ -101,13 +101,10 @@ module.exports = {
   ...
 }
 ```
-Further to make use of the tailwind utility class add to your into your applications main entry CSS file
+Further to make use of the tailwind utility class add into your applications main entry CSS file
 
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import '@smartive-education/design-system-component-library-hello-world-team/dist/global";
 ```
 
 ## Usage of the Components
