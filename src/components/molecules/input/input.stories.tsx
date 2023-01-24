@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import * as React from 'react';
+import React from 'react';
 import Input from './input';
 import MumbleIconSvGComponent from '../../atoms/icons/mumble-icon';
 

@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import * as React from 'react';
+import React from 'react';
 import Link from './link';
 
 export default {

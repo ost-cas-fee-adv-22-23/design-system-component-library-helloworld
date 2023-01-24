@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Heading, Size } from './heading';
 
