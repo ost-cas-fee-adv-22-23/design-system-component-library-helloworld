@@ -1,5 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import * as React from 'react';
+import React, { ComponentMeta, ComponentStory } from '@storybook/react';
 import MumbleIconSvGComponent from '../icons/mumble-icon';
 import Button from './button';
 
