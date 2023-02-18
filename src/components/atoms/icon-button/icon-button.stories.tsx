@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import * as React from 'react';
+import React from 'react';
 import IconButton from './icon-button';
-import MumbleIconSvGComponent from '../icons/mumble-icon';
+import { MumbleIcon } from '../icons';
 
 export default {
   title: 'Components/Atoms/Buttons/IconButton',
@@ -9,9 +9,11 @@ export default {
 } as ComponentMeta<typeof IconButton>;
 
 const Template: ComponentStory<typeof IconButton> = (args) => (
-  <IconButton {...args}>
-    <MumbleIconSvGComponent />
-  </IconButton>
+  <div className="text-white">
+    <IconButton {...args}>
+      <MumbleIcon size={16} />
+    </IconButton>
+  </div>
 );
 
 export const IconButtonComponent = Template.bind({});

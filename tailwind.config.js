@@ -134,68 +134,67 @@ module.exports = {
         0: '0ms',
         2000: '2000ms'
       }
-    },
-    plugins: [
-        require('@headlessui/tailwindcss')({ prefix: 'ui' }),
-        plugin(function ({ addComponents, theme }) {
-          addComponents({
-            '.head-1': {
-              fontSize: theme('fontSize.l3'),
-              fontWeight: theme('fontWeight.bold'),
-              color: theme('colors.current')
-            },
-            '.head-2': {
-              fontSize: theme('fontSize.l2'),
-              fontWeight: theme('fontWeight.bold'),
-              color: theme('colors.current')
-            },
-            '.head-3': {
-              fontSize: theme('fontSize.l1'),
-              fontWeight: theme('fontWeight.semibold'),
-              color: theme('colors.current')
-            },
-            '.head-4': {
-              fontSize: theme('fontSize.m2'),
-              fontWeight: theme('fontWeight.semibold'),
-              color: theme('colors.current')
-            },
-            '.paragraph-L': {
-              fontSize: theme('fontSize.m2'),
-              fontWeight: theme('fontWeight.medium'),
-              color: theme('colors.current')
-            },
-            '.paragraph-M': {
-              fontSize: theme('fontSize.s3'),
-              fontWeight: theme('fontWeight.medium'),
-              color: theme('colors.current')
-            },
-            '.label-XL': {
-              fontSize: theme('fontSize.m2'),
-              fontWeight: theme('fontWeight.semibold'),
-              color: theme('colors.current')
-            },
-            '.label-L': {
-              fontSize: theme('fontSize.m1'),
-              fontWeight: theme('fontWeight.semibold'),
-              color: theme('colors.current')
-            },
-            '.label-M': {
-              fontSize: theme('fontSize.s2'),
-              fontWeight: theme('fontWeight.semibold'),
-              color: theme('colors.current')
-            },
-            '.label-S': {
-              fontSize: theme('fontSize.s1'),
-              fontWeight: theme('fontWeight.semibold'),
-              color: theme('colors.current')
-            },
-            '.placeholder': {
-              fontSize: theme('fontSize.s1'),
-              fontWeight: theme('fontWeight.semibold'),
-              color: theme('colors.current')
-            },
-          })
-        })
-    ]
-  }
-}
+    }
+  },
+  plugins: [
+    plugin(function ({ addBase, theme }) {
+      addBase({
+        '.head-1': {
+          fontSize: theme('fontSize.l3'),
+          fontWeight: theme('fontWeight.bold'),
+          color: theme('colors.current')
+        },
+        '.head-2': {
+          fontSize: theme('fontSize.l2'),
+          fontWeight: theme('fontWeight.bold'),
+          color: theme('colors.current')
+        },
+        '.head-3': {
+          fontSize: theme('fontSize.l1'),
+          fontWeight: theme('fontWeight.semibold'),
+          color: theme('colors.current')
+        },
+        '.head-4': {
+          fontSize: theme('fontSize.m2'),
+          fontWeight: theme('fontWeight.semibold'),
+          color: theme('colors.current')
+        },
+        '.paragraph-L': {
+          fontSize: theme('fontSize.m2'),
+          fontWeight: theme('fontWeight.medium'),
+          color: theme('colors.current')
+        },
+        '.paragraph-M': {
+          fontSize: theme('fontSize.s3'),
+          fontWeight: theme('fontWeight.medium'),
+          color: theme('colors.current')
+        },
+        '.label-XL': {
+          fontSize: theme('fontSize.m2'),
+          fontWeight: theme('fontWeight.semibold'),
+          color: theme('colors.current')
+        },
+        '.label-L': {
+          fontSize: theme('fontSize.m1'),
+          fontWeight: theme('fontWeight.semibold'),
+          color: theme('colors.current')
+        },
+        '.label-M': {
+          fontSize: theme('fontSize.s2'),
+          fontWeight: theme('fontWeight.semibold'),
+          color: theme('colors.current')
+        },
+        '.label-S': {
+          fontSize: theme('fontSize.s1'),
+          fontWeight: theme('fontWeight.semibold'),
+          color: theme('colors.current')
+        },
+        '.placeholder': {
+          fontSize: theme('fontSize.s1'),
+          fontWeight: theme('fontWeight.semibold'),
+          color: theme('colors.current')
+        }
+      });
+    })
+  ]
+};

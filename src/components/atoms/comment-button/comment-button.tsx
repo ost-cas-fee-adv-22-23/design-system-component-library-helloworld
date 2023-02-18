@@ -1,7 +1,6 @@
-import * as React from 'react';
-import { FC } from 'react';
+import React, { FC } from 'react';
 import InteractionButton from '../interaction-button/interaction-button';
-import MessageIconSvGComponent from '../icons/message-icon';
+import { MessageIcon } from '../icons';
 
 export type LikeWithReactionProps = {
   label: {
@@ -22,7 +21,7 @@ const CommentButton: FC<LikeWithReactionProps> = ({ label, numberOfComments, onC
       active={active}
       onClick={onClick}
     >
-      <MessageIconSvGComponent variant={active ? 'filled' : 'normal'} size={16} />
+      <MessageIcon variant={active ? 'filled' : 'normal'} size={16} />
     </InteractionButton>
   );
 };

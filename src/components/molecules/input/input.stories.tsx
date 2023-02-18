@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import * as React from 'react';
+import React from 'react';
 import Input from './input';
-import MumbleIconSvGComponent from '../../atoms/icons/mumble-icon';
+import { MumbleIcon } from '../../atoms';
 
 export default {
   title: 'Components/Molecules/Input',
@@ -16,7 +16,7 @@ export default {
 
 const Template: ComponentStory<typeof Input> = (args) => (
   <Input {...args}>
-    <MumbleIconSvGComponent />
+    <MumbleIcon size={16} />
   </Input>
 );
 

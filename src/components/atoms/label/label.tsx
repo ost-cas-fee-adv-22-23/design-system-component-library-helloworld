@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { CalendarIcon, LocationIconComponent, TimeIconComponent, UserIcon } from '../icons/index';
+import { CalendarIcon, LocationIcon, TimeIcon, UserIcon } from '../icons/index';
 
 export type LabelProps = {
   label: string;
@@ -30,9 +30,9 @@ function iconSwitch(variant?: 'username' | 'timestamp' | 'location' | 'joined') 
     case 'username':
       return <UserIcon size={16} />;
     case 'timestamp':
-      return <TimeIconComponent size={16} />;
+      return <TimeIcon size={16} />;
     case 'location':
-      return <LocationIconComponent size={16} />;
+      return <LocationIcon size={16} />;
     case 'joined':
       return <CalendarIcon size={16} />;
   }

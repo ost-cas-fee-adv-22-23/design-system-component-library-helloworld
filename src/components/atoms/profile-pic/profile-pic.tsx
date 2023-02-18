@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { FC } from 'react';
+import React, { FC } from 'react';
 import IconButton from '../icon-button/icon-button';
 import { EditIcon } from '../icons';
 
