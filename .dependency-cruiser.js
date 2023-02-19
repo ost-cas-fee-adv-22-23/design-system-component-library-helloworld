@@ -20,7 +20,7 @@ module.exports = {
         "remove it. If it's logical this module is an orphan (i.e. it's a config file), " +
         'add an exception for it in your dependency-cruiser configuration. By default ' +
         'this rule does not scrutinize dot-files (e.g. .eslintrc.js), TypeScript declaration ' +
-        'files (.d.ts), tsconfig.json and some of the babel and webpack configs.',
+        'files (.d.ts), tsconfig.cjs.json and some of the babel and webpack configs.',
       severity: 'warn',
       from: {
         orphan: true,
@@ -237,16 +237,16 @@ module.exports = {
     /* if true leave symlinks untouched, otherwise use the realpath */
     // preserveSymlinks: false,
 
-    /* TypeScript project file ('tsconfig.json') to use for
+    /* TypeScript project file ('tsconfig.cjs.json') to use for
        (1) compilation and
        (2) resolution (e.g. with the paths property)
 
        The (optional) fileName attribute specifies which file to take (relative to
        dependency-cruiser's current working directory). When not provided
-       defaults to './tsconfig.json'.
+       defaults to './tsconfig.cjs.json'.
      */
     tsConfig: {
-      fileName: 'tsconfig.json'
+      fileName: 'tsconfig.cjs.json'
     },
 
     /* Webpack configuration to use to get resolve options from.
