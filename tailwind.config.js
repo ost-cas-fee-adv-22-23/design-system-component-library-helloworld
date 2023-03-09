@@ -137,7 +137,6 @@ module.exports = {
     }
   },
   plugins: [
-    require('@headlessui/tailwindcss')({ prefix: 'ui' }),
     plugin(function ({ addBase, theme }) {
       addBase({
         '.head-1': {
