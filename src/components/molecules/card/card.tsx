@@ -2,6 +2,8 @@ import React, {FC, ReactNode} from "react";
 
 export enum BorderType {
     none = 'none',
+    roundedTop = 'roundedTop',
+    roundedBottom = 'roundedBottom',
     rounded = 'rounded'
 }
 
@@ -23,6 +25,8 @@ const defaultCardClass = ['relative bg-white border-2 border-slate-200'];
 
 const cardBorderClass: Record<BorderType, string[]> = {
     none: ['rounded-none'],
+    roundedTop: ['rounded-t-m'],
+    roundedBottom: ['rounded-b-m'],
     rounded: ['rounded-m'],
 };
 
