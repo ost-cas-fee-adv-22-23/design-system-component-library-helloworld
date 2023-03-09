@@ -10,7 +10,7 @@ export enum ProfileHeaderLabelType {
     S = 'S',
     M = 'M',
     L = 'L',
-    h3 = 'h3',
+    h4 = 'h4',
 }
 
 type ProfileHeaderProps = {
@@ -42,7 +42,7 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
         S: <div className={'flex label-S leading-none cursor-inherit text-slate-600 ml-xs'}>{fullName}</div>,
         M: <div className={'flex label-M leading-none cursor-inherit text-slate-600 ml-xs'}>{fullName}</div>,
         L: <div className={'flex label-L leading-none cursor-inherit text-slate-600 ml-xs'}>{fullName}</div>,
-        h3: <h3 className={'flex head-3 cursor-inherit text-slate-600 ml-xs'}>{fullName}</h3>,
+        h4: <h4 className={'flex head-4 cursor-inherit text-slate-600 ml-s'}>{fullName}</h4>,
     }
 
     return (
