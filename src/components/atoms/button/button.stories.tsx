@@ -1,5 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
+import React, { ComponentMeta, ComponentStory } from '@storybook/react';
 import Button from './button';
 import { MumbleIcon } from '../icons';
 
