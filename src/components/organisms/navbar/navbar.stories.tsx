@@ -8,7 +8,7 @@ export default {
 } as ComponentMeta<typeof Navbar>;
 
 const Template: ComponentStory<typeof Navbar> = () => (
-  <Navbar>
+  <Navbar logoHref={'#'} logoAriaLabel={'Home-Button'}>
     <div>Button 1</div>
     <div>Button 2</div>
     <div>Button 3</div>
