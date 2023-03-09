@@ -1,3 +1,3 @@
-export * from './branding-app-icon';
-export * from './branding-hover-logo';
-export * from './branding-logo';
+export { default as BrandingAppIcon } from './branding-app-icon';
+export { default as BrandingHoverLogo } from './branding-hover-logo';
+export { default as BrandingLogo } from './branding-logo';
