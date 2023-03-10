@@ -60,7 +60,7 @@ DefaultComponent.args = {
 
 const paragraph = (
     <p className={'paragraph-M'}>
-        Paragraph – Quia aut et aut. Sunt et eligendi similique enim qui quo minus. Aut aut error velit voluptatum optio
+        Quia aut et aut. Sunt et eligendi similique enim qui quo minus. Aut aut error velit voluptatum optio
         sed quis cumque error magni. Deserunt pariatur molestiae incidunt. Omnis deserunt ratione et recusandae quos
         excepturi ut deleniti ut repellat magni.
     </p>
@@ -81,7 +81,7 @@ const mumbleSection = (
                     altText={'Robert Vogt'} imageSrc={'https://media.licdn.com/dms/image/D4E03AQEXHsHgH4BwJg/profile-displayphoto-shrink_800_800/0/1666815812197?e=2147483647&v=beta&t=Vx6xecdYFjUt3UTCmKdh2U-iHvY0bS-fcxlp_LKbxYw'} joined={'vor 17 Minuten'} username={'robertvogt'} hrefProfile={'#'}/>
     <div className={'mt-l'}>
         <Paragraph size={SizeParapgraph.m}>
-        Paragraph – Quia aut et aut. Sunt et eligendi similique enim qui quo minus. Aut aut error velit voluptatum optio
+        Quia aut et aut. Sunt et eligendi similique enim qui quo minus. Aut aut error velit voluptatum optio
         sed quis cumque error magni. Deserunt pariatur molestiae incidunt. Omnis deserunt ratione et recusandae quos
         excepturi ut deleniti ut repellat magni.
         </Paragraph>
@@ -128,7 +128,7 @@ const mumblePic = (
                        altText={'Robert Vogt'} imageSrc={'https://media.licdn.com/dms/image/D4E03AQEXHsHgH4BwJg/profile-displayphoto-shrink_800_800/0/1666815812197?e=2147483647&v=beta&t=Vx6xecdYFjUt3UTCmKdh2U-iHvY0bS-fcxlp_LKbxYw'} joined={'vor 17 Minuten'} username={'robertvogt'} hrefProfile={'#'}/>
         <div className={'mt-l'}>
             <Paragraph size={SizeParapgraph.m}>
-                Paragraph – Quia aut et aut. Sunt et eligendi similique enim qui quo minus. Aut aut error velit voluptatum optio
+                Quia aut et aut. Sunt et eligendi similique enim qui quo minus. Aut aut error velit voluptatum optio
                 sed quis cumque error magni. Deserunt pariatur molestiae incidunt. Omnis deserunt ratione et recusandae quos
                 excepturi ut deleniti ut repellat magni.
             </Paragraph>
@@ -220,7 +220,7 @@ const mumbleDetail = (
         </div>
         <div className={'mt-xxl'}>
             <Paragraph size={SizeParapgraph.m}>
-                Paragraph – Quia aut et aut. Sunt et eligendi similique enim qui quo minus. Aut aut error velit voluptatum optio
+                Quia aut et aut. Sunt et eligendi similique enim qui quo minus. Aut aut error velit voluptatum optio
                 sed quis cumque error magni. Deserunt pariatur molestiae incidunt. Omnis deserunt ratione et recusandae quos
                 excepturi ut deleniti ut repellat magni.
             </Paragraph>

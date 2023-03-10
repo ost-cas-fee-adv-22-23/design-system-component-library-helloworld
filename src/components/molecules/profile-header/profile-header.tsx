@@ -4,6 +4,7 @@ import { Label, ProfilePic } from "../../atoms";
 export enum ProfileHeaderPictureSize {
     S = 'S',
     M = 'M',
+    L = 'L',
 }
 
 export enum ProfileHeaderLabelType {
@@ -20,7 +21,7 @@ type ProfileHeaderProps = {
     joined?: string;
     labelType: ProfileHeaderLabelType;
     location?: string;
-    profilePictureSize: ProfileHeaderPictureSize;
+    profilePictureSize?: ProfileHeaderPictureSize;
     imageSrc?: string;
     timestamp?: string;
     username?: string;
