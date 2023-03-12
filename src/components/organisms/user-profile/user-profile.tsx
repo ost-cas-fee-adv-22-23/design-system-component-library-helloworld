@@ -34,19 +34,19 @@ const UserProfile: FC<UserProfileProps> = ({
 }) => {
     return (
         <div>
-            <div className={'w-100 pt-16/9 bg-violet-200 rounded-l relative mb-l'}>
+            <div className={'w-full pt-16/9 bg-violet-200 rounded-l relative mb-l'}>
                 <div className={'w-full h-full rounded-m'}>
                     <img alt={'image'} className={'object-cover rounded-m w-full h-full'} src={img}/>
                 </div>
-                <div className={'absolute right-l'}>
+                <div className={'absolute -mt-xl4 right-xl7'}>
                     <ProfilePic editLabel={'Bearbeiten'} altText={altText} imageUrl={imageSrc} size={profilePictureSize}/>
                 </div>
             </div>
-            <div className={'relative flex flex-row md:-left-xxl'}>
+            <div className={'relative flex flex-row md:-left-xxl p-xxs'}>
                 <ProfileHeader fullName={fullName} labelType={labelType} joined={joined} username={username} hrefProfile={hrefProfile} location={location}
                            timestamp={timestamp} />
             </div>
-            <div className={'relative mt-s'}>
+            <div className={'relative mt-m'}>
                 <Paragraph size={SizeParapgraph.m}>
                     {children}
                 </Paragraph>
