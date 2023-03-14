@@ -76,7 +76,13 @@ module.exports = {
       m: '24px',
       l: '32px',
       xl: '48px',
-      xxl: '64px'
+      xxl: '64px',
+      xl3: '80px',
+      xl4: '96px',
+      xl5: '128px',
+      xl6: '160px',
+      xl7: '192px'
+
     },
     borderRadius: {
       none: '0',

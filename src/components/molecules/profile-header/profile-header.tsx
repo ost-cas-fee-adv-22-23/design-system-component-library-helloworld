@@ -4,12 +4,15 @@ import { Label, ProfilePic } from "../../atoms";
 export enum ProfileHeaderPictureSize {
     S = 'S',
     M = 'M',
+    L = 'L',
+    XL = 'XL',
 }
 
 export enum ProfileHeaderLabelType {
     S = 'S',
     M = 'M',
     L = 'L',
+    XL = 'XL',
     h4 = 'h4',
 }
 
@@ -20,7 +23,7 @@ type ProfileHeaderProps = {
     joined?: string;
     labelType: ProfileHeaderLabelType;
     location?: string;
-    profilePictureSize: ProfileHeaderPictureSize;
+    profilePictureSize?: ProfileHeaderPictureSize;
     imageSrc?: string;
     timestamp?: string;
     username?: string;
@@ -42,6 +45,7 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
         S: <div className={'flex label-S leading-none cursor-inherit text-slate-600 ml-xs'}>{fullName}</div>,
         M: <div className={'flex label-M leading-none cursor-inherit text-slate-600 ml-xs'}>{fullName}</div>,
         L: <div className={'flex label-L leading-none cursor-inherit text-slate-600 ml-xs'}>{fullName}</div>,
+        XL: <div className={'flex label-XL leading-none cursor-inherit text-slate-600 ml-xs'}>{fullName}</div>,
         h4: <h4 className={'flex head-4 cursor-inherit text-slate-600 ml-s'}>{fullName}</h4>,
     }
 
