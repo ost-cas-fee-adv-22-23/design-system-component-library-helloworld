@@ -7,6 +7,8 @@ export type InputProps = {
   children?: ReactNode;
   actionLabel?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  value: string
 };
 
 const Input: FC<InputProps> = ({
@@ -15,7 +17,9 @@ const Input: FC<InputProps> = ({
   type = 'text',
   children,
   onClick,
-  actionLabel
+  onChange,
+  actionLabel,
+  value
 }) => {
   return (
     <div className={'block text-slate-700'}>
@@ -36,6 +40,8 @@ const Input: FC<InputProps> = ({
           className={
             'w-264 h-48 border-1 border-slate-100 hover:border-violet-600 focus:border-violet-600 focus:outline focus:outline-none focus:border-2 rounded-s px-s'
           }
+          onChange={onChange}
+          value={value}
         ></input>
       </div>
     </div>
