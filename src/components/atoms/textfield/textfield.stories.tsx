@@ -11,5 +11,7 @@ const Template: ComponentStory<typeof Textfield> = (args) => <Textfield {...args
 
 export const Username = Template.bind({});
 Username.args = {
-  placeholder: "Was gibt's Neues?"
+  placeholder: "Was gibt's Neues?",
+  onChange: function noRefCheck(){},
+  value:"",
 };

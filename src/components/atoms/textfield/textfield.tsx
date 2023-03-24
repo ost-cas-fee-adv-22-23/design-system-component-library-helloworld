@@ -2,9 +2,11 @@ import React, { FC } from 'react';
 
 export type TextfieldProps = {
   placeholder: string;
+  onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
+  value: string;
 };
 
-const Textfield: FC<TextfieldProps> = ({ placeholder }) => {
+const Textfield: FC<TextfieldProps> = ({ placeholder, onChange, value }) => {
   return (
     <textarea
       className={
@@ -13,6 +15,8 @@ const Textfield: FC<TextfieldProps> = ({ placeholder }) => {
         'focus:border-violet-600 px-s py-s resize-none'
       }
       placeholder={placeholder}
+      onChange={onChange}
+      value={value}
     ></textarea>
   );
 };

@@ -26,5 +26,7 @@ InputComponent.args = {
   placeholder: 'Placeholder',
   type: 'text',
   actionLabel: 'Delete',
-  onClick: () => console.log('Delete button pressed.')
+  onClick: () => console.log('Delete button pressed.'),
+  onChange: function noRefCheck(){},
+  value:"",
 };
