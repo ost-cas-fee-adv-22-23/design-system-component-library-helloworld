@@ -92,14 +92,14 @@ const mumbleSection = (
         <Link href={'#'} label={'#smartive'}/>
     </div>
     <div className="flex relative -left-3 space-x-8">
-        <CommentButton label={{ noComments: 'Comment', someComments: 'Comments' }} numberOfComments={0} onClick={undefined}/>
-        <LikeButtonWithReaction onClick={undefined}  active label={{
+        <CommentButton label={{ noComments: 'Comment', someComments: 'Comments' }} numberOfComments={0} onClick={e => (console.log(e))}/>
+        <LikeButtonWithReaction onClick={e => (console.log(e))}  active label={{
             noReaction: 'Like',
             oneReaction: 'Like',
             reactionByCurrentUser: 'Liked',
             severalReaction: 'Likes'
         }} likes={15} reactionByCurrentUser={true}/>
-        <CopyButton  onClick={undefined} active={false} label={ {inactive: 'Copy Link', active: 'Link copied' }}/>
+        <CopyButton  onClick={e => (console.log(e))} active={false} label={ {inactive: 'Copy Link', active: 'Link copied' }}/>
     </div>
 </div>
 );
@@ -107,8 +107,7 @@ const mumbleSection = (
 const ExampleMumbleSectionTemplate: ComponentStory<typeof Card> = (args) => (
     <div className={'bg-slate-100 p-10'}>
         <div className={'w-[680px]'}>
-            <Card
-                borderType={BorderType.rounded} {...args}>
+            <Card {...args}>
             </Card>
         </div>
     </div>
@@ -142,14 +141,14 @@ const mumblePic = (
             <Link href={'#'} label={'#smartive'}/>
         </div>
         <div className="flex relative -left-3 space-x-8">
-            <CommentButton label={{ noComments: 'Comment', someComments: 'Comments' }} numberOfComments={0} onClick={undefined}/>
-            <LikeButtonWithReaction onClick={undefined}  active label={{
+            <CommentButton label={{ noComments: 'Comment', someComments: 'Comments' }} numberOfComments={0} onClick={e => (console.log(e))}/>
+            <LikeButtonWithReaction onClick={e => (console.log(e))}  active label={{
                 noReaction: 'Like',
                 oneReaction: 'Like',
                 reactionByCurrentUser: 'Liked',
                 severalReaction: 'Likes'
             }} likes={15} reactionByCurrentUser={true}/>
-            <CopyButton  onClick={undefined} active={false} label={ {inactive: 'Copy Link', active: 'Link copied' }}/>
+            <CopyButton  onClick={e => (console.log(e))} active={false} label={ {inactive: 'Copy Link', active: 'Link copied' }}/>
         </div>
     </div>
 );
@@ -157,8 +156,7 @@ const mumblePic = (
 const ExampleMumblePicTemplate: ComponentStory<typeof Card> = (args) => (
     <div className={'bg-slate-100 p-10'}>
         <div className={'w-[680px]'}>
-            <Card
-                borderType={BorderType.rounded} {...args}>
+            <Card {...args}>
             </Card>
         </div>
     </div>
@@ -183,10 +181,10 @@ const mumbleWriteComponent = (
             <Textfield placeholder={"Was gibt's Neues?"} />
         </div>
         <div className="flex flex-row gap-l justify-between unset">
-            <Button label={'Bild hochladen'} onClick={undefined} size={'L'} variant={'default'} >
+            <Button label={'Bild hochladen'} onClick={e => (console.log(e))} size={'L'} variant={'default'} >
                 <UploadIcon size={16}/>
             </Button>
-            <Button label={'Absenden'} onClick={undefined} size={'L'} variant={'purple'} >
+            <Button label={'Absenden'} onClick={e => (console.log(e))} size={'L'} variant={'purple'} >
                 <SendIcon size={16}/>
             </Button>
         </div>
@@ -196,8 +194,7 @@ const mumbleWriteComponent = (
 const ExampleMumbleWriteTemplate: ComponentStory<typeof Card> = (args) => (
     <div className={'bg-slate-100 p-10'}>
         <div className={'w-[550px]'}>
-            <Card
-                borderType={BorderType.rounded} {...args}>
+            <Card {...args}>
             </Card>
         </div>
     </div>
@@ -231,14 +228,14 @@ const mumbleDetail = (
             <Link href={'#'} label={'#smartive'}/>
         </div>
         <div className="flex relative -left-3 space-x-8">
-            <CommentButton label={{ noComments: 'Comment', someComments: 'Comments' }} numberOfComments={0} onClick={undefined}/>
-            <LikeButtonWithReaction onClick={undefined}  active label={{
+            <CommentButton label={{ noComments: 'Comment', someComments: 'Comments' }} numberOfComments={0} onClick={e => (console.log(e))}/>
+            <LikeButtonWithReaction onClick={e => (console.log(e))}  active label={{
                 noReaction: 'Like',
                 oneReaction: 'Like',
                 reactionByCurrentUser: 'Liked',
                 severalReaction: 'Likes'
             }} likes={15} reactionByCurrentUser={true}/>
-            <CopyButton  onClick={undefined} active={false} label={ {inactive: 'Copy Link', active: 'Link copied' }}/>
+            <CopyButton  onClick={e => (console.log(e))} active={false} label={ {inactive: 'Copy Link', active: 'Link copied' }}/>
         </div>
     </div>
 );
@@ -246,8 +243,7 @@ const mumbleDetail = (
 const ExampleMumbleDetailTemplate: ComponentStory<typeof Card> = (args) => (
     <div className={'bg-slate-100 p-10'}>
         <div className={'w-[680px]'}>
-            <Card
-                borderType={BorderType.rounded} {...args}>
+            <Card {...args}>
             </Card>
         </div>
     </div>
@@ -271,10 +267,10 @@ const mumbleWriteDetailComponent = (
             <Textfield placeholder={"Was gibt's Neues?"} />
         </div>
         <div className="flex flex-row gap-l justify-between unset">
-            <Button label={'Bild hochladen'} onClick={undefined} size={'L'} variant={'default'} >
+            <Button label={'Bild hochladen'} onClick={e => (console.log(e))} size={'L'} variant={'default'} >
                 <UploadIcon size={16}/>
             </Button>
-            <Button label={'Absenden'} onClick={undefined} size={'L'} variant={'purple'} >
+            <Button label={'Absenden'} onClick={e => (console.log(e))} size={'L'} variant={'purple'} >
                 <SendIcon size={16}/>
             </Button>
         </div>
@@ -284,8 +280,7 @@ const mumbleWriteDetailComponent = (
 const ExampleMumbleWriteDetailTemplate: ComponentStory<typeof Card> = (args) => (
     <div className={'bg-slate-100 p-10'}>
         <div className={'w-[550px]'}>
-            <Card
-                borderType={BorderType.rounded} {...args}>
+            <Card {...args}>
             </Card>
         </div>
     </div>

@@ -13,5 +13,4 @@ export const Username = Template.bind({});
 Username.args = {
   placeholder: "Was gibt's Neues?",
   onChange: function noRefCheck(){},
-  value:"",
 };
