@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 export type TextfieldProps = {
   placeholder: string;
   onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
-  value: string;
+  value?: string;
 };
 
 const Textfield: FC<TextfieldProps> = ({ placeholder, onChange, value }) => {
