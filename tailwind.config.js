@@ -142,7 +142,6 @@ module.exports = {
       }
     },
     divideWidth: {
-      DEFAULT: '1px',
       '0': '0',
       '1': '1px',
       '3': '3px',
