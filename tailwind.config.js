@@ -140,6 +140,15 @@ module.exports = {
         0: '0ms',
         2000: '2000ms'
       }
+    },
+    divideWidth: {
+      DEFAULT: '1px',
+      '0': '0',
+      '1': '1px',
+      '3': '3px',
+      '4': '4px',
+      '6': '6px',
+      '8': '8px',
     }
   },
   plugins: [
