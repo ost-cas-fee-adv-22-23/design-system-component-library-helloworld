@@ -5,9 +5,10 @@ export type LabelProps = {
   label: string;
   mainTyp?: boolean;
   variant?: 'username' | 'timestamp' | 'location' | 'joined';
+  onClick?: React.MouseEventHandler<HTMLLabelElement>;
 };
 
-const Label: FC<LabelProps> = ({ label, variant, mainTyp = false }) => {
+const Label: FC<LabelProps> = ({ label, variant, mainTyp = false, onClick }) => {
   const defaultClasses = 'flex space-x-xs items-center px-xs py-xxs rounded-m';
   const classes = `${defaultClasses} - ${
     mainTyp
@@ -17,10 +18,10 @@ const Label: FC<LabelProps> = ({ label, variant, mainTyp = false }) => {
 
   return (
     <div className="group">
-      <div className={classes}>
+      <label className={classes} onClick={onClick}>
         {iconSwitch(variant)}
         <span className="text-current">{label}</span>
-      </div>
+      </label>
     </div>
   );
 };

@@ -7,17 +7,16 @@ export type ProfilePicProps = {
   altText?: string;
   imageUrl?: string;
   editLabel: string;
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const ProfilePic: FC<ProfilePicProps> = ({ size, imageUrl, editLabel, altText, onClick }) => {
+const ProfilePic: FC<ProfilePicProps> = ({ size, imageUrl, editLabel, altText }) => {
   const defaultClasses = 'object-fill bg-violet-200 rounded-full absolute';
   const outlineClasses = 'outline outline-4 outline-slate-100';
   const imgClasses = 'absolute w-full h-full';
   let sizeClasses;
   switch (size) {
     case 'S':
-      sizeClasses = 'absolute h-40 w-40 hover:h-44 hover:w-44 hover:-inset-xxxxs';
+      sizeClasses = 'absolute h-48 w-48 hover:h-50 hover:w-50 hover:-inset-xxxxs';
       break;
     case 'M':
       sizeClasses = 'absolute w-64 h-64 hover:h-70 hover:w-70 hover:-inset-xxxs';
@@ -45,7 +44,7 @@ const ProfilePic: FC<ProfilePicProps> = ({ size, imageUrl, editLabel, altText, o
           )}
         </div>
         <div className={size !== 'XL' ? 'invisible' : 'absolute right-none bottom-none text-white'}>
-          <IconButton label={editLabel} onClick={onClick}>
+          <IconButton label={editLabel}>
             <EditIcon size={16} />
           </IconButton>
         </div>
