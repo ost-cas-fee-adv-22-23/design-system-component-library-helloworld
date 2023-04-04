@@ -27,7 +27,6 @@ type ProfileHeaderProps = {
     imageSrc?: string;
     timestamp?: string;
     username?: string;
-    onButtonClick?: React.MouseEventHandler<HTMLButtonElement>;
     onLabelClick?: React.MouseEventHandler<HTMLLabelElement>;
 }
 
@@ -42,7 +41,6 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
     imageSrc,
     timestamp,
     username,
-    onButtonClick,
     onLabelClick,
 }) => {
     const labelVariantStyles: Record<ProfileHeaderLabelType, ReactElement> = {
@@ -56,7 +54,7 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
     return (
         <div className={'relative md:-left-20 flex mb-4'}>
             {profilePictureSize && imageSrc && altText && (
-                <ProfilePic editLabel={'Bearbeiten'} altText={altText} imageUrl={imageSrc} size={profilePictureSize} onClick={onButtonClick}/>
+                <ProfilePic editLabel={'Bearbeiten'} altText={altText} imageUrl={imageSrc} size={profilePictureSize}/>
             )}
             <div className={'ml-xxl'}>
                 {labelVariantStyles[labelType]}
