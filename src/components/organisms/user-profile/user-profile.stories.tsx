@@ -1,6 +1,7 @@
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import UserProfile from "./user-profile";
 import {ProfileHeaderLabelType, ProfileHeaderPictureSize} from "../../molecules/profile-header/profile-header";
+import React from "react";
 
 export default {
     title: 'Components/Organisms/UserProfile',

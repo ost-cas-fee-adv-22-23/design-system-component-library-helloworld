@@ -27,6 +27,8 @@ type ProfileHeaderProps = {
     imageSrc?: string;
     timestamp?: string;
     username?: string;
+    onButtonClick?: React.MouseEventHandler<HTMLButtonElement>;
+    onLabelClick?: React.MouseEventHandler<HTMLLabelElement>;
 }
 
 const ProfileHeader: FC<ProfileHeaderProps> = ({
@@ -40,25 +42,27 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
     imageSrc,
     timestamp,
     username,
+    onButtonClick,
+    onLabelClick,
 }) => {
     const labelVariantStyles: Record<ProfileHeaderLabelType, ReactElement> = {
-        S: <div className={'flex label-S leading-none cursor-inherit text-slate-600 ml-xs'}>{fullName}</div>,
-        M: <div className={'flex label-M leading-none cursor-inherit text-slate-600 ml-xs'}>{fullName}</div>,
-        L: <div className={'flex label-L leading-none cursor-inherit text-slate-600 ml-xs'}>{fullName}</div>,
-        XL: <div className={'flex label-XL leading-none cursor-inherit text-slate-600 ml-xs'}>{fullName}</div>,
-        h4: <h4 className={'flex head-4 cursor-inherit text-slate-600 ml-s'}>{fullName}</h4>,
+        S: <label className={'flex label-S leading-none cursor-inherit text-slate-600 ml-xs'} onClick={onLabelClick}>{fullName}</label>,
+        M: <label className={'flex label-M leading-none cursor-inherit text-slate-600 ml-xs'} onClick={onLabelClick}>{fullName}</label>,
+        L: <label className={'flex label-L leading-none cursor-inherit text-slate-600 ml-xs'} onClick={onLabelClick}>{fullName}</label>,
+        XL: <label className={'flex label-XL leading-none cursor-inherit text-slate-600 ml-xs'} onClick={onLabelClick}>{fullName}</label>,
+        h4: <label className={'flex head-4 cursor-inherit text-slate-600 ml-s'} onClick={onLabelClick}>{fullName}</label>,
     }
 
     return (
         <div className={'relative md:-left-20 flex mb-4'}>
             {profilePictureSize && imageSrc && altText && (
-                <ProfilePic editLabel={'Bearbeiten'} altText={altText} imageUrl={imageSrc} size={profilePictureSize}/>
+                <ProfilePic editLabel={'Bearbeiten'} altText={altText} imageUrl={imageSrc} size={profilePictureSize} onClick={onButtonClick}/>
             )}
             <div className={'ml-xxl'}>
                 {labelVariantStyles[labelType]}
                 <div className={'flex'}>
                     {username && hrefProfile && (
-                        <Label label={username} mainTyp={true} variant={'username'}></Label>
+                        <Label label={username} mainTyp={true} variant={'username'} onClick={onLabelClick}></Label>
                     )}
                     {location && (
                         <Label label={location} mainTyp={false} variant={'location'}></Label>

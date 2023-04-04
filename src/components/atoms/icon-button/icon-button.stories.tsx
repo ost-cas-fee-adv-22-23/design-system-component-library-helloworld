@@ -5,7 +5,13 @@ import { MumbleIcon } from '../icons';
 
 export default {
   title: 'Components/Atoms/Buttons/IconButton',
-  component: IconButton
+  component: IconButton,
+  argTypes: {
+      variant: {
+          options: ['default', 'purple', 'gradient'],
+          control: { type: 'radio' }
+      },
+  }
 } as ComponentMeta<typeof IconButton>;
 
 const Template: ComponentStory<typeof IconButton> = (args) => (
@@ -20,4 +26,11 @@ export const IconButtonComponent = Template.bind({});
 IconButtonComponent.args = {
   label: 'Click me',
   onClick: () => console.log('Icon button pressed.')
+};
+
+export const IconWithTextComponent = Template.bind({});
+IconWithTextComponent.args = {
+    label: 'Click me',
+    onClick: () => console.log('Icon button pressed.'),
+    iconText: 'Mumble'
 };

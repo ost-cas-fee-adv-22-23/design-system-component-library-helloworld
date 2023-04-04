@@ -1,6 +1,6 @@
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import ProfileHeader, {ProfileHeaderLabelType, ProfileHeaderPictureSize} from "./profile-header";
-import {action} from "@storybook/addon-actions";
+import React from "react";
 
 export default {
     title: 'Components/Molecules/ProfileHeader',
@@ -93,10 +93,8 @@ SizeXl.args = {
     fullName: 'Robert Vogt',
     hrefProfile: '#',
     joined: 'Mitglied seit 4 Wochen',
-    labelType: ProfileHeaderLabelType.h3,
+    labelType: ProfileHeaderLabelType.h4,
     location: 'St. Gallen',
-    onSettingsClick: action('onSettingsClick'),
-    showSettings: true,
     username: 'robertvogt',
 };
 SizeXl.storyName = 'Size XL';
