@@ -28,6 +28,5 @@ XLarge.args = {
   size: 'XL',
   imageUrl: 'https://www.ost.ch/typo3conf/ext/template/Resources/Public/Images/logo-de.svg',
   editLabel: 'Bearbeiten',
-  onClick: () => console.log('Edit button pressed.'),
   altText: 'Profilbild'
 };

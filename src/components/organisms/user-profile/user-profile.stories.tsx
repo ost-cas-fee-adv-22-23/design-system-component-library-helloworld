@@ -25,5 +25,6 @@ defaultUserProfile.args = {
     timestamp: 'vor 42 Minuten',
     username: 'robertvogt',
     img: 'https://picsum.photos/800/600',
-    children: 'Quia aut et aut. Sunt et eligendi similique enim qui quo minus. Aut aut error velit voluptatum optio sed quis cumque error magni.'
+    children: 'Quia aut et aut. Sunt et eligendi similique enim qui quo minus. Aut aut error velit voluptatum optio sed quis cumque error magni.',
+    href: 'https://www.google.com/'
 };
