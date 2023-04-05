@@ -1,5 +1,5 @@
 import React, {FC, ReactElement} from "react";
-import { Label, ProfilePic } from "../../atoms";
+import { Label, ProfilePic, NextLink } from "../../atoms";
 
 export enum ProfileHeaderPictureSize {
     S = 'S',
@@ -28,6 +28,8 @@ type ProfileHeaderProps = {
     timestamp?: string;
     username?: string;
     onLabelClick?: React.MouseEventHandler<HTMLLabelElement>;
+    link?: any,
+    href?: string
 }
 
 const ProfileHeader: FC<ProfileHeaderProps> = ({
@@ -42,6 +44,8 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
     timestamp,
     username,
     onLabelClick,
+    link,
+    href
 }) => {
     const labelVariantStyles: Record<ProfileHeaderLabelType, ReactElement> = {
         S: <label className={'flex label-S leading-none cursor-inherit text-slate-600 ml-xs'} onClick={onLabelClick}>{fullName}</label>,
@@ -51,16 +55,17 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
         h4: <label className={'flex head-4 cursor-inherit text-slate-600 ml-s'} onClick={onLabelClick}>{fullName}</label>,
     }
 
+    // @ts-ignore
     return (
         <div className={'relative md:-left-20 flex mb-4'}>
             {profilePictureSize && imageSrc && altText && (
-                <ProfilePic editLabel={'Bearbeiten'} altText={altText} imageUrl={imageSrc} size={profilePictureSize}/>
+                <NextLink href={href} linkComponent={link}><ProfilePic editLabel={'Bearbeiten'} altText={altText} imageUrl={imageSrc} size={profilePictureSize}/></NextLink>
             )}
             <div className={'ml-xxl'}>
-                {labelVariantStyles[labelType]}
+                <NextLink href={href} linkComponent={link}>{labelVariantStyles[labelType]}</NextLink>
                 <div className={'flex'}>
                     {username && hrefProfile && (
-                        <Label label={username} mainTyp={true} variant={'username'} onClick={onLabelClick}></Label>
+                        <NextLink href={href} linkComponent={link}><Label label={username} mainTyp={true} variant={'username'} onClick={onLabelClick}></Label></NextLink>
                     )}
                     {location && (
                         <Label label={location} mainTyp={false} variant={'location'}></Label>
