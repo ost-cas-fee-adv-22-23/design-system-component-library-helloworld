@@ -82,7 +82,6 @@ module.exports = {
       xl5: '128px',
       xl6: '160px',
       xl7: '192px'
-
     },
     borderRadius: {
       none: '0',
@@ -131,7 +130,8 @@ module.exports = {
         64: '64px',
         70: '70px',
         96: '96px',
-        160: '160px'
+        160: '160px',
+        328: '328px'
       },
       rotate: {
         360: '360deg'
@@ -142,12 +142,12 @@ module.exports = {
       }
     },
     divideWidth: {
-      '0': '0',
-      '1': '1px',
-      '3': '3px',
-      '4': '4px',
-      '6': '6px',
-      '8': '8px',
+      0: '0',
+      1: '1px',
+      3: '3px',
+      4: '4px',
+      6: '6px',
+      8: '8px'
     }
   },
   plugins: [
