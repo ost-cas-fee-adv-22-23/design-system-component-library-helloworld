@@ -11,5 +11,6 @@ export { default as Link } from './link';
 export { NextLink } from './next-link';
 export { default as Textfield } from './textfield';
 export { default as Tabs } from './tabs';
+export { TabsItem } from './tabs';
 export * from './icons';
 export * from './branding';
