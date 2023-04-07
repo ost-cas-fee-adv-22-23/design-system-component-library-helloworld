@@ -1,7 +1,7 @@
 import React, {FC, ReactNode} from "react";
 import {NextLink, ProfilePic} from "../../atoms";
 import {ProfileHeader} from "../../molecules";
-import {ProfileHeaderLabelType, ProfileHeaderPictureSize} from "../../molecules/profile-header/profile-header";
+import {ProfileHeaderLabelType, ProfileHeaderPictureSize} from "../../molecules";
 import {Paragraph, SizeParapgraph} from "../../../design-tokens/typography-examples/paragraph";
 
 type UserProfileProps = {
@@ -15,7 +15,7 @@ type UserProfileProps = {
     imageSrc?: string;
     timestamp?: string;
     username?: string;
-    img?: string;
+    image?: React.ImgHTMLAttributes<HTMLImageElement>;
     link: any;
     href: string;
     children?: ReactNode;
@@ -31,7 +31,6 @@ const UserProfile: FC<UserProfileProps> = ({
     imageSrc,
     timestamp,
     username,
-    img,
     link,
     href,
     children
@@ -39,9 +38,6 @@ const UserProfile: FC<UserProfileProps> = ({
     return (
         <div>
             <div className={'w-full pt-16/9 bg-violet-200 rounded-l relative mb-l'}>
-                <div className={'w-full h-full rounded-m'}>
-                    <img alt={'image'} className={'object-cover rounded-m w-full h-full'} src={img}/>
-                </div>
                 <div className={'absolute -mt-xl4 right-xl7'}>
                     <NextLink href={href} linkComponent={link}><ProfilePic editLabel={'Bearbeiten'} altText={altText} imageUrl={imageSrc} size={profilePictureSize}/></NextLink>
                 </div>
