@@ -1,19 +1,19 @@
-import React, {FC, ReactNode} from 'react'
+import React, {FC, ReactNode, useState} from 'react'
 import {CancelIcon} from "../../atoms";
 
 export type ModalProps = {
     title: string
     children: ReactNode
-    isOpen?: boolean
-    setIsOpen?: any
+    opened?: boolean
 }
 
 const Modal: FC<ModalProps> = ({
   children,
   title,
-  isOpen = false,
-  setIsOpen
+  opened = true,
 }) => {
+    const [isOpen, setIsOpen] = useState(opened);
+
     const wrapperClasses = isOpen ? 'z-10 fixed flex justify-center align-center w-full h-full top-0 left-0 bg-transparent' : 'hidden';
     const defaultClasses =  'm-xl bg-white rounded-lg z-10 w-1/2';
 

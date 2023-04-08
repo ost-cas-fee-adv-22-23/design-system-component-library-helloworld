@@ -4,7 +4,15 @@ import Modal from "./modal";
 
 export default {
     title: 'Components/Organisms/Modal',
-    component: Modal
+    component: Modal,
+    argTypes: {
+        type: {
+            control: 'radio',
+            options: ['default', 'settings', 'upload']
+        },
+        title: { control: 'text' },
+        opened: { control:'boolean' }
+    }
 } as ComponentMeta<typeof Modal>
 
 const Template: ComponentStory<typeof Modal> = (args) => (
@@ -13,5 +21,6 @@ const Template: ComponentStory<typeof Modal> = (args) => (
 
 export const ModalComponent = Template.bind({})
 ModalComponent.args = {
-    title: 'Modal'
+    title: 'Modal',
+    opened: true,
 }
