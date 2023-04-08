@@ -1,1 +1,1 @@
-export { default} from './user-profile'
+export { default } from './user-profile'
