@@ -94,7 +94,7 @@ SizeXl.args = {
     fullName: 'Robert Vogt',
     hrefProfile: '#',
     joined: 'Mitglied seit 4 Wochen',
-    labelType: ProfileHeaderLabelType.h4,
+    labelType: ProfileHeaderLabelType.HEADER,
     location: 'St. Gallen',
     username: 'robertvogt',
 };

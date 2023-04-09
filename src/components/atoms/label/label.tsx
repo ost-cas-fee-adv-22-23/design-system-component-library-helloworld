@@ -9,7 +9,7 @@ export type LabelProps = {
 };
 
 const Label: FC<LabelProps> = ({ label, variant, mainTyp = false, onClick }) => {
-  const defaultClasses = 'flex space-x-xs items-center px-xs py-xxs rounded-m';
+  const defaultClasses = 'flex space-x-xs items-center px-xs py-xxs rounded-m label-S';
   const classes = `${defaultClasses} - ${
     mainTyp
       ? 'text-violet-600 group-hover:text-violet-900'

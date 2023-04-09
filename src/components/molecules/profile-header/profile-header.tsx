@@ -13,7 +13,7 @@ export enum ProfileHeaderLabelType {
     M = 'M',
     L = 'L',
     XL = 'XL',
-    h4 = 'h4',
+    HEADER = 'header',
 }
 
 type ProfileHeaderProps = {
@@ -48,18 +48,18 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
     href
 }) => {
     const labelVariantStyles: Record<ProfileHeaderLabelType, ReactElement> = {
-        S: <label className={'flex label-S leading-none cursor-inherit text-slate-600 ml-xs'} onClick={onLabelClick}>{fullName}</label>,
-        M: <label className={'flex label-M leading-none cursor-inherit text-slate-600 ml-xs'} onClick={onLabelClick}>{fullName}</label>,
-        L: <label className={'flex label-L leading-none cursor-inherit text-slate-600 ml-xs'} onClick={onLabelClick}>{fullName}</label>,
-        XL: <label className={'flex label-XL leading-none cursor-inherit text-slate-600 ml-xs'} onClick={onLabelClick}>{fullName}</label>,
-        h4: <label className={'flex head-4 cursor-inherit text-slate-600 ml-s'} onClick={onLabelClick}>{fullName}</label>,
+        S: <label className={'flex label-S leading-none cursor-inherit text-slate-600 ml-xxxs'} onClick={onLabelClick}>{fullName}</label>,
+        M: <label className={'flex label-M leading-none cursor-inherit text-slate-600 ml-xxxs'} onClick={onLabelClick}>{fullName}</label>,
+        L: <label className={'flex label-L leading-none cursor-inherit text-slate-600 ml-xxxs'} onClick={onLabelClick}>{fullName}</label>,
+        XL: <label className={'flex label-XL leading-none cursor-inherit text-slate-600 ml-xxxs'} onClick={onLabelClick}>{fullName}</label>,
+        header: <label className={'flex head-3 leading-none cursor-inherit text-slate-600 ml-xs'} onClick={onLabelClick}>{fullName}</label>,
     }
 
     const hasProfilePicClasses = !!profilePictureSize && !!imageSrc && !!altText ? 'mr-xxl' : '';
 
     // @ts-ignore
     return (
-        <div className={'relative md:-left-20 flex mb-4'}>
+        <div className={'relative flex mb-4'}>
             <div className={hasProfilePicClasses}>
                 {profilePictureSize && imageSrc && altText && (
                     <NextLink href={href} linkComponent={link}><ProfilePic editLabel={'Bearbeiten'} altText={altText} imageUrl={imageSrc} size={profilePictureSize}/></NextLink>
