@@ -12,9 +12,9 @@ export type FileUploadProps = {
     onChange?: React.ChangeEventHandler<HTMLInputElement>;
 };
 
-const defaultClasses = 'mb-4 p-0 rounded-s border-0 outline-1 outline-dashed -outline-offset-1 hover:border-0 hover:outline-2 hover:outline-slate-300 hover:-outline-offset-2 focus:border-0 focus:outline-2 focus:outline-slate-300 focus:-outline-offset-2'
+const defaultClasses = 'mb-xxs p-none rounded-s border-0 outline-1 outline-dashed -outline-offset-1 hover:border-0 hover:outline-2 hover:outline-slate-300 hover:-outline-offset-2 focus:border-0 focus:outline-2 focus:outline-slate-300 focus:-outline-offset-2'
 
-const inputStyle = 'justify-center items-center w-full text-black text-base rounded-s p-4 bg-slate-50 hover:bg-slate-100 focus:bg-white border border-slate-300 outline outline-slate-300 outline-0' +
+const inputStyle = 'justify-center items-center w-full text-black text-base rounded-s p-xxs bg-slate-50 hover:bg-slate-100 focus:bg-white border border-slate-300 outline outline-slate-300 outline-0' +
     'hover:border-slate-300 hover:outline-slate-300 hover:outline-1 focus:border-purple-600 focus:outline-purple-600 focus:outline-1' +
     'disabled:text-slate-400 disabled:bg-slate-50 disabled:border-slate-300 disabled:outline-slate-300 disabled:outline-0';
 
@@ -41,7 +41,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
             <div className={`${defaultClasses} - ${inputStyle} - ${errorMessage ? errorStyle : ''}`}>
                 <label
                     htmlFor={id}
-                    className="flex flex-col gap-2 items-center w-full px-xxs py-l sm:py-s text-slate-500 text-center">
+                    className="flex flex-col gap-2 items-center w-full px-xs py-xl sm:py-l text-slate-500 text-center">
                     <UploadIcon size={16} />
                     <span className={'text-m text-bold text-slate-500'} >
                         {dropzoneTitle}
@@ -54,7 +54,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
 						</span>
                     )}
                 </label>
-                <input className="relative top-0 left-0 w-full h-full opacity-0" id={id} type="file" />
+                <input className="absolute  top-none left-none w-full h-full opacity-0" id={id} type="file" />
             </div>
             <div className={'pt-s'}>
                 <label htmlFor={id} className={buttonClasses}>
