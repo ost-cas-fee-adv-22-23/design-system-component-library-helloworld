@@ -41,7 +41,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
             <div className={`${defaultClasses} - ${inputStyle} - ${errorMessage ? errorStyle : ''}`}>
                 <label
                     htmlFor={id}
-                    className="flex flex-col gap-2 items-center w-full px-4 py-12 sm:py-8 text-slate-500 text-center">
+                    className="flex flex-col gap-2 items-center w-full px-xxs py-l sm:py-s text-slate-500 text-center">
                     <UploadIcon size={16} />
                     <span className={'text-m text-bold text-slate-500'} >
                         {dropzoneTitle}

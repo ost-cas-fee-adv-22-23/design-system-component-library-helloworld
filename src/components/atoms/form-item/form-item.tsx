@@ -12,7 +12,7 @@ export const FormItem: FC<FormItemProps> = ({ label, children, errorMessage, hid
     return (
         <div className="flex flex-col">
             <label
-                className={['text-slate-800 font-semibold text-base mb-xxs', hideLabel ? 'sr-only' : ''].join(' ')}
+                className={['text-slate-800 font-semibold text-base label-S mb-xxs', hideLabel ? 'sr-only' : ''].join(' ')}
                 htmlFor={id}
             >
                 {label}
