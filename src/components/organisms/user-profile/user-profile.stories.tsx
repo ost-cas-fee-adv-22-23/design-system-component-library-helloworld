@@ -10,7 +10,6 @@ export default {
 
 const Template: ComponentStory<typeof UserProfile> = (args) => (
     <div>
-        <img alt={'image'} className={'object-cover rounded-m w-full h-full'} src={'https://picsum.photos/600/400'}/>
         <UserProfile {...args} />
     </div>
 );
@@ -21,7 +20,7 @@ defaultUserProfile.args = {
     fullName: 'Robert Vogt',
     hrefProfile: '#',
     joined: 'Mitglied seit 4 Wochen',
-    labelType: ProfileHeaderLabelType.XL,
+    labelType: ProfileHeaderLabelType.HEADER,
     location: 'St. Gallen',
     profilePictureSize: ProfileHeaderPictureSize.XL,
     imageSrc: 'https://media.licdn.com/dms/image/D4E03AQEXHsHgH4BwJg/profile-displayphoto-shrink_800_800/0/1666815812197?e=2147483647&v=beta&t=Vx6xecdYFjUt3UTCmKdh2U-iHvY0bS-fcxlp_LKbxYw',
