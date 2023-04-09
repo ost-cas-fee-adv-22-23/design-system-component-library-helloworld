@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 
 export type ButtonProps = {
-  size?: 'M' | 'L' | 'XL';
+  size?: 'M' | 'L';
   label?: string;
   variant?: 'default' | 'purple' | 'gradient';
   children?: ReactNode;
@@ -18,7 +18,7 @@ const Button: FC<ButtonProps> = ({ size, label, onClick, variant, children }) =>
 
   const defaultClasses =
     'text-white py-xxs px-xs rounded-s outline hover:outline-3 active:outline-4 relative';
-  const currentSize = size === 'M' ? 'w-150 h-40' : size === 'L' ? 'w-178 h-48' : 'w-355 h-48';
+  const currentSize = size === 'M' ? 'w-150 h-40' : 'w-178 h-48';
   return (
     <button
       className={`${defaultClasses} - ${currentSize} - ${
