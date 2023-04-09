@@ -55,13 +55,17 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
         h4: <label className={'flex head-4 cursor-inherit text-slate-600 ml-s'} onClick={onLabelClick}>{fullName}</label>,
     }
 
+    const hasProfilePicClasses = !!profilePictureSize && !!imageSrc && !!altText ? 'mr-xxl' : '';
+
     // @ts-ignore
     return (
         <div className={'relative md:-left-20 flex mb-4'}>
-            {profilePictureSize && imageSrc && altText && (
-                <NextLink href={href} linkComponent={link}><ProfilePic editLabel={'Bearbeiten'} altText={altText} imageUrl={imageSrc} size={profilePictureSize}/></NextLink>
-            )}
-            <div className={'ml-xxl'}>
+            <div className={hasProfilePicClasses}>
+                {profilePictureSize && imageSrc && altText && (
+                    <NextLink href={href} linkComponent={link}><ProfilePic editLabel={'Bearbeiten'} altText={altText} imageUrl={imageSrc} size={profilePictureSize}/></NextLink>
+                )}
+            </div>
+            <div>
                 <NextLink href={href} linkComponent={link}>{labelVariantStyles[labelType]}</NextLink>
                 <div className={'flex'}>
                     {username && hrefProfile && (
