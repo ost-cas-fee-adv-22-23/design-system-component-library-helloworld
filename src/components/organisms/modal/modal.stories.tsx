@@ -1,5 +1,5 @@
-import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import React, {useEffect, useState} from 'react'
 import Modal from "./modal";
 
 export default {
@@ -15,12 +15,19 @@ export default {
     }
 } as ComponentMeta<typeof Modal>
 
-const Template: ComponentStory<typeof Modal> = (args) => (
-    <Modal {...args}>Titel</Modal>
-)
+const Template: ComponentStory<typeof Modal> = (args) => {
+    const [isOpen, setIsOpen] = useState(true);
+    useEffect(() => {
+        setIsOpen(args.isOpen);
+    }, [args.isOpen]);
+
+    return <Modal {...args} isOpen={isOpen} onClose={() => setIsOpen(false)}>Titel</Modal>;
+};
 
 export const ModalComponent = Template.bind({})
+// @ts-ignore
 ModalComponent.args = {
     title: 'Modal',
-    opened: true,
+    isOpen: true,
+    onClose: function noRefCheck(){},
 }
