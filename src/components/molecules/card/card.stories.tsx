@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import Card, {BorderType, Size} from "./card";
 import ProfileHeader from "../profile-header";
-import {ProfileHeaderLabelType, ProfileHeaderPictureSize} from "../profile-header/profile-header";
+import {ProfileHeaderLabelType, ProfileHeaderPictureSize} from "../profile-header";
 import {Paragraph, SizeParapgraph} from "../../../design-tokens/typography-examples/paragraph";
 import {Button, Link, SendIcon, Textfield, UploadIcon} from "../../atoms";
 import CommentButton from "../../atoms/comment-button";
@@ -260,7 +260,7 @@ ExampleMumbleDetail.args = {
 const mumbleWriteDetailComponent = (
     <div className={'grid grid-cols-1'}>
         <div className={'absolute flex flex-row md:-left-l'}>
-            <ProfileHeader fullName={'Hey, was gibts neues?'} labelType={ProfileHeaderLabelType.h4} profilePictureSize={ProfileHeaderPictureSize.M}
+            <ProfileHeader fullName={'Hey, was gibts neues?'} labelType={ProfileHeaderLabelType.HEADER} profilePictureSize={ProfileHeaderPictureSize.M}
                            altText={'Robert Vogt'} imageSrc={'https://media.licdn.com/dms/image/D4E03AQEXHsHgH4BwJg/profile-displayphoto-shrink_800_800/0/1666815812197?e=2147483647&v=beta&t=Vx6xecdYFjUt3UTCmKdh2U-iHvY0bS-fcxlp_LKbxYw'} />
         </div>
         <div className={'mt-xl'}>

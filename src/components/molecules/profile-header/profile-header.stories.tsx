@@ -99,3 +99,13 @@ SizeXl.args = {
     username: 'robertvogt',
 };
 SizeXl.storyName = 'Size XL';
+
+export const WriteCardExample = Template.bind({});
+WriteCardExample.args = {
+    altText: 'Robert Vogt',
+    fullName: 'Hey, was läuft?',
+    imageSrc: 'https://media.licdn.com/dms/image/D4E03AQEXHsHgH4BwJg/profile-displayphoto-shrink_800_800/0/1666815812197?e=2147483647&v=beta&t=Vx6xecdYFjUt3UTCmKdh2U-iHvY0bS-fcxlp_LKbxYw',
+    labelType: ProfileHeaderLabelType.L,
+    profilePictureSize: ProfileHeaderPictureSize.M,
+};
+WriteCardExample.storyName = 'Write Card Example';

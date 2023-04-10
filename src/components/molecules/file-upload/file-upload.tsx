@@ -2,7 +2,7 @@ import React, { useId, useRef } from 'react';
 import { FormItem, UploadIcon} from "../../atoms";
 
 export type FileUploadProps = {
-    label: string;
+    label?: string;
     dropzoneTitle?: string;
     hint?: string;
     buttonTitle?: string;
@@ -37,7 +37,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
     const fileInputRef = useRef<HTMLInputElement | null>(null);
 
     return (
-        <FormItem id={id} errorMessage={errorMessage} hideLabel={hideLabel} label={label}>
+        <FormItem id={id} errorMessage={errorMessage} hideLabel={hideLabel} label={label || ''}>
             <div className={`${defaultClasses} - ${inputStyle} - ${errorMessage ? errorStyle : ''}`}>
                 <label
                     htmlFor={id}
