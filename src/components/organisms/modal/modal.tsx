@@ -1,18 +1,19 @@
-import React, {FC, ReactNode, useState} from 'react'
+import React, {FC, ReactNode} from 'react'
 import {CancelIcon} from "../../atoms";
 
 export type ModalProps = {
     title: string
-    children: ReactNode
-    opened?: boolean
+    isOpen: boolean,
+    onClose: () => void
+    children?: ReactNode
 }
 
 const Modal: FC<ModalProps> = ({
-  children,
   title,
-  opened = true,
+   isOpen,
+   onClose,
+   children
 }) => {
-    const [isOpen, setIsOpen] = useState(opened);
 
     const wrapperClasses = isOpen ? 'z-10 fixed flex justify-center align-center w-full h-full top-0 left-0 bg-transparent' : 'hidden';
     const defaultClasses =  'm-xl bg-white rounded-lg z-10 w-1/2';
@@ -23,7 +24,7 @@ const Modal: FC<ModalProps> = ({
             <section className={defaultClasses}>
                 <section className={'flex self-center items-center justify-between h-96 px-l bg-violet-600 rounded-t-lg'}>
                     <h3 className={'text-white'}>{title}</h3>
-                    <span className={'cursor-pointer hover:opacity-50'} onClick={() => setIsOpen(false)}>
+                    <span className={'cursor-pointer hover:opacity-50'} onClick={onClose}>
                         <CancelIcon size={16} />
                     </span>
                 </section>
