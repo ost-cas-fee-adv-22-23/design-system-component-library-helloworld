@@ -14,10 +14,12 @@ export const FormUpload = Template.bind({});
 FormUpload.args = {
     label: 'Form Upload',
     hint: 'JPEG oder PNG, maximal 50 MB',
+    onAddFile: function noRefCheck(){},
 };
 
 export const FormUploadError = Template.bind({});
 FormUploadError.args = {
     label: 'Form Upload and Error',
     errorMessage: 'Oh no, an error occurred',
+    onAddFile: function noRefCheck(){},
 };
