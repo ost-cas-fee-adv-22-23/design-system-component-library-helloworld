@@ -12,6 +12,7 @@ export type LikeWithReactionProps = {
   };
   likes: number;
   reactionByCurrentUser: boolean;
+  hideLabel?: boolean;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
@@ -19,7 +20,8 @@ const LikeButtonWithReaction: FC<LikeWithReactionProps> = ({
   label,
   likes,
   reactionByCurrentUser,
-  onClick
+  onClick,
+  hideLabel
 }) => {
   const active = reactionByCurrentUser || likes > 0;
   let theLabel = '';
@@ -35,7 +37,12 @@ const LikeButtonWithReaction: FC<LikeWithReactionProps> = ({
   }
 
   return (
-    <InteractionButton label={theLabel} colorVariant={'pink'} active={active} onClick={onClick}>
+    <InteractionButton
+      label={theLabel}
+      colorVariant={'pink'}
+      active={active}
+      onClick={onClick}
+      hideLabel={hideLabel}>
       <HeartIcon variant={active ? 'filled' : 'normal'} size={16} />
     </InteractionButton>
   );

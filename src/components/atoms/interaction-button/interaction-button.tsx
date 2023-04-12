@@ -6,6 +6,7 @@ export type InteractionButtonProps = {
   active?: boolean;
   children?: ReactNode;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
+  hideLabel?: boolean;
 };
 
 const InteractionButton: FC<InteractionButtonProps> = ({
@@ -13,6 +14,7 @@ const InteractionButton: FC<InteractionButtonProps> = ({
   colorVariant,
   active,
   onClick,
+  hideLabel,
   children
 }) => {
   const defaultClasses = 'group flex space-x-xs items-center px-xs py-xxs rounded-m text-slate-600';
@@ -40,11 +42,14 @@ const InteractionButton: FC<InteractionButtonProps> = ({
       break;
   }
 
+  const textClassName = `text-current - ${hideLabel ? 'sr-only' : ''}`
+
   return (
     <div className="group">
+      {hideLabel}
       <button className={`${defaultClasses} - ${hoverColor} - ${textColor}`} onClick={onClick}>
         <div className={iconColor}>{children}</div>
-        <span className="text-current">{label}</span>
+        <span className={textClassName}>{label}</span>
       </button>
     </div>
   );

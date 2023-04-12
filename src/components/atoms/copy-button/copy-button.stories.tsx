@@ -23,3 +23,11 @@ Active.args = {
   active: true,
   onClick: () => console.log('Copy button pressed.')
 };
+
+export const ActiveSrOnly = Template.bind({});
+ActiveSrOnly.args = {
+  label: { inactive: 'Copy Link', active: 'Link copied' },
+  active: true,
+  onClick: () => console.log('Copy button pressed.'),
+  hideLabel: true
+};
