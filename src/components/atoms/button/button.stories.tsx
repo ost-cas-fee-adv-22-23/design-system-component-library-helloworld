@@ -30,3 +30,12 @@ ButtonComponent.args = {
   size: 'M',
   onClick: () => console.log('Default button pressed.')
 };
+
+export const DisabledButtonComponent = Template.bind({});
+DisabledButtonComponent.args = {
+  label: 'Click me',
+  variant: 'default',
+  size: 'M',
+  isDisabled: true,
+  onClick: () => console.log('Default button pressed.')
+};

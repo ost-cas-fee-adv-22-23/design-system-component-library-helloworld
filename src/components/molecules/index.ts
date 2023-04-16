@@ -6,3 +6,5 @@ export { BorderType } from './card';
 export { Size } from './card';
 export { ProfileHeaderPictureSize } from './profile-header';
 export { ProfileHeaderLabelType } from './profile-header';
+export { UploadState } from './file-upload'
+export { UploadAction } from './file-upload'
