@@ -10,11 +10,11 @@ export type ButtonProps = {
 };
 
 const Button: FC<ButtonProps> = ({ size, label, onClick, variant,isDisabled = false, children }) => {
-  const purpleVariant = isDisabled ? 'bg-violet-600 ' :
+  const purpleVariant = isDisabled ? 'bg-violet-400 ' :
     'bg-violet-600 hover:bg-violet-700 hover:outline-violet-100 active:outline-violet-200';
-  const defaultVariant = isDisabled ? 'bg-slate-600' :
+  const defaultVariant = isDisabled ? 'bg-slate-400' :
     'bg-slate-600 hover:bg-slate-700 hover:outline-slate-100 active:outline-slate-200';
-  const gradientVariant = isDisabled ? 'bg-gradient-to-r from-pink-500 to-violet-500' :
+  const gradientVariant = isDisabled ? 'bg-gradient-to-r from-pink-400 to-violet-400' :
     'bg-gradient-to-r from-pink-500 to-violet-500 hover:bg-gradient70 hover:outline-violet-100 active:outline-violet-200 active:bg-gradient80';
 
   const defaultClasses =
