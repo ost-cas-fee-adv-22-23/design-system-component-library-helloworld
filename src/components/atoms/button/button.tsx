@@ -4,24 +4,28 @@ export type ButtonProps = {
   size?: 'M' | 'L';
   label?: string;
   variant?: 'default' | 'purple' | 'gradient';
+  isDisabled?: boolean
   children?: ReactNode;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const Button: FC<ButtonProps> = ({ size, label, onClick, variant, children }) => {
-  const purpleVariant =
+const Button: FC<ButtonProps> = ({ size, label, onClick, variant,isDisabled = false, children }) => {
+  const purpleVariant = isDisabled ? 'bg-violet-600 ' :
     'bg-violet-600 hover:bg-violet-700 hover:outline-violet-100 active:outline-violet-200';
-  const defaultVariant =
+  const defaultVariant = isDisabled ? 'bg-slate-600' :
     'bg-slate-600 hover:bg-slate-700 hover:outline-slate-100 active:outline-slate-200';
-  const gradientVariant =
+  const gradientVariant = isDisabled ? 'bg-gradient-to-r from-pink-500 to-violet-500' :
     'bg-gradient-to-r from-pink-500 to-violet-500 hover:bg-gradient70 hover:outline-violet-100 active:outline-violet-200 active:bg-gradient80';
 
   const defaultClasses =
     'text-white py-xxs px-xs rounded-s outline hover:outline-3 active:outline-4 relative';
   const currentSize = size === 'M' ? 'w-150 h-40' : 'w-178 h-48';
+
+  const disabledClasses =
+      'text-white py-xxs px-xs rounded-s relative'
   return (
     <button
-      className={`${defaultClasses} - ${currentSize} - ${
+      className={`${ isDisabled ? disabledClasses : defaultClasses} - ${currentSize} - ${
         variant === 'purple'
           ? purpleVariant
           : variant === 'gradient'
@@ -29,6 +33,7 @@ const Button: FC<ButtonProps> = ({ size, label, onClick, variant, children }) =>
           : defaultVariant
       }`}
       onClick={onClick}
+      disabled={isDisabled}
     >
       <div className={'flex items-center justify-between'}>
         {label}

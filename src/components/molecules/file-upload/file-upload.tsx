@@ -1,34 +1,39 @@
-import React, {useId, useRef, useState} from 'react';
+import React, {useId, useRef } from 'react';
 import { FormItem, UploadIcon} from "../../atoms";
 import CheckmarkIcon from "../../atoms/icons/checkmark-icon";
 
 export type FileUploadProps = {
-    onAddFile: (file: File) => void;
+    onAddFile: (fileState: UploadState) => void;
     label?: string;
     dropzoneTitle?: string;
     hint?: string;
     buttonTitle?: string;
     errorMessage?: string;
+    isFileSelected?: boolean
+    currentFile?: string;
     id?: string;
     hideLabel?: boolean;
     maximumFileSize?: number;
     validFileExtensions?: Array<string>;
 };
 
-type FileState = {
+export type UploadState = {
+    type: string,
+    file: File | null,
     currentFile: string;
     isFileSelected: boolean;
     isDragActive: boolean;
     errorMessage: string;
 };
 
-const initFileState: FileState = {
-    currentFile: '',
-    isFileSelected: false,
-    isDragActive: false,
-    errorMessage: ''
-};
-
+export type UploadAction =
+    | { type: 'upload_drag_active'; fileState: UploadState }
+    | { type: 'upload_drag_leave'; fileState: UploadState }
+    | { type: 'upload_error_files'; fileState: UploadState }
+    | { type: 'upload_error_max_size'; fileState: UploadState }
+    | { type: 'upload_error_wrong_type'; fileState: UploadState }
+    | { type: 'upload_file_reset'; fileState: UploadState }
+    | { type: 'upload_file_success'; fileState: UploadState };
 
 const defaultClasses = 'mb-xxs p-none rounded-s border-0 outline-1 outline-dashed -outline-offset-1 hover:border-0 hover:outline-2 hover:outline-slate-300 hover:-outline-offset-2 focus:border-0 focus:outline-2 focus:outline-slate-300 focus:-outline-offset-2'
 
@@ -47,7 +52,9 @@ const FileUpload: React.FC<FileUploadProps> = ({
    dropzoneTitle = 'Datei hierhin ziehen ...',
    hint = 'JPEG oder PNG, maximal 50 MB',
    buttonTitle = '... oder Datei auswählen',
-   errorMessage,
+   errorMessage= '',
+   isFileSelected = false,
+   currentFile= '',
    id = useId(),
    hideLabel,
    onAddFile,
@@ -55,12 +62,8 @@ const FileUpload: React.FC<FileUploadProps> = ({
    validFileExtensions = ['jpg', 'png'],
 }) => {
     const fileInputRef = useRef<HTMLInputElement | null>(null);
-    const [fileState, setFileState] = useState(initFileState);
-
-
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         e.preventDefault();
-        console.log("handleChange");
         if(e.target?.files) {
             handleFile(e.target.files);
         }
@@ -69,15 +72,23 @@ const FileUpload: React.FC<FileUploadProps> = ({
         e.preventDefault();
         e.stopPropagation();
         if (e.type === 'dragenter' || e.type === 'dragover') {
-            setFileState((state: FileState) => ({
-               ...state,
-               isDragActive: true,
-            }));
+            onAddFile({
+                type: 'upload_drag_active',
+                file: null,
+                currentFile: '',
+                isFileSelected: false,
+                isDragActive: true,
+                errorMessage: ''
+            });
         } else if (e.type === 'dragleave') {
-            setFileState((state: FileState) => ({
-                ...state,
+            onAddFile({
+                type: 'upload_drag_leave',
+                file: null,
+                currentFile: '',
+                isFileSelected: false,
                 isDragActive: false,
-            }));
+                errorMessage: ''
+            });
         }
     };
 
@@ -87,7 +98,14 @@ const FileUpload: React.FC<FileUploadProps> = ({
         if (e.dataTransfer?.files) {
             handleFile(e.dataTransfer.files);
         } else {
-            setFileState(initFileState);
+            onAddFile({
+                type: 'upload_file_reset',
+                file: null,
+                currentFile: '',
+                isFileSelected: false,
+                isDragActive: false,
+                errorMessage: ''
+            });
         }
 
     };
@@ -99,43 +117,52 @@ const FileUpload: React.FC<FileUploadProps> = ({
         const fileExtension = fileName?.split('.').pop() || '';
 
         if (files.length > 1) {
-            setFileState((state: FileState) => ({
-                ...state,
-                errorMessage: 'Es werden zu viele Dateien auf einaml geladen.',
-                isDragActive: false
-            }));
+            onAddFile({
+                type: 'upload_error_files',
+                file: null,
+                currentFile: '',
+                isFileSelected: false,
+                isDragActive: false,
+                errorMessage: 'Es werden zu viele Dateien auf einmal geladen.'
+            });
         } else if (fileSize && fileSize >= maximumFileSize) {
-            setFileState((state: FileState) => ({
-                ...state,
-                errorMessage: 'Die Datei ist grösser als die maximal zulässige Grösse.',
-                isDragActive: false
-            }));
+            onAddFile({
+                type: 'upload_error_max_size',
+                file: null,
+                currentFile: '',
+                isFileSelected: false,
+                isDragActive: false,
+                errorMessage: 'Die Datei ist grösser als die maximal zulässige Grösse.'
+            });
         } else if (fileExtension && !validFileExtensions.includes(fileExtension)) {
-            setFileState((state: FileState) => ({
-                ...state,
-                errorMessage: 'Die Datei hat den falschen Dateitypen.',
-                isDragActive: false
-            }));
+            onAddFile({
+                type: 'upload_error_wrong_type',
+                file: null,
+                currentFile: '',
+                isFileSelected: false,
+                isDragActive: false,
+                errorMessage: 'Die Datei hat den falschen Dateitypen.'
+            });
         } else {
-            setFileState((state: FileState) => ({
-                ...state,
-                errorMessage: '',
+            onAddFile({
+                type: 'upload_file_success',
+                file: file,
                 currentFile: fileName,
                 isFileSelected: true,
-                isDragActive: false
-            }));
-            onAddFile(file);
+                isDragActive: false,
+                errorMessage: ''
+            });
         }
     }
 
     return (
-        <FormItem id={id} errorMessage={fileState.errorMessage} hideLabel={hideLabel} label={label || ''}>
+        <FormItem id={id} errorMessage={errorMessage} hideLabel={hideLabel} label={label || ''}>
             <div className={`${defaultClasses} - ${inputStyle} - ${errorMessage ? errorStyle : ''}`}>
                 <label
                     htmlFor={id}
                     className="flex flex-col gap-2 items-center w-full px-xs py-xl sm:py-l text-slate-500 text-center">
                     <div onDrop={handleDrop} onDragEnter={handleDrag} onDragOver={handleDrag} onDragLeave={handleDrag}></div>
-                    {!fileState.isFileSelected ? (
+                    {!isFileSelected ? (
                         <>
                             <UploadIcon size={16}/>
                             <span className={'text-m text-bold text-slate-500'}>
@@ -153,7 +180,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
                         <>
                             <CheckmarkIcon size={16}/>
                             <span className={'text-m text-bold text-slate-500'}>
-                                    {`${fileState.currentFile} wurde hinzugefügt`}
+                                    {`${currentFile} wurde hinzugefügt`}
                             </span>
                         </>
                     )}
