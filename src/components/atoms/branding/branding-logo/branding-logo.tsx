@@ -34,7 +34,7 @@ const BrandingLogoSvGComponent: FC<BrandingLogoProps> = ({ orientation, color, w
 
 export default BrandingLogoSvGComponent;
 
-const whiteHorizontalLogo = (width, height) => (
+const whiteHorizontalLogo = (width: string, height: string) => (
   <svg width={width} height={height} viewBox="0 0 335 64" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clipPath="url(#clip0_437_1086)">
       <path
