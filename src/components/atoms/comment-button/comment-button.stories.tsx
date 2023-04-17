@@ -17,10 +17,9 @@ Comment.args = {
   onClick: () => console.log('Comment button pressed.')
 };
 
-export const CommentHideLabel = Template.bind({});
-CommentHideLabel.args = {
+export const MultipleComments = Template.bind({});
+MultipleComments.args = {
   label: { noComments: 'Comment', someComments: 'Comments' },
-  numberOfComments: 0,
-  onClick: () => console.log('Comment button pressed.'),
-  hideLabel: true
+  numberOfComments: 23,
+  onClick: () => console.log('Comment button pressed.')
 };
