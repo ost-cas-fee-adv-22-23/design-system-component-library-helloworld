@@ -8,17 +8,15 @@ export type CopyButtonProps = {
     inactive: string;
     active: string;
   };
-  hideLabel?: boolean;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const CopyButton: FC<CopyButtonProps> = ({ label, active, onClick, hideLabel }) => {
+const CopyButton: FC<CopyButtonProps> = ({ label, active, onClick }) => {
   return (
     <InteractionButton
       label={active ? label.active : label.inactive}
       colorVariant={'slate'}
-      onClick={onClick}
-      hideLabel={hideLabel}>
+      onClick={onClick}>
       <ShareIcon variant={active ? 'filled' : 'normal'} size={16} />
     </InteractionButton>
   );
