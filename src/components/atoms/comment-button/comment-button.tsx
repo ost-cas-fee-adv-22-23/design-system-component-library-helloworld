@@ -8,11 +8,10 @@ export type LikeWithReactionProps = {
     someComments: string;
   };
   numberOfComments: number;
-  hideLabel?: boolean;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const CommentButton: FC<LikeWithReactionProps> = ({ label, numberOfComments, onClick, hideLabel }) => {
+const CommentButton: FC<LikeWithReactionProps> = ({ label, numberOfComments, onClick }) => {
   const active = numberOfComments > 0;
 
   return (
@@ -21,7 +20,7 @@ const CommentButton: FC<LikeWithReactionProps> = ({ label, numberOfComments, onC
       colorVariant={'violet'}
       active={active}
       onClick={onClick}
-      hideLabel={hideLabel}
+      mobileLabel={numberOfComments && numberOfComments > 0 ? numberOfComments.toString() : undefined}
     >
       <MessageIcon variant={active ? 'filled' : 'normal'} size={16} />
     </InteractionButton>

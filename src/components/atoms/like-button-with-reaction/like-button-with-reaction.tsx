@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import InteractionButton from '../interaction-button/interaction-button';
-import { HeartIcon } from '../icons';
+import React, { FC } from "react";
+import InteractionButton from "../interaction-button/interaction-button";
+import { HeartIcon } from "../icons";
 
 export type LikeWithReactionProps = {
   active: boolean;
@@ -12,7 +12,6 @@ export type LikeWithReactionProps = {
   };
   likes: number;
   reactionByCurrentUser: boolean;
-  hideLabel?: boolean;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
@@ -20,8 +19,7 @@ const LikeButtonWithReaction: FC<LikeWithReactionProps> = ({
   label,
   likes,
   reactionByCurrentUser,
-  onClick,
-  hideLabel
+  onClick
 }) => {
   const active = reactionByCurrentUser || likes > 0;
   let theLabel = '';
@@ -42,7 +40,7 @@ const LikeButtonWithReaction: FC<LikeWithReactionProps> = ({
       colorVariant={'pink'}
       active={active}
       onClick={onClick}
-      hideLabel={hideLabel}>
+      mobileLabel={likes && likes > 0 ? likes.toString() : undefined}>
       <HeartIcon variant={active ? 'filled' : 'normal'} size={16} />
     </InteractionButton>
   );
