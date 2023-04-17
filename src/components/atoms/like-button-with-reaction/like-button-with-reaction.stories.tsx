@@ -60,3 +60,17 @@ LikedByCurrentUser.args = {
   reactionByCurrentUser: true,
   onClick: () => console.log('Like button pressed.')
 };
+
+export const LikedByCurrentUserHideLabel = Template.bind({});
+LikedByCurrentUserHideLabel.args = {
+  label: {
+    noReaction: 'Like',
+    oneReaction: 'Like',
+    reactionByCurrentUser: 'Liked',
+    severalReaction: 'Likes'
+  },
+  likes: 15,
+  reactionByCurrentUser: true,
+  onClick: () => console.log('Like button pressed.'),
+  hideLabel: true
+};
