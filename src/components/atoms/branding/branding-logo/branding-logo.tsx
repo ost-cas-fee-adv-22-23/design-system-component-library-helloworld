@@ -1,12 +1,14 @@
-import * as React from 'react';
-import { FC } from 'react';
+import * as React from "react";
+import { FC } from "react";
 
 export type BrandingLogoProps = {
   orientation: 'horizontal' | 'vertical';
   color: 'purple' | 'white' | 'gradient';
+  width?: '64';
+  height?: '32';
 };
 
-const BrandingLogoSvGComponent: FC<BrandingLogoProps> = ({ orientation, color }) => {
+const BrandingLogoSvGComponent: FC<BrandingLogoProps> = ({ orientation, color, width = '64', height = '32' }) => {
   switch (color) {
     case 'gradient':
       if (orientation === 'horizontal') {
@@ -19,7 +21,7 @@ const BrandingLogoSvGComponent: FC<BrandingLogoProps> = ({ orientation, color })
       if (orientation === 'horizontal') {
         return whiteVerticalLogo;
       } else {
-        return whiteHorizontalLogo;
+        return whiteHorizontalLogo(width, height);
       }
     default:
       if (orientation === 'horizontal') {
@@ -32,8 +34,8 @@ const BrandingLogoSvGComponent: FC<BrandingLogoProps> = ({ orientation, color })
 
 export default BrandingLogoSvGComponent;
 
-const whiteHorizontalLogo = (
-  <svg width="335" height="64" viewBox="0 0 335 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+const whiteHorizontalLogo = (width, height) => (
+  <svg width={width} height={height} viewBox="0 0 335 64" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clipPath="url(#clip0_437_1086)">
       <path
         d="M37.3333 40H26.6667C25.1406 40 23.7708 40.849 23.0885 42.2135C22.4062 43.5755 22.5521 45.1823 23.4661 46.3985L28.7995 53.513C29.5625 54.5287 30.7291 55.112 32 55.112C33.2709 55.112 34.4375 54.5287 35.2005 53.5104L40.5339 46.401C41.4479 45.1823 41.5938 43.5755 40.9115 42.2135C40.2292 40.849 38.8594 40 37.3333 40Z"
@@ -83,8 +85,8 @@ const whiteHorizontalLogo = (
 
 const whiteVerticalLogo = (
   <svg
-    width="247"
-    height="128"
+    width="64"
+    height="32"
     viewBox="0 0 247 128"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
