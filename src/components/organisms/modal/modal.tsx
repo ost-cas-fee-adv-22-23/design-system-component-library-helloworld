@@ -16,7 +16,7 @@ const Modal: FC<ModalProps> = ({
 }) => {
 
     const wrapperClasses = isOpen ? 'z-10 fixed flex justify-center align-center w-full h-full top-none left-none bg-transparent' : 'hidden';
-    const defaultClasses =  'm-xl bg-white rounded-lg z-10 w-1/2';
+    const defaultClasses =  'm-xl bg-white rounded-lg z-10 w-2/3 h-2/3';
 
     return (
         <div className={wrapperClasses}>
