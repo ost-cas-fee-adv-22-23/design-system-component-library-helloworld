@@ -31,6 +31,15 @@ ButtonComponent.args = {
   onClick: () => console.log('Default button pressed.')
 };
 
+export const ButtonMobileComponent = Template.bind({});
+ButtonMobileComponent.args = {
+  label: 'Click me',
+  variant: 'default',
+  size: 'M',
+  hideLabelMobile: true,
+  onClick: () => console.log('Default button pressed.')
+};
+
 export const DisabledButtonComponent = Template.bind({});
 DisabledButtonComponent.args = {
   label: 'Click me',

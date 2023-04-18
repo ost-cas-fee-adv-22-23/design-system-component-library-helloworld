@@ -4,12 +4,13 @@ export type ButtonProps = {
   size?: 'M' | 'L';
   label?: string;
   variant?: 'default' | 'purple' | 'gradient';
-  isDisabled?: boolean
+  isDisabled?: boolean;
   children?: ReactNode;
+  hideLabelMobile?: boolean;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const Button: FC<ButtonProps> = ({ size, label, onClick, variant,isDisabled = false, children }) => {
+const Button: FC<ButtonProps> = ({ size, label, onClick, variant,isDisabled = false, children, hideLabelMobile= false }) => {
   const purpleVariant = isDisabled ? 'bg-violet-400 ' :
     'bg-violet-600 hover:bg-violet-700 hover:outline-violet-100 active:outline-violet-200';
   const defaultVariant = isDisabled ? 'bg-slate-400' :
@@ -35,10 +36,17 @@ const Button: FC<ButtonProps> = ({ size, label, onClick, variant,isDisabled = fa
       onClick={onClick}
       disabled={isDisabled}
     >
-      <div className={'flex items-center justify-between'}>
-        {label}
-        <div className={'fill-white absolute right-s'}>{children}</div>
-      </div>
+      {hideLabelMobile ? (
+          <div className={'flex items-center justify-center md:justify-between'}>
+            <div className={'sr-only md:not-sr-only'}>{label}</div>
+            <div className={'fill-white absolute md:right-s'}>{children}</div>
+          </div>
+        ) : (
+          <div className={'flex items-center justify-between'}>
+            {label}
+            <div className={'fill-white absolute right-s'}>{children}</div>
+          </div>
+      )}
     </button>
   );
 };
