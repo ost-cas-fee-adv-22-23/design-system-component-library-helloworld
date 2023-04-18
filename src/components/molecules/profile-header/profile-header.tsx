@@ -67,7 +67,7 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
             </div>
             <div>
                 <NextLink href={href} linkComponent={link}>{labelVariantStyles[labelType]}</NextLink>
-                <div className={'flex'}>
+                <div className={'flex flex-row'}>
                     {username && hrefProfile && (
                         <NextLink href={href} linkComponent={link}><Label label={username} mainTyp={true} variant={'username'} onClick={onLabelClick}></Label></NextLink>
                     )}
