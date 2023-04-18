@@ -19,7 +19,7 @@ const BrandingLogoSvGComponent: FC<BrandingLogoProps> = ({ orientation, color, w
       break;
     case 'white':
       if (orientation === 'horizontal') {
-        return whiteVerticalLogo;
+        return whiteVerticalLogo(width, height);
       } else {
         return whiteHorizontalLogo(width, height);
       }
@@ -83,10 +83,9 @@ const whiteHorizontalLogo = (width: string, height: string) => (
   </svg>
 );
 
-const whiteVerticalLogo = (
+const whiteVerticalLogo = (width: string, height: string) =>  (
   <svg
-    width="247"
-    height="128"
+    width={width} height={height}
     viewBox="0 0 247 128"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
