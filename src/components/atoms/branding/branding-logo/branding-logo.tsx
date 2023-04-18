@@ -4,11 +4,11 @@ import { FC } from "react";
 export type BrandingLogoProps = {
   orientation: 'horizontal' | 'vertical';
   color: 'purple' | 'white' | 'gradient';
-  width?: '64';
-  height?: '32';
+  width?: '64' | '355';
+  height?: '32' | '64';
 };
 
-const BrandingLogoSvGComponent: FC<BrandingLogoProps> = ({ orientation, color, width = '64', height = '32' }) => {
+const BrandingLogoSvGComponent: FC<BrandingLogoProps> = ({ orientation, color, width = '355', height = '64' }) => {
   switch (color) {
     case 'gradient':
       if (orientation === 'horizontal') {
