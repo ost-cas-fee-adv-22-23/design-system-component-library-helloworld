@@ -29,6 +29,7 @@ type ProfileHeaderProps = {
     username?: string;
     onLabelClick?: React.MouseEventHandler<HTMLLabelElement>;
     link?: any,
+    nextImage?: any,
     href?: string
 }
 
@@ -45,7 +46,9 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
     username,
     onLabelClick,
     link,
-    href
+    nextImage,
+    href,
+    ...nextImagePros
 }) => {
     const labelVariantStyles: Record<ProfileHeaderLabelType, ReactElement> = {
         S: <label className={'flex label-S leading-none cursor-inherit text-slate-600 ml-xxxs'} onClick={onLabelClick}>{fullName}</label>,
@@ -62,7 +65,7 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
         <div className={'relative flex mb-4'}>
             <div className={hasProfilePicClasses}>
                 {profilePictureSize && imageSrc && altText && (
-                    <NextLink href={href} linkComponent={link}><ProfilePic editLabel={'Bearbeiten'} altText={altText} imageUrl={imageSrc} size={profilePictureSize}/></NextLink>
+                    <NextLink href={href} linkComponent={link}><ProfilePic editLabel={'Bearbeiten'} altImage={altText} imageUrl={imageSrc} size={profilePictureSize} nextImage={nextImage} {...nextImagePros}/></NextLink>
                 )}
             </div>
             <div>

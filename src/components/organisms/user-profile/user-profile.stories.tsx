@@ -16,7 +16,8 @@ const Template: ComponentStory<typeof UserProfile> = (args) => (
 
 export const defaultUserProfile = Template.bind({});
 defaultUserProfile.args = {
-    altText: 'Robert Vogt',
+    altProfileImage: 'Robert Vogt',
+    altImage: 'Bild',
     fullName: 'Robert Vogt',
     hrefProfile: '#',
     joined: 'Mitglied seit 4 Wochen',

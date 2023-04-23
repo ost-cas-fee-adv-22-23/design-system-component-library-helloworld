@@ -1,15 +1,17 @@
 import React, { FC } from 'react';
 import IconButton from '../icon-button/icon-button';
 import { EditIcon } from '../icons';
+import {NextImage} from "../next-image";
 
 export type ProfilePicProps = {
   size?: 'S' | 'M' | 'L' | 'XL';
-  altText?: string;
+  altImage?: string;
   imageUrl?: string;
   editLabel: string;
+  nextImage?: any,
 };
 
-const ProfilePic: FC<ProfilePicProps> = ({ size, imageUrl, editLabel, altText }) => {
+const ProfilePic: FC<ProfilePicProps> = ({ size, imageUrl, editLabel, altImage, nextImage, ...nextImagePros }) => {
   const defaultClasses = 'object-fill bg-violet-200 rounded-full absolute';
   const outlineClasses = 'outline outline-4 outline-slate-100';
   const imgClasses = 'absolute w-full h-full';
@@ -36,10 +38,12 @@ const ProfilePic: FC<ProfilePicProps> = ({ size, imageUrl, editLabel, altText })
           className={`${defaultClasses} - ${imgClasses} - ${size !== 'S' ? outlineClasses : ''}`}
         >
           {!!imageUrl && (
-            <img
-              src={imageUrl}
-              alt={altText}
-              className="object-fill absolute w-full h-full rounded-full"
+            <NextImage
+              srcImagePath={imageUrl}
+              altImage={altImage}
+              imageComponent={nextImage}
+              {...nextImagePros}
+               isProfile={true}
             />
           )}
         </div>
