@@ -19,7 +19,7 @@ defaultUserProfile.args = {
     altProfileImage: 'Robert Vogt',
     altImage: 'Bild',
     fullName: 'Robert Vogt',
-    hrefProfile: '#',
+    hrefProfile: 'https://www.google.com/',
     joined: 'Mitglied seit 4 Wochen',
     labelType: ProfileHeaderLabelType.HEADER,
     location: 'St. Gallen',
@@ -28,5 +28,4 @@ defaultUserProfile.args = {
     timestamp: 'vor 42 Minuten',
     username: 'robertvogt',
     children: 'Quia aut et aut. Sunt et eligendi similique enim qui quo minus. Aut aut error velit voluptatum optio sed quis cumque error magni.',
-    href: 'https://www.google.com/'
 };

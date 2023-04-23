@@ -18,7 +18,6 @@ type UserProfileProps = {
     image?: React.ImgHTMLAttributes<HTMLImageElement>;
     link: any;
     nextImage: any;
-    href: string;
     children?: ReactNode;
 }
 const UserProfile: FC<UserProfileProps> = ({
@@ -35,7 +34,6 @@ const UserProfile: FC<UserProfileProps> = ({
     username,
     link,
     nextImage,
-    href,
     children,
     ...nextImagePros
                                            }) => {
@@ -47,13 +45,13 @@ const UserProfile: FC<UserProfileProps> = ({
                         <NextImage altImage={altImage} srcImagePath={'https://picsum.photos/600/300'} imageComponent={nextImage} {...nextImagePros}/>
                     </div>
                     <div className={'absolute -mt-xl4 right-xl7'}>
-                        <NextLink href={href} linkComponent={link}><ProfilePic editLabel={'Bearbeiten'} altImage={altProfileImage} imageUrl={imageSrc}  size={profilePictureSize}/></NextLink>
+                        <NextLink href={hrefProfile} linkComponent={link}><ProfilePic editLabel={'Bearbeiten'} altImage={altProfileImage} imageUrl={imageSrc}  size={profilePictureSize}/></NextLink>
                     </div>
                 </div>
             </div>
             <div className={'grid grid-cols-1 gap-3 place-items-center'}>
                 <ProfileHeader fullName={fullName} labelType={labelType} joined={joined} username={username} hrefProfile={hrefProfile} location={location}
-                               timestamp={timestamp}  link={link} href={href}/>
+                               timestamp={timestamp}  link={link}/>
                 <div className={'relative flex mt-m'}>
                     <p className={'paragraph-M text-slate-400'}>
                         {children}
