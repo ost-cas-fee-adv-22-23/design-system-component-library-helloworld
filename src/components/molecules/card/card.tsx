@@ -34,7 +34,7 @@ const cardInteractiveStyle = ['transition-all duration-300 ease-in-out outline-s
 
 export const sizeMap: Record<string, string []> = {
     S: ['py-xs px-xs'],
-    M: ['py-l px-xl'],
+    M: ['py-l px-l'],
 };
 
 function classNames(...classes: any[]) {
