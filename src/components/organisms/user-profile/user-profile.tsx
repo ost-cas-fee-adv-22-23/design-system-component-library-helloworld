@@ -1,10 +1,11 @@
 import React, {FC, ReactNode} from "react";
-import {NextLink, ProfilePic} from "../../atoms";
+import {NextImage, NextLink, ProfilePic} from "../../atoms";
 import {ProfileHeader} from "../../molecules";
 import {ProfileHeaderLabelType, ProfileHeaderPictureSize} from "../../molecules";
 
 type UserProfileProps = {
-    altText?: string;
+    altProfileImage?: string;
+    altImage?: string;
     fullName: string;
     hrefProfile?: string;
     joined?: string;
@@ -16,11 +17,13 @@ type UserProfileProps = {
     username?: string;
     image?: React.ImgHTMLAttributes<HTMLImageElement>;
     link: any;
+    imageComponent: any;
     href: string;
     children?: ReactNode;
 }
 const UserProfile: FC<UserProfileProps> = ({
-    altText,
+    altProfileImage,
+    altImage,
     fullName,
     hrefProfile,
     joined,
@@ -31,18 +34,20 @@ const UserProfile: FC<UserProfileProps> = ({
     timestamp,
     username,
     link,
+    imageComponent,
     href,
-    children
-}) => {
+    children,
+    ...nextImagePros
+                                           }) => {
     return (
         <div className={'relative grid grid-cols-1 gap-2 place-content-center justify-items-center'}>
             <div className={'my-m'}>
                 <div className={'w-full pt-16/9 bg-violet-200 rounded-l relative mb-s'}>
                     <div className={'rounded-l bg-violet-200'}>
-                        <img alt={'image'} className={'object-cover rounded-m w-full h-full'} src={'https://picsum.photos/600/300'}/>
+                        <NextImage altImage={altImage} srcImagePath={'https://picsum.photos/600/300'} imageComponent={imageComponent} {...nextImagePros}/>
                     </div>
                     <div className={'absolute -mt-xl4 right-xl7'}>
-                        <NextLink href={href} linkComponent={link}><ProfilePic editLabel={'Bearbeiten'} altText={altText} imageUrl={imageSrc} size={profilePictureSize}/></NextLink>
+                        <NextLink href={href} linkComponent={link}><ProfilePic editLabel={'Bearbeiten'} altImage={altProfileImage} imageUrl={imageSrc}  size={profilePictureSize}/></NextLink>
                     </div>
                 </div>
             </div>

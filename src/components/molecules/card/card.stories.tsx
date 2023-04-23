@@ -4,7 +4,7 @@ import Card, {BorderType, Size} from "./card";
 import ProfileHeader from "../profile-header";
 import {ProfileHeaderLabelType, ProfileHeaderPictureSize} from "../profile-header";
 import {Paragraph, SizeParapgraph} from "../../../design-tokens/typography-examples/paragraph";
-import {Button, Link, SendIcon, Textfield, UploadIcon} from "../../atoms";
+import {Button, Link, NextImage, SendIcon, Textfield, UploadIcon} from "../../atoms";
 import CommentButton from "../../atoms/comment-button";
 import LikeButtonWithReaction from "../../atoms/like-button-with-reaction";
 import CopyButton from "../../atoms/copy-button";
@@ -133,7 +133,7 @@ const mumblePic = (
             </Paragraph>
         </div>
         <div className={'mt-l'}>
-            <img alt={"image"} src={'https://www.bwallpaperhd.com/wp-content/uploads/2021/01/NashPoint.jpg'} />
+            <NextImage altImage={"image"} srcImagePath={'https://www.bwallpaperhd.com/wp-content/uploads/2021/01/NashPoint.jpg'} />
         </div>
         <div className="paragraph-M flex space-x-xs mt-l mb-l">
             <Link href={'#'} label={'#casfee'}/>

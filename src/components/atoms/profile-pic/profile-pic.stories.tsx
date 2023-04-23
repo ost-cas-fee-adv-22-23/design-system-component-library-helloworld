@@ -20,7 +20,7 @@ Small.args = {
   size: 'S',
   imageUrl: 'https://www.ost.ch/typo3conf/ext/template/Resources/Public/Images/logo-de.svg',
   editLabel: 'Bearbeiten',
-  altText: 'Profilbild'
+  altImage: 'Profilbild'
 };
 
 export const XLarge = Template.bind({});
@@ -28,5 +28,5 @@ XLarge.args = {
   size: 'XL',
   imageUrl: 'https://www.ost.ch/typo3conf/ext/template/Resources/Public/Images/logo-de.svg',
   editLabel: 'Bearbeiten',
-  altText: 'Profilbild'
+  altImage: 'Profilbild'
 };

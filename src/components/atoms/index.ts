@@ -8,6 +8,7 @@ export { default as Label } from './label';
 export { default as ProfilePic } from './profile-pic';
 export { default as FormItem } from './form-item';
 export { default as Link } from './link';
+export { NextImage } from './next-image';
 export { NextLink } from './next-link';
 export { default as Textfield } from './textfield';
 export { default as Tabs } from './tabs';

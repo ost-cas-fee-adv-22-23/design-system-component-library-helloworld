@@ -3,7 +3,7 @@ import React from 'react';
 import { NextLink } from './next-link';
 
 export default {
-  title: 'Components/Atoms/Nextlink',
+  title: 'Components/Atoms/NextLink',
   component: NextLink
 } as ComponentMeta<typeof NextLink>;
 
