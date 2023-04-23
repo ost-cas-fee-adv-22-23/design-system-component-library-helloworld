@@ -17,7 +17,7 @@ type UserProfileProps = {
     username?: string;
     image?: React.ImgHTMLAttributes<HTMLImageElement>;
     link: any;
-    imageComponent: any;
+    nextImage: any;
     href: string;
     children?: ReactNode;
 }
@@ -34,7 +34,7 @@ const UserProfile: FC<UserProfileProps> = ({
     timestamp,
     username,
     link,
-    imageComponent,
+    nextImage,
     href,
     children,
     ...nextImagePros
@@ -44,7 +44,7 @@ const UserProfile: FC<UserProfileProps> = ({
             <div className={'my-m'}>
                 <div className={'w-full pt-16/9 bg-violet-200 rounded-l relative mb-s'}>
                     <div className={'rounded-l bg-violet-200'}>
-                        <NextImage altImage={altImage} srcImagePath={'https://picsum.photos/600/300'} imageComponent={imageComponent} {...nextImagePros}/>
+                        <NextImage altImage={altImage} srcImagePath={'https://picsum.photos/600/300'} imageComponent={nextImage} {...nextImagePros}/>
                     </div>
                     <div className={'absolute -mt-xl4 right-xl7'}>
                         <NextLink href={href} linkComponent={link}><ProfilePic editLabel={'Bearbeiten'} altImage={altProfileImage} imageUrl={imageSrc}  size={profilePictureSize}/></NextLink>
