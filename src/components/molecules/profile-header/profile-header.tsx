@@ -30,7 +30,6 @@ type ProfileHeaderProps = {
     onLabelClick?: React.MouseEventHandler<HTMLLabelElement>;
     link?: any,
     nextImage?: any,
-    href?: string
 }
 
 const ProfileHeader: FC<ProfileHeaderProps> = ({
@@ -47,7 +46,6 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
     onLabelClick,
     link,
     nextImage,
-    href,
     ...nextImagePros
 }) => {
     const labelVariantStyles: Record<ProfileHeaderLabelType, ReactElement> = {
@@ -65,14 +63,14 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
         <div className={'relative flex mb-4'}>
             <div className={hasProfilePicClasses}>
                 {profilePictureSize && imageSrc && altText && (
-                    <NextLink href={href} linkComponent={link}><ProfilePic editLabel={'Bearbeiten'} altImage={altText} imageUrl={imageSrc} size={profilePictureSize} nextImage={nextImage} {...nextImagePros}/></NextLink>
+                    <NextLink href={hrefProfile} linkComponent={link}><ProfilePic editLabel={'Bearbeiten'} altImage={altText} imageUrl={imageSrc} size={profilePictureSize} nextImage={nextImage} {...nextImagePros}/></NextLink>
                 )}
             </div>
             <div>
-                <NextLink href={href} linkComponent={link}>{labelVariantStyles[labelType]}</NextLink>
+                <NextLink href={hrefProfile} linkComponent={link}>{labelVariantStyles[labelType]}</NextLink>
                 <div className={'flex flex-col md:flex-row'}>
                     {username && hrefProfile && (
-                        <NextLink href={href} linkComponent={link}><Label label={username} mainTyp={true} variant={'username'} onClick={onLabelClick}></Label></NextLink>
+                        <NextLink href={hrefProfile} linkComponent={link}><Label label={username} mainTyp={true} variant={'username'} onClick={onLabelClick}></Label></NextLink>
                     )}
                     {location && (
                         <Label label={location} mainTyp={false} variant={'location'}></Label>
