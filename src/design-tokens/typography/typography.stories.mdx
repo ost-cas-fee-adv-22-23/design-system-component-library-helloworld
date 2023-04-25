@@ -1,0 +1,136 @@
+import { Meta, Typeset } from '@storybook/addon-docs/blocks';
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../../../tailwind.config.js";
+const fullConfig = resolveConfig(tailwindConfig);
+
+<Meta title="Design Tokens/Typography" />
+
+export const typography = {
+    fontSize: {
+        l3: 48,
+        l2: 40,
+        l1: 32,
+        m2: 24,
+        m1: 20,
+        s3: 18,
+        s2: 16,
+        s1: 14,
+    },
+};
+
+export const HeaderText = 'Ueberschrift';
+export const SampleText = 'Quia aut et aut. Sunt et eligendi similique enim qui quo minus.';
+export const LabelText = 'Label'
+
+# Typography
+As primary font the google font "Poppins" is used. For Mumble the default font is overwritten with "Poppins". It is one of the fonts that contains a wide range of readability, so it is very common to see it in continuous text and in large headings.
+
+
+# Type scale
+Type scales are hierarchical type systems consisting of style definitions for common elements. The existing components headers 'h1', 'h2' etc., 'p' and 'label' are set with styles which used by Mumble.
+The  scales can be overridden if it is necessary.
+
+| Scale                           | Weight                 | Font-Family             | Size                  |
+| ------------------------------- | ---------------------- | ----------------------- | --------------------- |
+| head-1                          | bold       (700)       | Poppins                 | l3    (3rem/48px)     |
+| head-2                          | bold       (700)       | Poppins                 | l2    (2.5rem/40px)   |
+| head-3                          | semibold   (600)       | Poppins                 | l1    (2rem/32px)     |
+| head-4                          | semibold   (600)       | Poppins                 | m2    (2rem/24px)     |
+| paragraph-L                     | medium   (500)         | Poppins                 | m2    (2rem/24px)     |
+| paragraph-M                     | medium   (500)         | Poppins                 | s3    (1.125rem/18px) |
+| label-XL                        | semibold   (600)       | Poppins                 | m2    (2rem/24px)     |
+| label-L                         | semibold   (600)       | Poppins                 | m1    (1.25rem/20px)  |
+| label-M                         | semibold   (600)       | Poppins                 | s2    (1rem/16px)     |
+| label-S                         | semibold   (600)       | Poppins                 | s1    (0.875rem/14px) |
+
+
+# Headings
+**Scale:** head-1, head-2
+
+<Typeset
+    fontSizes={[
+        Number(typography.fontSize.l3),
+        Number(typography.fontSize.l2)
+    ]}
+    fontWeight={fullConfig.theme.fontWeight.bold}
+    sampleText={HeaderText}
+    fontFamily={fullConfig.theme.fontFamily.sans}/>
+
+**Scale:** head-3, head-4
+
+<Typeset
+    fontSizes={[
+     Number(typography.fontSize.l1),
+     Number(typography.fontSize.m2)
+    ]}
+    fontWeight={fullConfig.theme.fontWeight.semibold}
+    sampleText={HeaderText}
+    fontFamily={fullConfig.theme.fontFamily.sans}/>
+
+## Usage
+The heading can be used as class property. It creates depending on the above mentioned properties the style.
+```jsx
+<h1 className="head-1">Heading 1</h1>
+<h2 className="head-2">Heading 2</h2>
+```
+The header tag can be used with a different property
+```jsx
+<h1 className="head-4">Heading 4</h1>
+```
+
+# Paragraph
+**Scale:** paragraph-L, paragraph-M
+
+<Typeset
+    fontSizes={[
+        Number(typography.fontSize.m2),
+        Number(typography.fontSize.s3)
+    ]}
+    fontWeight={fullConfig.theme.fontWeight.medium}
+    sampleText={SampleText}
+    fontFamily={fullConfig.theme.fontFamily.sans}/>
+
+## Usage
+The paragraph property can be used as class property. It creates depending on the above mentioned properties the style.
+```jsx
+<p className="paragraph-M">Paragraph M</p>
+// larger size
+<p className="paragraph-L">Paragraph L</p>
+```
+
+# Label
+**Scale:** label-XL, label-L, label-M, label-S
+
+<Typeset
+    fontSizes={[
+        Number(typography.fontSize.m2),
+        Number(typography.fontSize.m1),
+        Number(typography.fontSize.s2),
+        Number(typography.fontSize.s1)
+    ]}
+    fontWeight={fullConfig.theme.fontWeight.semibold}
+    sampleText={LabelText}
+    fontFamily={fullConfig.theme.fontFamily.sans}/>
+
+## Usage
+The label property can be used as class property. It creates depending on the above mentioned properties the style.
+```jsx
+<label className="label-M">Label M</label>
+// With larger size
+<label className="label-XL">Label XL</label>
+```
+
+# Color
+The colors of the typography properties refers to the current text color of the parent element. SO you could set the color for the header, paragraph and label outside of it.
+## Header
+```jsx
+<div className="text-slate-600">
+    <h1 className="head-1">Heading</h1>
+</div>
+```
+## Label
+```jsx
+<div className="text-slate-600">
+    <label className="label-M">Label</label>
+</div>
+```
