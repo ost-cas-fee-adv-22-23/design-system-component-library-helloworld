@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, ReactNode } from "react";
 
 export type InteractionButtonProps = {
   label?: string;
@@ -7,6 +7,7 @@ export type InteractionButtonProps = {
   children?: ReactNode;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   mobileLabel?: string;
+  variant?: 'label' | 'button';
 };
 
 const InteractionButton: FC<InteractionButtonProps> = ({
@@ -15,6 +16,7 @@ const InteractionButton: FC<InteractionButtonProps> = ({
   active,
   onClick,
   mobileLabel,
+  variant= 'button',
   children
 }) => {
   const defaultClasses = 'group flex space-x-xs items-center px-xs py-xxs rounded-m text-slate-600';
@@ -44,11 +46,16 @@ const InteractionButton: FC<InteractionButtonProps> = ({
 
   return (
     <div className="group">
-      <button className={`${defaultClasses} - ${hoverColor} - ${textColor}`} onClick={onClick}>
+      { variant === 'label' && <label className={`${defaultClasses} - ${hoverColor} - ${textColor}`} onClick={onClick}>
         <div className={iconColor}>{children}</div>
         <span className={'sr-only md:not-sr-only'}>{label}</span>
         { !!mobileLabel && <span className={'text-current aria-hidden md:hidden'}>{mobileLabel}</span>}
-      </button>
+      </label>}
+      { variant === 'button' && <button className={`${defaultClasses} - ${hoverColor} - ${textColor}`} onClick={onClick}>
+        <div className={iconColor}>{children}</div>
+        <span className={'sr-only md:not-sr-only'}>{label}</span>
+        { !!mobileLabel && <span className={'text-current aria-hidden md:hidden'}>{mobileLabel}</span>}
+      </button>}
     </div>
   );
 };
