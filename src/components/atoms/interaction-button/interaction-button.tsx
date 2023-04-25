@@ -46,7 +46,7 @@ const InteractionButton: FC<InteractionButtonProps> = ({
 
   return (
     <div className="group">
-      { variant === 'label' && <label className={`${defaultClasses} - ${hoverColor} - ${textColor}`}>
+      { variant === 'label' && <label className={`${defaultClasses} - ${hoverColor} - ${textColor} - cursor-pointer`}>
         <div className={iconColor}>{children}</div>
         <span className={'sr-only md:not-sr-only'}>{label}</span>
         { !!mobileLabel && <span className={'text-current aria-hidden md:hidden'}>{mobileLabel}</span>}
