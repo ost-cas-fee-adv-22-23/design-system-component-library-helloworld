@@ -165,7 +165,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
                     {!isFileSelected ? (
                         <>
                             <UploadIcon size={16}/>
-                            <span className={'text-m text-bold text-slate-500'}>
+                            <span className={'text-m text-bold text-slate-500 hidden sm:flex'}>
                                 {dropzoneTitle}
                             </span>
                             {hint && (
@@ -187,12 +187,11 @@ const FileUpload: React.FC<FileUploadProps> = ({
                 </label>
                 <input className="absolute  top-none left-none w-full h-full opacity-0" id={id} type="file" onChange={handleChange} />
             </div>
-            <div className={'pt-s'}>
+            <div className={'pt-s sr-only sm:not-sr-only'}>
                 <label htmlFor={id} className={buttonClasses}>
                     <span className={'mr-[9px]'}>{buttonTitle}</span>
                     <UploadIcon size={16}/>
                 </label>
-                <input type="file" ref={fileInputRef} id={id} className="hidden" onChange={handleChange} />
             </div>
         </FormItem>
     );
