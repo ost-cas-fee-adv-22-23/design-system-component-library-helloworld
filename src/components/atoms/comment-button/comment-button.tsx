@@ -9,7 +9,7 @@ export type LikeWithReactionProps = {
   };
   numberOfComments: number;
   variant?: 'label' | 'button'
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
 const CommentButton: FC<LikeWithReactionProps> = ({ label, numberOfComments, variant,  onClick }) => {

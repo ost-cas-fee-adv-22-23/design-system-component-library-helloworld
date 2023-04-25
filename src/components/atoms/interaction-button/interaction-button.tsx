@@ -5,7 +5,7 @@ export type InteractionButtonProps = {
   colorVariant?: 'slate' | 'pink' | 'violet';
   active?: boolean;
   children?: ReactNode;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   mobileLabel?: string;
   variant?: 'label' | 'button';
 };
