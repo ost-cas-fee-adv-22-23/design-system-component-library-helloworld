@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import InteractionButton from '../interaction-button/interaction-button';
-import { MessageIcon } from '../icons';
+import React, { FC } from "react";
+import InteractionButton from "../interaction-button/interaction-button";
+import { MessageIcon } from "../icons";
 
 export type LikeWithReactionProps = {
   label: {
@@ -8,10 +8,11 @@ export type LikeWithReactionProps = {
     someComments: string;
   };
   numberOfComments: number;
+  variant?: 'label' | 'button'
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const CommentButton: FC<LikeWithReactionProps> = ({ label, numberOfComments, onClick }) => {
+const CommentButton: FC<LikeWithReactionProps> = ({ label, numberOfComments, variant,  onClick }) => {
   const active = numberOfComments > 0;
 
   return (
@@ -20,6 +21,7 @@ const CommentButton: FC<LikeWithReactionProps> = ({ label, numberOfComments, onC
       colorVariant={'violet'}
       active={active}
       onClick={onClick}
+      variant={variant}
       mobileLabel={numberOfComments && numberOfComments > 0 ? numberOfComments.toString() : undefined}
     >
       <MessageIcon variant={active ? 'filled' : 'normal'} size={16} />

@@ -1,6 +1,6 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
-import CommentButton from './comment-button';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import React from "react";
+import CommentButton from "./comment-button";
 
 export default {
   title: 'Components/Atoms/Interaction Buttons/Comment Button',
@@ -22,4 +22,11 @@ MultipleComments.args = {
   label: { noComments: 'Comment', someComments: 'Comments' },
   numberOfComments: 23,
   onClick: () => console.log('Comment button pressed.')
+};
+
+export const MultipleCommentsAsLabel = Template.bind({});
+MultipleCommentsAsLabel.args = {
+  label: { noComments: 'Comment', someComments: 'Comments' },
+  numberOfComments: 23,
+  variant: 'label'
 };
